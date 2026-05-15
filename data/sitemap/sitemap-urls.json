@@ -1,9 +1,37 @@
 {
   "_meta": {
-    "description": "Extracted URLs from the Innova Retail sitemap. Populated by scripts/sitemap_fetcher.py",
+    "description": "Extracted URLs from innovaretail.co.in sitemap. Pending local fetch — see manual-fetch-instructions.md.",
     "last_fetched": null,
-    "sitemap_url": "TODO: fill in from config/site-config.json",
-    "total_urls": 0
+    "sitemap_url": "https://innovaretail.co.in/sitemap.xml",
+    "fetch_status": "pending_local_run",
+    "total_urls": 0,
+    "notes": "Cloud environment blocks outbound HTTP. Run scripts/sitemap_fetcher.py locally and push the result."
+  },
+  "sitemap_index": {
+    "confirmed": false,
+    "nested_sitemaps": [
+      {
+        "url": "https://innovaretail.co.in/sitemap_products_1.xml",
+        "type": "products",
+        "status": "pending"
+      },
+      {
+        "url": "https://innovaretail.co.in/sitemap_collections_1.xml",
+        "type": "collections",
+        "status": "pending"
+      },
+      {
+        "url": "https://innovaretail.co.in/sitemap_pages_1.xml",
+        "type": "pages",
+        "status": "pending"
+      },
+      {
+        "url": "https://innovaretail.co.in/sitemap_blogs_1.xml",
+        "type": "blogs",
+        "status": "pending"
+      }
+    ],
+    "note": "These are Shopify's standard nested sitemaps — confirm actual structure after local fetch"
   },
   "blog_urls": [],
   "product_urls": [],

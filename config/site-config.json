@@ -1,7 +1,7 @@
 {
   "website_name": "Innova Retail",
-  "website_url": "TODO: https://www.innovaretail.in",
-  "sitemap_url": "TODO: https://www.innovaretail.in/sitemap.xml",
+  "website_url": "https://innovaretail.co.in",
+  "sitemap_url": "https://innovaretail.co.in/sitemap.xml",
   "target_country": "India",
   "target_language": "English",
   "business_niche": "HP laptops, desktops, accessories, business IT products, office laptops, commercial laptop buying, B2B laptop supply, laptop price trends, laptop guides, laptop comparisons, ELV products including Smart Locks, Smart Cleaning Robots, Parking Barriers, Dahua products",
@@ -41,5 +41,5 @@
   "auto_publish": false,
   "min_qa_score": 85,
   "content_language_tone": "professional, helpful, commercial — written for Indian B2B buyers",
-  "internal_link_base_url": "TODO: https://www.innovaretail.in"
+  "internal_link_base_url": "https://innovaretail.co.in"
 }

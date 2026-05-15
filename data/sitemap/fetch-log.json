@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "description": "Sitemap fetch attempt log for innovaretail.co.in",
+    "last_attempt": "2026-05-15",
+    "sitemap_url": "https://innovaretail.co.in/sitemap.xml"
+  },
+  "fetch_attempts": [
+    {
+      "url": "https://innovaretail.co.in/sitemap.xml",
+      "http_status": 403,
+      "user_agent": "curl/default",
+      "result": "blocked"
+    },
+    {
+      "url": "https://innovaretail.co.in/sitemap.xml",
+      "http_status": 403,
+      "user_agent": "Chrome/120 browser UA",
+      "result": "blocked"
+    },
+    {
+      "url": "https://innovaretail.co.in/sitemap_products_1.xml",
+      "http_status": 403,
+      "result": "blocked"
+    },
+    {
+      "url": "https://innovaretail.co.in/sitemap_pages_1.xml",
+      "http_status": 403,
+      "result": "blocked"
+    },
+    {
+      "url": "https://innovaretail.co.in/sitemap_blogs_1.xml",
+      "http_status": 403,
+      "result": "blocked"
+    },
+    {
+      "url": "https://www.innovaretail.co.in/sitemap.xml",
+      "http_status": 403,
+      "result": "blocked"
+    }
+  ],
+  "root_cause": "Cloud execution environment network policy blocks outbound HTTP requests to external domains. The website itself is accessible from browsers — this is a server-side restriction only.",
+  "resolution": "Run scripts/sitemap_fetcher.py locally on your machine where outbound HTTP is allowed. See data/sitemap/manual-fetch-instructions.md for step-by-step instructions."
+}
