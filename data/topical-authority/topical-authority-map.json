@@ -1,0 +1,365 @@
+{
+  "_meta": {
+    "description": "Topical authority map for innovaretail.co.in. Tracks cluster health, pillar/spoke structure, and gap coverage over time. Updated automatically when new blogs are created via blog_folder_creator.py.",
+    "last_updated": "2026-05-15",
+    "version": "1.0"
+  },
+  "clusters": {
+    "Laptop How-To": {
+      "authority_goal": "Rank for all common laptop troubleshooting and how-to searches in India",
+      "pillar_blog": null,
+      "spoke_blogs": [
+        "/blogs/insights/how-to-check-laptop-battery-health-simple-ways-to-know-when-it-s-time-to-replace-or-upgrade",
+        "/blogs/insights/how-to-format-a-laptop-safely",
+        "/blogs/insights/how-to-speed-up-a-laptop",
+        "/blogs/insights/how-to-transfer-photos-from-iphone-to-laptop",
+        "/blogs/insights/how-to-take-a-screenshot-on-a-laptop"
+      ],
+      "collection_pages": ["/collections/laptops"],
+      "blog_count": 5,
+      "gap_articles": [],
+      "cannibalization_notes": "No pillar defined. Articles are flat — consider creating a 'Laptop Maintenance Guide' pillar.",
+      "last_updated": "2026-05-15"
+    },
+    "Laptop Buying Guide — Students": {
+      "authority_goal": "Be the top resource for student laptop buying in India across all streams/courses",
+      "pillar_blog": "/blogs/insights/your-college-stream-decides-your-laptop-heres-the-complete-guide",
+      "spoke_blogs": [
+        "/blogs/insights/laptop-buying-guide-india-2025",
+        "/blogs/insights/best-laptop-for-coding-and-programming-india",
+        "/blogs/insights/best-laptop-for-graphic-design-in-india",
+        "/blogs/insights/best-laptop-for-video-editing",
+        "/blogs/insights/best-laptop-for-mba-students-india-2026",
+        "/blogs/insights/best-laptop-for-online-classes-india",
+        "/blogs/insights/best-laptop-for-ca-students-india-2026",
+        "/blogs/insights/best-laptop-for-engineering-students-in-india-2026"
+      ],
+      "collection_pages": ["/collections/student-laptop", "/collections/laptops"],
+      "blog_count": 9,
+      "gap_articles": [],
+      "cannibalization_notes": "BLOG-022 is pillar. All spokes must link back to it. BLOG-009 (coding) overlaps with BLOG-028 (engineering) — differentiate by use-case depth.",
+      "last_updated": "2026-05-15"
+    },
+    "Laptop Buying Guide — Professional": {
+      "authority_goal": "Rank for business and professional laptop searches — B2B and WFH segments",
+      "pillar_blog": null,
+      "spoke_blogs": [
+        "/blogs/insights/best-laptops-for-work-from-home",
+        "/blogs/insights/hp-zbook-workstation-laptop-in-india"
+      ],
+      "collection_pages": ["/collections/business-laptops"],
+      "blog_count": 2,
+      "gap_articles": [
+        {
+          "topic": "Best HP Laptop for Office Use India 2026",
+          "target_keyword": "HP laptop for office use india",
+          "priority": "HIGH",
+          "supports_collection": "/collections/business-laptops"
+        }
+      ],
+      "cannibalization_notes": "Thin cluster. ZBook is a specific product guide. WFH is a use-case guide. Neither covers the broad office/business buying guide.",
+      "last_updated": "2026-05-15"
+    },
+    "Gaming Laptops": {
+      "authority_goal": "Rank for all gaming laptop price-range and comparison searches in India",
+      "pillar_blog": null,
+      "spoke_blogs": [],
+      "collection_pages": [
+        "/collections/gaming-laptops",
+        "/collections/hp-victus-gaming-laptop",
+        "/collections/hp-omen-laptop",
+        "/collections/best-gaming-laptop-under-70000",
+        "/collections/best-gaming-laptop-under-1-lakh"
+      ],
+      "blog_count": 0,
+      "gap_articles": [
+        {
+          "topic": "Best Gaming Laptop Under 70000 in India 2026",
+          "target_keyword": "best gaming laptop under 70000",
+          "priority": "HIGH",
+          "supports_collection": "/collections/best-gaming-laptop-under-70000",
+          "intent": "informational — buying guide supporting collection"
+        },
+        {
+          "topic": "Best Gaming Laptop Under 1 Lakh in India 2026",
+          "target_keyword": "best gaming laptop under 1 lakh",
+          "priority": "HIGH",
+          "supports_collection": "/collections/best-gaming-laptop-under-1-lakh",
+          "intent": "informational — buying guide supporting collection"
+        },
+        {
+          "topic": "HP Victus vs HP Omen — Which Gaming Laptop Should You Buy?",
+          "target_keyword": "HP Victus vs HP Omen",
+          "priority": "MEDIUM",
+          "supports_collection": "/collections/gaming-laptops",
+          "intent": "comparison"
+        }
+      ],
+      "cannibalization_notes": "No blog coverage at all. Collection pages own the transactional keywords. Blogs must be informational/comparison guides that link to collections.",
+      "last_updated": "2026-05-15"
+    },
+    "HP OmniBook": {
+      "authority_goal": "Be discoverable for all HP OmniBook searches — new hero product line",
+      "pillar_blog": null,
+      "spoke_blogs": [],
+      "collection_pages": ["/collections/laptops"],
+      "blog_count": 0,
+      "gap_articles": [
+        {
+          "topic": "HP OmniBook X Review India — Snapdragon X Elite Laptop",
+          "target_keyword": "HP OmniBook X review india",
+          "priority": "HIGH",
+          "supports_collection": "/collections/laptops",
+          "intent": "informational — product review"
+        },
+        {
+          "topic": "HP OmniBook 5 vs OmniBook X — Which Should You Buy?",
+          "target_keyword": "HP OmniBook 5 vs OmniBook X",
+          "priority": "MEDIUM",
+          "supports_collection": "/collections/laptops",
+          "intent": "comparison"
+        }
+      ],
+      "cannibalization_notes": "No coverage. New product line. No internal competition risk.",
+      "last_updated": "2026-05-15"
+    },
+    "Business IT": {
+      "authority_goal": "Rank for B2B/office laptop and desktop searches — capture business buyers",
+      "pillar_blog": null,
+      "spoke_blogs": [],
+      "collection_pages": ["/collections/business-laptops", "/collections/business-desktops"],
+      "blog_count": 0,
+      "gap_articles": [
+        {
+          "topic": "Best HP Laptop for Office Use India 2026",
+          "target_keyword": "HP laptop for office use india",
+          "priority": "HIGH",
+          "supports_collection": "/collections/business-laptops",
+          "intent": "informational — buying guide"
+        },
+        {
+          "topic": "HP Laptop for Business — B2B Buying Guide India",
+          "target_keyword": "HP laptop for business india",
+          "priority": "HIGH",
+          "supports_collection": "/collections/business-laptops",
+          "intent": "informational — buying guide"
+        }
+      ],
+      "cannibalization_notes": "No coverage. Distinct from Professional cluster (which covers WFH/ZBook). Business IT = office buyers + B2B procurement.",
+      "last_updated": "2026-05-15"
+    },
+    "Printers": {
+      "authority_goal": "Rank for all printer buying and troubleshooting searches in India",
+      "pillar_blog": "/blogs/insights/printer-buying-guide-india-how-to-choose-the-best-printer-for-your-home-or-office",
+      "spoke_blogs": [
+        "/blogs/insights/laser-printer-vs-inkjet-what-kind-of-printer-do-you-really-need",
+        "/blogs/insights/best-printer-for-home-india"
+      ],
+      "collection_pages": ["/collections/printers", "/collections/home-office-printers", "/collections/laser-printers", "/collections/wireless-printers", "/collections/all-in-one-printers"],
+      "blog_count": 3,
+      "gap_articles": [],
+      "cannibalization_notes": "Pillar (BLOG-002) = broad guide. BLOG-001 = top-of-funnel comparison. BLOG-017 = bottom-of-funnel home-specific. All three should link to each other with clear hierarchy.",
+      "last_updated": "2026-05-15"
+    },
+    "Large Format Printers": {
+      "authority_goal": "Rank for HP DesignJet and large format printer searches — architects/engineers segment",
+      "pillar_blog": null,
+      "spoke_blogs": [],
+      "collection_pages": ["/collections/large-format-printer"],
+      "blog_count": 0,
+      "gap_articles": [
+        {
+          "topic": "HP DesignJet Plotter Printer — Buying Guide for Architects & Engineers India",
+          "target_keyword": "HP DesignJet price india",
+          "priority": "MEDIUM",
+          "supports_collection": "/collections/large-format-printer",
+          "intent": "informational — buying guide"
+        }
+      ],
+      "cannibalization_notes": "No coverage. 10 products, 1 collection. B2B-leaning audience.",
+      "last_updated": "2026-05-15"
+    },
+    "ELV Products": {
+      "authority_goal": "Rank for all ELV product searches — smart locks, robots, barriers, intercoms",
+      "pillar_blog": "/blogs/insights/best-smart-door-locks-in-india-2026",
+      "spoke_blogs": [
+        "/blogs/insights/which-digital-door-lock-is-right-for-your-space"
+      ],
+      "collection_pages": ["/collections/smart-lock", "/collections/robotic-vacuum-cleaner", "/collections/parking-barrier", "/collections/dahua", "/collections/elv-appliances"],
+      "blog_count": 2,
+      "gap_articles": [
+        {
+          "topic": "Best Robotic Vacuum Cleaner India 2026",
+          "target_keyword": "best robotic vacuum cleaner india",
+          "priority": "HIGH",
+          "supports_collection": "/collections/robotic-vacuum-cleaner",
+          "intent": "informational — buying guide"
+        },
+        {
+          "topic": "Automatic Parking Barriers India — Complete Buying Guide",
+          "target_keyword": "automatic parking barrier india",
+          "priority": "HIGH",
+          "supports_collection": "/collections/parking-barrier",
+          "intent": "informational — buying guide"
+        },
+        {
+          "topic": "Dahua Video Intercom Systems India — Features, Price & Where to Buy",
+          "target_keyword": "dahua video intercom india",
+          "priority": "HIGH",
+          "supports_collection": "/collections/dahua",
+          "intent": "informational — product guide"
+        }
+      ],
+      "cannibalization_notes": "CRITICAL: BLOG-020 (best smart door locks) vs BLOG-024 (which door lock) are cannibalizing. Assign BLOG-020 as pillar. BLOG-024 must link to BLOG-020. Future ELV blogs should target subcategories (robots, barriers, Dahua) separately.",
+      "last_updated": "2026-05-15"
+    },
+    "Accessories": {
+      "authority_goal": "Rank for HP accessory searches — bags, keyboards, mice, headsets, USB drives",
+      "pillar_blog": null,
+      "spoke_blogs": [
+        "/blogs/insights/why-use-hp-laptop-bag-travel-protection"
+      ],
+      "collection_pages": ["/collections/accessories", "/collections/laptop-bags", "/collections/mouse-keyboard", "/collections/audio-headsets", "/collections/chargers-cable", "/collections/usb-drives"],
+      "blog_count": 1,
+      "gap_articles": [
+        {
+          "topic": "Best HP Wireless Keyboard and Mouse Combo India 2026",
+          "target_keyword": "HP wireless keyboard mouse india",
+          "priority": "MEDIUM",
+          "supports_collection": "/collections/mouse-keyboard",
+          "intent": "informational — buying guide"
+        }
+      ],
+      "cannibalization_notes": "Only 1 article (HP bag). Broad category with 40+ products uncovered.",
+      "last_updated": "2026-05-15"
+    },
+    "Desktops AIO": {
+      "authority_goal": "Rank for HP desktop and all-in-one desktop searches nationally",
+      "pillar_blog": null,
+      "spoke_blogs": [],
+      "collection_pages": ["/collections/all-in-one", "/collections/desktops", "/collections/business-desktops", "/collections/personal-desktops"],
+      "blog_count": 0,
+      "gap_articles": [
+        {
+          "topic": "Best HP All-in-One Desktop in India 2026",
+          "target_keyword": "best HP all in one desktop india",
+          "priority": "MEDIUM",
+          "supports_collection": "/collections/all-in-one",
+          "intent": "informational — buying guide"
+        }
+      ],
+      "cannibalization_notes": "Only local Ahmedabad article exists (in Local SEO cluster). No national AIO guide.",
+      "last_updated": "2026-05-15"
+    },
+    "Local SEO": {
+      "authority_goal": "Rank for 'HP laptop/printer/desktop + city' searches across Ahmedabad and Rajkot",
+      "pillar_blog": null,
+      "spoke_blogs": [
+        "/blogs/insights/desktop-computers-ahmedabad-hp-desktops",
+        "/blogs/insights/hp-printers-ahmedabad"
+      ],
+      "collection_pages": [
+        "/pages/hp-world-navrangpura",
+        "/pages/hp-world-maninagar",
+        "/pages/hp-world-chandkheda",
+        "/pages/hp-world-prahlad-nagar",
+        "/pages/hp-world-vastral",
+        "/pages/hp-world-rajkot-tagore-road"
+      ],
+      "blog_count": 2,
+      "gap_articles": [
+        {
+          "topic": "HP Laptops in Ahmedabad — Buy at HP World Stores",
+          "target_keyword": "HP laptop ahmedabad",
+          "priority": "HIGH",
+          "supports_collection": "/pages/hp-world-navrangpura",
+          "intent": "local commercial"
+        },
+        {
+          "topic": "HP Store Rajkot — Laptops, Printers & Accessories at HP World Tagore Road",
+          "target_keyword": "HP laptop rajkot",
+          "priority": "HIGH",
+          "supports_collection": "/pages/hp-world-rajkot-tagore-road",
+          "intent": "local commercial"
+        }
+      ],
+      "cannibalization_notes": "Ahmedabad covered for desktops and printers. Laptop + Ahmedabad and all Rajkot local content missing.",
+      "last_updated": "2026-05-15"
+    },
+    "Services": {
+      "authority_goal": "Rank for HP laptop repair, upgrade, and service center searches in Ahmedabad/Rajkot",
+      "pillar_blog": null,
+      "spoke_blogs": [],
+      "collection_pages": ["/pages/laptop-service"],
+      "blog_count": 0,
+      "gap_articles": [
+        {
+          "topic": "HP Laptop Service Center Ahmedabad — Repair, RAM & SSD Upgrade",
+          "target_keyword": "HP laptop service center ahmedabad",
+          "priority": "MEDIUM",
+          "supports_collection": "/pages/laptop-service",
+          "intent": "local commercial"
+        }
+      ],
+      "cannibalization_notes": "No blog coverage. 6 service products with no search-visible support content.",
+      "last_updated": "2026-05-15"
+    },
+    "Tech Guide": {
+      "authority_goal": "Rank for technology explanation and comparison searches relevant to HP products",
+      "pillar_blog": null,
+      "spoke_blogs": [
+        "/blogs/insights/best-processor-for-laptops-2025",
+        "/blogs/insights/laptop-prices-increase-2026",
+        "/blogs/insights/what-is-an-ai-pc-2026",
+        "/blogs/insights/laptop-vs-desktop-what-should-you-buy-in-2026"
+      ],
+      "collection_pages": ["/collections/laptops", "/collections/desktops"],
+      "blog_count": 4,
+      "gap_articles": [],
+      "cannibalization_notes": "4 articles, reasonable coverage. No pillar defined. Consider 'HP Laptop Technology Guide' as pillar.",
+      "last_updated": "2026-05-15"
+    },
+    "Price Guide": {
+      "authority_goal": "Support price-based collection pages with informational guide content",
+      "pillar_blog": null,
+      "spoke_blogs": [],
+      "collection_pages": [
+        "/collections/best-laptop-under-40000",
+        "/collections/best-laptop-under-50000",
+        "/collections/best-laptop-under-60000",
+        "/collections/best-gaming-laptop-under-70000",
+        "/collections/best-gaming-laptop-under-1-lakh"
+      ],
+      "blog_count": 0,
+      "gap_articles": [
+        {
+          "topic": "Best Laptop Under 40000 in India 2026 — HP Options Compared",
+          "target_keyword": "best laptop under 40000 india 2026",
+          "priority": "HIGH",
+          "supports_collection": "/collections/best-laptop-under-40000",
+          "intent": "informational — price guide supporting collection",
+          "note": "Blog must NOT target same transactional keyword as collection. Angle: 'which features matter at this price point'"
+        }
+      ],
+      "cannibalization_notes": "Price-based collections own the transactional keyword. Blog articles must take an INFORMATIONAL angle (features at this price, what to expect) not a direct shopping list.",
+      "last_updated": "2026-05-15"
+    }
+  },
+  "authority_score_by_cluster": {
+    "Laptop How-To": {"score": 7, "note": "Strong how-to coverage"},
+    "Laptop Buying Guide — Students": {"score": 9, "note": "Best covered cluster — 9 articles with pillar"},
+    "Laptop Buying Guide — Professional": {"score": 3, "note": "Only 2 articles, no broad office guide"},
+    "Gaming Laptops": {"score": 0, "note": "Zero coverage despite major product catalog"},
+    "HP OmniBook": {"score": 0, "note": "New product line, zero blog support"},
+    "Business IT": {"score": 0, "note": "No B2B content at all"},
+    "Printers": {"score": 6, "note": "3 articles with clear pillar/spoke structure"},
+    "Large Format Printers": {"score": 0, "note": "10 products, zero blog coverage"},
+    "ELV Products": {"score": 3, "note": "2 articles but cannibalization risk on smart locks"},
+    "Accessories": {"score": 1, "note": "Only 1 article (HP bag)"},
+    "Desktops AIO": {"score": 1, "note": "Only local Ahmedabad article"},
+    "Local SEO": {"score": 3, "note": "Ahmedabad partial, Rajkot missing entirely"},
+    "Services": {"score": 0, "note": "No supporting blog content"},
+    "Tech Guide": {"score": 6, "note": "4 relevant tech articles"},
+    "Price Guide": {"score": 0, "note": "Price collections have no blog support"}
+  }
+}

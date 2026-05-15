@@ -1,8 +1,20 @@
 {
   "_meta": {
-    "description": "Final selected blog topics after SEMrush validation. Claude populates this after analyzing the uploaded SEMrush report.",
+    "description": "Final selected blog topics after SEMrush validation. Each topic is memory-validated: checked against existing blogs, collection pages, and topical authority map before selection. Claude populates this after analyzing the uploaded SEMrush report.",
     "last_updated": null,
-    "selection_round": 0
+    "selection_round": 0,
+    "memory_rules": {
+      "collection_pages_own_transactional_keywords": true,
+      "blogs_must_support_a_collection": true,
+      "cannibalization_check_required": true,
+      "all_required_fields": [
+        "target_page_type",
+        "parent_cluster",
+        "supported_collection_page",
+        "cannibalization_risk",
+        "internal_link_targets"
+      ]
+    }
   },
   "selected_topics": []
 }
