@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "description": "Extracted URLs from the Innova Retail sitemap. Populated by scripts/sitemap_fetcher.py",
+    "last_fetched": null,
+    "sitemap_url": "TODO: fill in from config/site-config.json",
+    "total_urls": 0
+  },
+  "blog_urls": [],
+  "product_urls": [],
+  "collection_urls": [],
+  "other_urls": [],
+  "content_gaps": []
+}

@@ -1,0 +1,8 @@
+{
+  "_meta": {
+    "description": "Master content index for Innova Retail. Every blog created by this system is tracked here. Claude checks this file before writing new content to avoid keyword cannibalization.",
+    "last_updated": "2026-05-15",
+    "total_blogs": 0
+  },
+  "blogs": []
+}

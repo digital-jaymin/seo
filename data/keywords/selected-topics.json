@@ -1,0 +1,8 @@
+{
+  "_meta": {
+    "description": "Final selected blog topics after SEMrush validation. Claude populates this after analyzing the uploaded SEMrush report.",
+    "last_updated": null,
+    "selection_round": 0
+  },
+  "selected_topics": []
+}

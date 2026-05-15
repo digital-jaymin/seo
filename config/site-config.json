@@ -1,0 +1,45 @@
+{
+  "website_name": "Innova Retail",
+  "website_url": "TODO: https://www.innovaretail.in",
+  "sitemap_url": "TODO: https://www.innovaretail.in/sitemap.xml",
+  "target_country": "India",
+  "target_language": "English",
+  "business_niche": "HP laptops, desktops, accessories, business IT products, office laptops, commercial laptop buying, B2B laptop supply, laptop price trends, laptop guides, laptop comparisons, ELV products including Smart Locks, Smart Cleaning Robots, Parking Barriers, Dahua products",
+  "core_product_categories": [
+    "HP Laptops",
+    "HP Desktops",
+    "HP Accessories",
+    "Business IT Products",
+    "Office Laptops",
+    "B2B Laptop Supply",
+    "Smart Locks",
+    "Smart Cleaning Robots",
+    "Parking Barriers",
+    "Dahua Products"
+  ],
+  "blog_goals": [
+    "Drive organic traffic for commercial laptop buying queries in India",
+    "Rank for B2B IT procurement and bulk laptop supply keywords",
+    "Build topical authority in HP products and business laptops",
+    "Support ELV product discovery through informational content",
+    "Generate inbound leads from comparison and buying guide content",
+    "Reduce customer acquisition cost through organic SEO"
+  ],
+  "target_audience": [
+    "Business owners buying laptops for office use",
+    "IT procurement managers in SMEs and enterprises",
+    "Schools and institutions buying in bulk",
+    "Retail buyers looking for HP laptops at best price in India",
+    "Facility managers looking for smart locks and parking solutions"
+  ],
+  "primary_competitors": [
+    "TODO: Add top 3 competitor domains here"
+  ],
+  "shopify_store_url": "TODO: https://your-store.myshopify.com",
+  "blog_section_handle": "TODO: news (or your Shopify blog handle)",
+  "publishing_mode": "manual approval required",
+  "auto_publish": false,
+  "min_qa_score": 85,
+  "content_language_tone": "professional, helpful, commercial — written for Indian B2B buyers",
+  "internal_link_base_url": "TODO: https://www.innovaretail.in"
+}

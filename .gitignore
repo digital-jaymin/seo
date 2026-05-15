@@ -1,0 +1,18 @@
+# Never commit real API keys
+config/api-keys.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# Logs
+logs/*.log
+output/*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
