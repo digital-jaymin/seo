@@ -1,0 +1,21 @@
+# Innova Retail — Static Page URLs
+# Source: https://innovaretail.co.in/sitemap_pages_1.xml
+# Extracted: 2026-05-15
+# Total: 9 pages
+# Note: Innova Retail has 6 HP World showrooms — Navrangpura, Maninagar, Chandkheda,
+#       Prahlad Nagar, Vastral (all Ahmedabad) + Rajkot Tagore Road
+
+# ── CONTACT & SHOWROOM ────────────────────────────────────────────────────────
+https://innovaretail.co.in/pages/contact
+https://innovaretail.co.in/pages/our-showroom
+
+# ── HP WORLD LOCATIONS (LOCAL SEO OPPORTUNITY) ────────────────────────────────
+https://innovaretail.co.in/pages/hp-world-navrangpura
+https://innovaretail.co.in/pages/hp-world-maninagar
+https://innovaretail.co.in/pages/hp-world-chandkheda
+https://innovaretail.co.in/pages/hp-world-prahlad-nagar
+https://innovaretail.co.in/pages/hp-world-vastral
+https://innovaretail.co.in/pages/hp-world-rajkot-tagore-road
+
+# ── SERVICES ──────────────────────────────────────────────────────────────────
+https://innovaretail.co.in/pages/laptop-service

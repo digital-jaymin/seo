@@ -1,1 +1,61 @@
 keyword,intent,cluster,source,commercial_score,informational_score,priority_score,semrush_volume,semrush_kd,semrush_cpc,status,notes
+best gaming laptop under 70000,commercial,Gaming Laptops,gap_analysis,9,3,8.5,,,, pending_semrush,Direct match to collection /collections/best-gaming-laptop-under-70000
+best gaming laptop under 1 lakh,commercial,Gaming Laptops,gap_analysis,9,3,8.5,,,, pending_semrush,Direct match to collection /collections/best-gaming-laptop-under-1-lakh
+best gaming laptop under 70000 in india,commercial,Gaming Laptops,gap_analysis,9,3,8.4,,,, pending_semrush,India-specific variant — high intent
+best gaming laptop under 1 lakh in india 2026,commercial,Gaming Laptops,gap_analysis,9,3,8.4,,,, pending_semrush,India-specific variant — high intent
+HP Victus vs HP Omen,informational,Gaming Laptops,gap_analysis,6,8,7.0,,,, pending_semrush,Comparison article — high engagement potential
+HP Victus laptop review,informational,Gaming Laptops,gap_analysis,7,7,7.2,,,, pending_semrush,Product-level review — drives to /collections/hp-victus-gaming-laptop
+HP Omen laptop India price,commercial,Gaming Laptops,gap_analysis,8,4,7.6,,,, pending_semrush,Drives to /collections/hp-omen-laptop
+gaming laptop for students india,commercial,Gaming Laptops,gap_analysis,8,5,7.8,,,, pending_semrush,Student + gaming crossover segment
+HP laptop for office use india,commercial,Business IT,gap_analysis,9,3,8.5,,,, pending_semrush,Core B2B keyword — no current coverage
+best laptop for office india 2026,commercial,Business IT,gap_analysis,9,3,8.4,,,, pending_semrush,Drives to /collections/business-laptops
+HP laptop for business india,commercial,Business IT,gap_analysis,8,4,7.9,,,, pending_semrush,B2B segment keyword
+best business laptop under 60000,commercial,Business IT,gap_analysis,8,4,7.8,,,, pending_semrush,Price-specific business variant
+HP laptop for ca office,commercial,Business IT,gap_analysis,7,5,7.2,,,, pending_semrush,Accountant/CA B2B keyword
+laptop for accountants india,commercial,Business IT,gap_analysis,7,5,7.0,,,, pending_semrush,Professional segment — B2B angle
+HP OmniBook X review india,informational,HP OmniBook,gap_analysis,7,8,7.5,,,, pending_semrush,New product line — zero competition currently
+HP OmniBook review,informational,HP OmniBook,gap_analysis,7,8,7.4,,,, pending_semrush,Broad OmniBook review keyword
+HP OmniBook 5 price india,commercial,HP OmniBook,gap_analysis,8,4,7.6,,,, pending_semrush,Product pricing keyword
+HP OmniBook X snapdragon,informational,HP OmniBook,gap_analysis,6,8,6.9,,,, pending_semrush,Tech-focused variant
+HP OmniBook vs MacBook Air,informational,HP OmniBook,gap_analysis,6,9,7.2,,,, pending_semrush,Comparison that drives discovery
+best robotic vacuum cleaner india,commercial,ELV Cleaning Robots,gap_analysis,8,4,7.6,,,, pending_semrush,Drives to /collections/robotic-vacuum-cleaner
+robotic vacuum cleaner price india,commercial,ELV Cleaning Robots,gap_analysis,8,4,7.5,,,, pending_semrush,High commercial intent — price research
+best robot vacuum cleaner under 20000 india,commercial,ELV Cleaning Robots,gap_analysis,8,4,7.4,,,, pending_semrush,Price-specific variant
+robotic mop india 2026,commercial,ELV Cleaning Robots,gap_analysis,7,5,7.0,,,, pending_semrush,Mop + vacuum combo segment
+automatic parking barrier india,commercial,ELV Parking Barriers,gap_analysis,8,4,7.5,,,, pending_semrush,Drives to /collections/parking-barrier
+boom barrier price india,commercial,ELV Parking Barriers,gap_analysis,8,3,7.4,,,, pending_semrush,Direct purchase intent keyword
+parking gate system ahmedabad,commercial,ELV Parking Barriers,gap_analysis,7,3,6.8,,,, pending_semrush,Local + commercial — strong conversion
+automatic boom barrier ahmedabad,commercial,ELV Parking Barriers,gap_analysis,7,3,6.7,,,, pending_semrush,Hyper-local commercial keyword
+dahua video intercom india,commercial,ELV Dahua,gap_analysis,8,4,7.5,,,, pending_semrush,Drives to /collections/dahua
+dahua intercom price india,commercial,ELV Dahua,gap_analysis,8,3,7.4,,,, pending_semrush,Price research keyword
+video door phone india price,commercial,ELV Dahua,gap_analysis,7,4,7.0,,,, pending_semrush,Broader category — Dahua is a supplier
+IP intercom system india,commercial,ELV Dahua,gap_analysis,7,5,7.0,,,, pending_semrush,B2B/commercial building segment
+dahua intercom ahmedabad,commercial,ELV Dahua,gap_analysis,7,3,6.8,,,, pending_semrush,Local + commercial combination
+best HP all in one desktop india,commercial,Desktops AIO,gap_analysis,8,4,7.6,,,, pending_semrush,Drives to /collections/all-in-one
+HP all in one desktop price india,commercial,Desktops AIO,gap_analysis,8,3,7.5,,,, pending_semrush,High commercial intent — AIO segment
+all in one computer india 2026,commercial,Desktops AIO,gap_analysis,7,5,7.0,,,, pending_semrush,Broad AIO desktop category
+HP desktop computer price india,commercial,Desktops AIO,gap_analysis,8,3,7.4,,,, pending_semrush,General HP desktop pricing
+HP DesignJet price india,commercial,Large Format Printers,gap_analysis,8,3,7.5,,,, pending_semrush,High ASP product — DesignJet is 10 products
+HP DesignJet plotter india,commercial,Large Format Printers,gap_analysis,7,4,7.0,,,, pending_semrush,Large format printing keyword
+large format printer india,commercial,Large Format Printers,gap_analysis,7,5,7.0,,,, pending_semrush,Broader category — architects and engineers
+HP plotter printer for architects india,commercial,Large Format Printers,gap_analysis,7,5,6.9,,,, pending_semrush,Professional niche keyword
+HP laptop ahmedabad,commercial,Local SEO,gap_analysis,8,3,7.5,,,, pending_semrush,Local SEO — laptop + city combination
+buy HP laptop ahmedabad,commercial,Local SEO,gap_analysis,9,2,7.8,,,, pending_semrush,High commercial local intent
+HP World ahmedabad,commercial,Local SEO,gap_analysis,8,3,7.4,,,, pending_semrush,Brand + location keyword
+HP laptop shop ahmedabad,commercial,Local SEO,gap_analysis,8,3,7.3,,,, pending_semrush,Local purchase intent
+HP laptop rajkot,commercial,Local SEO,gap_analysis,8,3,7.4,,,, pending_semrush,Rajkot currently has zero coverage
+HP store rajkot,commercial,Local SEO,gap_analysis,8,3,7.3,,,, pending_semrush,Brand + Rajkot location
+buy HP laptop rajkot,commercial,Local SEO,gap_analysis,9,2,7.7,,,, pending_semrush,High commercial local intent — Rajkot
+HP laptop service center ahmedabad,commercial,Services,gap_analysis,8,4,7.5,,,, pending_semrush,Drives to /pages/laptop-service
+laptop repair ahmedabad,commercial,Services,gap_analysis,7,4,7.0,,,, pending_semrush,Service-oriented keyword
+HP laptop repair ahmedabad,commercial,Services,gap_analysis,8,3,7.3,,,, pending_semrush,Brand-specific service keyword
+laptop upgrade ahmedabad,commercial,Services,gap_analysis,7,4,6.9,,,, pending_semrush,Upgrade service — RAM/SSD upgrades
+HP wireless keyboard mouse india,commercial,Accessories,gap_analysis,7,4,7.0,,,, pending_semrush,Drives to /collections/mouse-keyboard
+best HP headset india,commercial,Accessories,gap_analysis,7,4,6.9,,,, pending_semrush,Drives to /collections/audio-headsets
+HP USB drive india,commercial,Accessories,gap_analysis,7,3,6.8,,,, pending_semrush,Drives to /collections/usb-drives
+best laptop bag india,commercial,Accessories,gap_analysis,6,4,6.3,,,, pending_semrush,Broader — not HP-specific but relevant
+HP laptop charger india,commercial,Accessories,gap_analysis,7,3,6.7,,,, pending_semrush,Drives to /collections/chargers-cable
+what is snapdragon x elite laptop,informational,Tech Guide,gap_analysis,4,9,6.0,,,, pending_semrush,Supports OmniBook X content
+best laptop under 40000 india 2026,commercial,Price Guide,gap_analysis,9,3,8.4,,,, pending_semrush,Direct match to /collections/best-laptop-under-40000
+best laptop under 50000 india 2026,commercial,Price Guide,gap_analysis,9,3,8.4,,,, pending_semrush,Direct match to /collections/best-laptop-under-50000
+best laptop under 60000 india 2026,commercial,Price Guide,gap_analysis,9,3,8.4,,,, pending_semrush,Direct match to /collections/best-laptop-under-60000

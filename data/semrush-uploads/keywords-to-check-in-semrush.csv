@@ -1,0 +1,41 @@
+keyword,priority_tier,cluster,why_check,expected_intent
+best gaming laptop under 70000,TIER-1,Gaming Laptops,Zero blog coverage — high revenue category. Direct collection match.,commercial
+best gaming laptop under 1 lakh,TIER-1,Gaming Laptops,Zero blog coverage — high revenue category. Direct collection match.,commercial
+best gaming laptop under 70000 in india,TIER-1,Gaming Laptops,India-specific — confirm volume vs non-India variant.,commercial
+best gaming laptop under 1 lakh in india 2026,TIER-1,Gaming Laptops,India-specific — confirm volume vs non-India variant.,commercial
+gaming laptop for students india,TIER-1,Gaming Laptops,Student + gaming crossover — high competition segment.,commercial
+HP Victus vs HP Omen,TIER-2,Gaming Laptops,Comparison content — check if informational or commercial intent dominates.,informational
+HP laptop for office use india,TIER-1,Business IT,No B2B content exists. Core commercial keyword.,commercial
+best laptop for office india 2026,TIER-1,Business IT,High-volume commercial — check KD before writing.,commercial
+HP laptop for business india,TIER-1,Business IT,B2B primary keyword — essential to validate.,commercial
+best business laptop under 60000,TIER-2,Business IT,Price-specific B2B keyword — validate volume.,commercial
+HP OmniBook X review india,TIER-1,HP OmniBook,New product line — check if search demand has built up yet.,informational
+HP OmniBook review,TIER-1,HP OmniBook,Broad product line review — validate volume.,informational
+HP OmniBook 5 price india,TIER-2,HP OmniBook,Product pricing keyword — check CPC for commercial value.,commercial
+HP OmniBook vs MacBook Air,TIER-2,HP OmniBook,Comparison keyword — check if volume justifies standalone article.,informational
+best robotic vacuum cleaner india,TIER-1,ELV Cleaning Robots,Zero coverage — validate volume before writing.,commercial
+robotic vacuum cleaner price india,TIER-1,ELV Cleaning Robots,High commercial intent — check CPC to assess revenue potential.,commercial
+best robot vacuum cleaner under 20000 india,TIER-2,ELV Cleaning Robots,Price-specific variant — check volume.,commercial
+automatic parking barrier india,TIER-1,ELV Parking Barriers,B2B niche — validate whether organic blog can rank.,commercial
+boom barrier price india,TIER-1,ELV Parking Barriers,Purchase intent keyword — check KD and CPC.,commercial
+parking gate system ahmedabad,TIER-2,ELV Parking Barriers,Hyper-local — check if volume exists for local keyword.,commercial
+dahua video intercom india,TIER-1,ELV Dahua,12 products with zero coverage — validate primary keyword.,commercial
+dahua intercom price india,TIER-1,ELV Dahua,Price research keyword — high commercial intent.,commercial
+video door phone india price,TIER-2,ELV Dahua,Broader category keyword — check if Dahua ranks here.,commercial
+IP intercom system india,TIER-2,ELV Dahua,B2B segment — validate volume for commercial buildings.,commercial
+best HP all in one desktop india,TIER-1,Desktops AIO,Only 1 local blog exists — need national AIO guide.,commercial
+HP all in one desktop price india,TIER-1,Desktops AIO,High commercial intent — validate before writing AIO guide.,commercial
+HP DesignJet price india,TIER-1,Large Format Printers,10 DesignJet products with zero coverage — validate.,commercial
+HP DesignJet plotter india,TIER-2,Large Format Printers,Plotter-specific variant — check KD.,commercial
+large format printer india,TIER-1,Large Format Printers,Broad category keyword — assess competition level.,commercial
+HP laptop ahmedabad,TIER-1,Local SEO,Local commercial keyword — check volume for city-specific article.,commercial
+buy HP laptop ahmedabad,TIER-1,Local SEO,High commercial local intent — validate before writing.,commercial
+HP laptop rajkot,TIER-1,Local SEO,Rajkot entirely uncovered — validate local volume.,commercial
+buy HP laptop rajkot,TIER-1,Local SEO,High commercial local intent — Rajkot.,commercial
+HP laptop service center ahmedabad,TIER-1,Services,6 service products with no blog support — validate.,commercial
+laptop repair ahmedabad,TIER-2,Services,Service-oriented local keyword — check volume.,commercial
+best laptop under 40000 india 2026,TIER-1,Price Guide,Collection exists but no supporting blog — validate volume.,commercial
+best laptop under 50000 india 2026,TIER-1,Price Guide,Collection exists but no supporting blog — validate volume.,commercial
+best laptop under 60000 india 2026,TIER-1,Price Guide,Collection exists but no supporting blog — validate volume.,commercial
+HP wireless keyboard mouse india,TIER-2,Accessories,14 keyboards/mice with no coverage — quick accessory article.,commercial
+best HP headset india,TIER-2,Accessories,11 headsets with no coverage.,commercial

@@ -1,41 +1,123 @@
 {
   "_meta": {
-    "description": "Extracted URLs from innovaretail.co.in sitemap. Pending local fetch — see manual-fetch-instructions.md.",
-    "last_fetched": null,
+    "description": "Full structured sitemap for innovaretail.co.in — manually extracted 2026-05-15",
+    "last_fetched": "2026-05-15",
     "sitemap_url": "https://innovaretail.co.in/sitemap.xml",
-    "fetch_status": "pending_local_run",
-    "total_urls": 0,
-    "notes": "Cloud environment blocks outbound HTTP. Run scripts/sitemap_fetcher.py locally and push the result."
+    "fetch_status": "manual_paste",
+    "totals": {
+      "products": 202,
+      "collections": 44,
+      "pages": 9,
+      "blogs": 28,
+      "blog_listing_pages": 1,
+      "grand_total": 284
+    }
   },
   "sitemap_index": {
-    "confirmed": false,
+    "confirmed": true,
     "nested_sitemaps": [
-      {
-        "url": "https://innovaretail.co.in/sitemap_products_1.xml",
-        "type": "products",
-        "status": "pending"
-      },
-      {
-        "url": "https://innovaretail.co.in/sitemap_collections_1.xml",
-        "type": "collections",
-        "status": "pending"
-      },
-      {
-        "url": "https://innovaretail.co.in/sitemap_pages_1.xml",
-        "type": "pages",
-        "status": "pending"
-      },
-      {
-        "url": "https://innovaretail.co.in/sitemap_blogs_1.xml",
-        "type": "blogs",
-        "status": "pending"
-      }
-    ],
-    "note": "These are Shopify's standard nested sitemaps — confirm actual structure after local fetch"
+      { "url": "https://innovaretail.co.in/sitemap_products_1.xml", "type": "products", "status": "fetched", "url_count": 202 },
+      { "url": "https://innovaretail.co.in/sitemap_collections_1.xml", "type": "collections", "status": "fetched", "url_count": 44 },
+      { "url": "https://innovaretail.co.in/sitemap_pages_1.xml", "type": "pages", "status": "fetched", "url_count": 9 },
+      { "url": "https://innovaretail.co.in/sitemap_blogs_1.xml", "type": "blogs", "status": "fetched", "url_count": 29 }
+    ]
   },
-  "blog_urls": [],
-  "product_urls": [],
-  "collection_urls": [],
-  "other_urls": [],
-  "content_gaps": []
+  "product_catalog_summary": {
+    "laptops_consumer": 33,
+    "laptops_gaming": 21,
+    "desktops_aio": 9,
+    "printers_standard": 12,
+    "printers_large_format": 10,
+    "ink_cartridges_bottles": 24,
+    "toner_cartridges_drums": 9,
+    "keyboards_mice": 14,
+    "headsets_audio": 11,
+    "laptop_bags": 9,
+    "chargers_power": 5,
+    "usb_pens_battery_monitor": 9,
+    "elv_smart_locks": 10,
+    "elv_cleaning_robots": 4,
+    "elv_parking_barriers": 4,
+    "elv_dahua_intercom": 12,
+    "services": 6
+  },
+  "collection_summary": {
+    "laptop_collections": 10,
+    "price_based_collections": 5,
+    "desktop_collections": 4,
+    "printer_collections": 6,
+    "ink_toner_collections": 4,
+    "accessory_collections": 6,
+    "elv_collections": 5,
+    "special_collections": 4
+  },
+  "blog_urls": [
+    { "url": "https://innovaretail.co.in/blogs/insights/laser-printer-vs-inkjet-what-kind-of-printer-do-you-really-need", "slug": "laser-printer-vs-inkjet-what-kind-of-printer-do-you-really-need", "topic": "Laser Printer vs Inkjet", "cluster": "Printers", "lastmod": "2025-10-30" },
+    { "url": "https://innovaretail.co.in/blogs/insights/printer-buying-guide-india-how-to-choose-the-best-printer-for-your-home-or-office", "slug": "printer-buying-guide-india-how-to-choose-the-best-printer-for-your-home-or-office", "topic": "Printer Buying Guide India", "cluster": "Printers", "lastmod": "2025-10-30" },
+    { "url": "https://innovaretail.co.in/blogs/insights/how-to-check-laptop-battery-health-simple-ways-to-know-when-it-s-time-to-replace-or-upgrade", "slug": "how-to-check-laptop-battery-health", "topic": "How to Check Laptop Battery Health", "cluster": "Laptop How-To", "lastmod": "2025-11-03" },
+    { "url": "https://innovaretail.co.in/blogs/insights/how-to-format-a-laptop-safely", "slug": "how-to-format-a-laptop-safely", "topic": "How to Format a Laptop Safely", "cluster": "Laptop How-To", "lastmod": "2025-11-03" },
+    { "url": "https://innovaretail.co.in/blogs/insights/how-to-speed-up-a-laptop", "slug": "how-to-speed-up-a-laptop", "topic": "How to Speed Up a Laptop", "cluster": "Laptop How-To", "lastmod": "2025-11-04" },
+    { "url": "https://innovaretail.co.in/blogs/insights/how-to-transfer-photos-from-iphone-to-laptop", "slug": "how-to-transfer-photos-from-iphone-to-laptop", "topic": "How to Transfer Photos from iPhone to Laptop", "cluster": "Laptop How-To", "lastmod": "2025-11-04" },
+    { "url": "https://innovaretail.co.in/blogs/insights/how-to-take-a-screenshot-on-a-laptop", "slug": "how-to-take-a-screenshot-on-a-laptop", "topic": "How to Take a Screenshot on a Laptop", "cluster": "Laptop How-To", "lastmod": "2025-11-05" },
+    { "url": "https://innovaretail.co.in/blogs/insights/laptop-buying-guide-india-2025", "slug": "laptop-buying-guide-india-2025", "topic": "Laptop Buying Guide India 2025", "cluster": "Laptop Buying Guide", "lastmod": "2025-11-12" },
+    { "url": "https://innovaretail.co.in/blogs/insights/best-laptop-for-coding-and-programming-india", "slug": "best-laptop-for-coding-and-programming-india", "topic": "Best Laptop for Coding India", "cluster": "Laptop Buying Guide — Students", "lastmod": "2025-11-27" },
+    { "url": "https://innovaretail.co.in/blogs/insights/best-processor-for-laptops-2025", "slug": "best-processor-for-laptops-2025", "topic": "Best Processor for Laptops 2025", "cluster": "Tech Guide", "lastmod": "2025-12-05" },
+    { "url": "https://innovaretail.co.in/blogs/insights/best-laptop-for-graphic-design-in-india", "slug": "best-laptop-for-graphic-design-in-india", "topic": "Best Laptop for Graphic Design India", "cluster": "Laptop Buying Guide — Students", "lastmod": "2025-12-08" },
+    { "url": "https://innovaretail.co.in/blogs/insights/best-laptop-for-video-editing", "slug": "best-laptop-for-video-editing", "topic": "Best Laptop for Video Editing", "cluster": "Laptop Buying Guide — Students", "lastmod": "2026-03-16" },
+    { "url": "https://innovaretail.co.in/blogs/insights/laptop-prices-increase-2026", "slug": "laptop-prices-increase-2026", "topic": "Laptop Prices Increase 2026", "cluster": "Market Trends", "lastmod": "2026-03-19" },
+    { "url": "https://innovaretail.co.in/blogs/insights/what-is-an-ai-pc-2026", "slug": "what-is-an-ai-pc-2026", "topic": "What Is an AI PC 2026", "cluster": "Tech Guide", "lastmod": "2026-01-22" },
+    { "url": "https://innovaretail.co.in/blogs/insights/best-laptop-for-mba-students-india-2026", "slug": "best-laptop-for-mba-students-india-2026", "topic": "Best Laptop for MBA Students India", "cluster": "Laptop Buying Guide — Students", "lastmod": "2026-02-20" },
+    { "url": "https://innovaretail.co.in/blogs/insights/laptop-vs-desktop-what-should-you-buy-in-2026", "slug": "laptop-vs-desktop-what-should-you-buy-in-2026", "topic": "Laptop vs Desktop 2026", "cluster": "Tech Guide", "lastmod": "2026-02-23" },
+    { "url": "https://innovaretail.co.in/blogs/insights/best-printer-for-home-india", "slug": "best-printer-for-home-india", "topic": "Best Printer for Home India", "cluster": "Printers", "lastmod": "2026-03-06" },
+    { "url": "https://innovaretail.co.in/blogs/insights/best-laptop-for-online-classes-india", "slug": "best-laptop-for-online-classes-india", "topic": "Best Laptop for Online Classes India", "cluster": "Laptop Buying Guide — Students", "lastmod": "2026-03-12" },
+    { "url": "https://innovaretail.co.in/blogs/insights/best-laptops-for-work-from-home", "slug": "best-laptops-for-work-from-home", "topic": "Best Laptops for Work From Home India", "cluster": "Laptop Buying Guide — Professional", "lastmod": "2026-03-13" },
+    { "url": "https://innovaretail.co.in/blogs/insights/best-smart-door-locks-in-india-2026", "slug": "best-smart-door-locks-in-india-2026", "topic": "Best Smart Door Locks India 2026", "cluster": "ELV Products", "lastmod": "2026-03-25" },
+    { "url": "https://innovaretail.co.in/blogs/insights/why-use-hp-laptop-bag-travel-protection", "slug": "why-use-hp-laptop-bag-travel-protection", "topic": "Why Use HP Laptop Bag", "cluster": "Accessories", "lastmod": "2026-04-23" },
+    { "url": "https://innovaretail.co.in/blogs/insights/your-college-stream-decides-your-laptop-heres-the-complete-guide", "slug": "your-college-stream-decides-your-laptop-heres-the-complete-guide", "topic": "College Stream Decides Your Laptop", "cluster": "Laptop Buying Guide — Students", "lastmod": "2026-04-22" },
+    { "url": "https://innovaretail.co.in/blogs/insights/hp-zbook-workstation-laptop-in-india", "slug": "hp-zbook-workstation-laptop-in-india", "topic": "HP ZBook Workstation Laptop India", "cluster": "Laptop Buying Guide — Professional", "lastmod": "2026-04-25" },
+    { "url": "https://innovaretail.co.in/blogs/insights/which-digital-door-lock-is-right-for-your-space", "slug": "which-digital-door-lock-is-right-for-your-space", "topic": "Which Digital Door Lock Is Right for Your Space", "cluster": "ELV Products", "lastmod": "2026-04-28" },
+    { "url": "https://innovaretail.co.in/blogs/insights/desktop-computers-ahmedabad-hp-desktops", "slug": "desktop-computers-ahmedabad-hp-desktops", "topic": "Desktop Computers Ahmedabad", "cluster": "Local SEO", "lastmod": "2026-05-04" },
+    { "url": "https://innovaretail.co.in/blogs/insights/hp-printers-ahmedabad", "slug": "hp-printers-ahmedabad", "topic": "HP Printers Ahmedabad", "cluster": "Local SEO", "lastmod": "2026-05-05" },
+    { "url": "https://innovaretail.co.in/blogs/insights/best-laptop-for-ca-students-india-2026", "slug": "best-laptop-for-ca-students-india-2026", "topic": "Best Laptop for CA Students India", "cluster": "Laptop Buying Guide — Students", "lastmod": "2026-05-12" },
+    { "url": "https://innovaretail.co.in/blogs/insights/best-laptop-for-engineering-students-in-india-2026", "slug": "best-laptop-for-engineering-students-in-india-2026", "topic": "Best Laptop for Engineering Students India", "cluster": "Laptop Buying Guide — Students", "lastmod": "2026-05-14" }
+  ],
+  "product_urls": [
+    "https://innovaretail.co.in/products/hp-spectre-x360-14-eu0556tu-ultra7-32gb-oled",
+    "https://innovaretail.co.in/products/hp-omnibook-x-snapdragon-x-elite-16gb-1tb-2-2k-touch-fe0121qu",
+    "https://innovaretail.co.in/products/hp-omnibook-x-flip-oled-ultra5-16gb-512gb-3k-touch-fm0058tu",
+    "https://innovaretail.co.in/products/hp-omnibook-5-i5-1334u-16gb-512gb-2k-16inch-ba1008tu",
+    "https://innovaretail.co.in/products/hp-victus-i7-13620h-rtx-5050-24gb-1tb-ssd-144hz-fa2309tx",
+    "https://innovaretail.co.in/products/hp-pavilion-x360-ek2033tu-i3-100u-8gb-512gb-14-touch",
+    "... (see products-urls.txt for full list)"
+  ],
+  "collection_urls": [
+    "https://innovaretail.co.in/collections/laptops",
+    "https://innovaretail.co.in/collections/business-laptops",
+    "https://innovaretail.co.in/collections/gaming-laptops",
+    "... (see collections-urls.txt for full list)"
+  ],
+  "other_urls": [
+    "https://innovaretail.co.in/pages/contact",
+    "https://innovaretail.co.in/pages/our-showroom",
+    "https://innovaretail.co.in/pages/hp-world-navrangpura",
+    "https://innovaretail.co.in/pages/hp-world-maninagar",
+    "https://innovaretail.co.in/pages/hp-world-chandkheda",
+    "https://innovaretail.co.in/pages/hp-world-prahlad-nagar",
+    "https://innovaretail.co.in/pages/hp-world-vastral",
+    "https://innovaretail.co.in/pages/hp-world-rajkot-tagore-road",
+    "https://innovaretail.co.in/pages/laptop-service"
+  ],
+  "content_gaps": [
+    { "cluster": "Gaming Laptops", "gap": "Zero blog coverage despite 21 gaming laptop products and 2 price-based gaming collections", "priority": "HIGH" },
+    { "cluster": "Business IT / B2B", "gap": "No blog covering HP laptop for office, business laptop buying, or B2B procurement", "priority": "HIGH" },
+    { "cluster": "HP OmniBook", "gap": "New product line (OmniBook 5/7/X) has 13+ products but zero dedicated review or guide", "priority": "HIGH" },
+    { "cluster": "ELV — Parking Barriers", "gap": "4 barrier products, 1 collection, zero blog coverage", "priority": "HIGH" },
+    { "cluster": "ELV — Cleaning Robots", "gap": "4 robot products, 1 collection, zero blog coverage", "priority": "HIGH" },
+    { "cluster": "ELV — Dahua Intercom", "gap": "12 Dahua products, zero blog coverage", "priority": "HIGH" },
+    { "cluster": "Desktops / AIO", "gap": "Only 1 local blog (Ahmedabad). No buying guide for AIO desktops nationally", "priority": "MEDIUM" },
+    { "cluster": "Large Format Printers", "gap": "10 DesignJet products, zero blog coverage", "priority": "MEDIUM" },
+    { "cluster": "Accessories", "gap": "Only 1 bag article. No content for keyboards, mice, headsets, USB drives", "priority": "MEDIUM" },
+    { "cluster": "Local SEO", "gap": "Ahmedabad covered for desktops and printers. Rajkot and laptop-specific local content missing", "priority": "MEDIUM" },
+    { "cluster": "Services", "gap": "6 service products (repair, upgrade) but zero blog supporting them", "priority": "MEDIUM" }
+  ]
 }

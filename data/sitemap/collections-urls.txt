@@ -1,0 +1,64 @@
+# Innova Retail — Collection URLs
+# Source: https://innovaretail.co.in/sitemap_collections_1.xml
+# Extracted: 2026-05-15
+# Total: 44 collections
+
+# ── LAPTOPS ───────────────────────────────────────────────────────────────────
+https://innovaretail.co.in/collections/laptops
+https://innovaretail.co.in/collections/business-laptops
+https://innovaretail.co.in/collections/gaming-laptops
+https://innovaretail.co.in/collections/student-laptop
+https://innovaretail.co.in/collections/touch-screen-laptop
+https://innovaretail.co.in/collections/convertible-laptops
+https://innovaretail.co.in/collections/hp-pavilion-laptop
+https://innovaretail.co.in/collections/hp-victus-gaming-laptop
+https://innovaretail.co.in/collections/hp-omen-laptop
+https://innovaretail.co.in/collections/hp-envy-laptops
+
+# ── PRICE-BASED COLLECTIONS (High SEO value) ──────────────────────────────────
+https://innovaretail.co.in/collections/best-laptop-under-40000
+https://innovaretail.co.in/collections/best-laptop-under-50000
+https://innovaretail.co.in/collections/best-laptop-under-60000
+https://innovaretail.co.in/collections/best-gaming-laptop-under-70000
+https://innovaretail.co.in/collections/best-gaming-laptop-under-1-lakh
+
+# ── DESKTOPS ──────────────────────────────────────────────────────────────────
+https://innovaretail.co.in/collections/desktops
+https://innovaretail.co.in/collections/all-in-one
+https://innovaretail.co.in/collections/business-desktops
+https://innovaretail.co.in/collections/personal-desktops
+
+# ── PRINTERS ──────────────────────────────────────────────────────────────────
+https://innovaretail.co.in/collections/printers
+https://innovaretail.co.in/collections/home-office-printers
+https://innovaretail.co.in/collections/laser-printers
+https://innovaretail.co.in/collections/wireless-printers
+https://innovaretail.co.in/collections/all-in-one-printers
+https://innovaretail.co.in/collections/large-format-printer
+
+# ── INK & TONER ───────────────────────────────────────────────────────────────
+https://innovaretail.co.in/collections/ink-cartridges
+https://innovaretail.co.in/collections/inkjet-cartridges
+https://innovaretail.co.in/collections/ink-bottles
+https://innovaretail.co.in/collections/toner-cartridges
+
+# ── ACCESSORIES ───────────────────────────────────────────────────────────────
+https://innovaretail.co.in/collections/accessories
+https://innovaretail.co.in/collections/laptop-bags
+https://innovaretail.co.in/collections/mouse-keyboard
+https://innovaretail.co.in/collections/audio-headsets
+https://innovaretail.co.in/collections/chargers-cable
+https://innovaretail.co.in/collections/usb-drives
+
+# ── ELV PRODUCTS ──────────────────────────────────────────────────────────────
+https://innovaretail.co.in/collections/smart-lock
+https://innovaretail.co.in/collections/robotic-vacuum-cleaner
+https://innovaretail.co.in/collections/elv-appliances
+https://innovaretail.co.in/collections/parking-barrier
+https://innovaretail.co.in/collections/dahua
+
+# ── SPECIAL COLLECTIONS ───────────────────────────────────────────────────────
+https://innovaretail.co.in/collections/new-launches
+https://innovaretail.co.in/collections/best-sellers
+https://innovaretail.co.in/collections/offers
+https://innovaretail.co.in/collections/ongc-special

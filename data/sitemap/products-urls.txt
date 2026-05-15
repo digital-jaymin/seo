@@ -1,0 +1,246 @@
+# Innova Retail — Product URLs
+# Source: https://innovaretail.co.in/sitemap_products_1.xml
+# Extracted: 2026-05-15
+# Total: 202 product URLs + 1 homepage
+# Categories: Laptops, Gaming Laptops, Desktops/AIO, Printers, Large Format Printers,
+#             Accessories, Ink/Toner, Smart Locks, Cleaning Robots, Parking Barriers,
+#             Dahua Intercom, Services, Monitor
+
+# ── HOMEPAGE ──────────────────────────────────────────────────────────────────
+https://innovaretail.co.in/
+
+# ── LAPTOPS (Consumer & Business) ─────────────────────────────────────────────
+https://innovaretail.co.in/products/hp-spectre-x360-14-eu0556tu-ultra7-32gb-oled
+https://innovaretail.co.in/products/hp-omnibook-x-snapdragon-x-elite-16gb-1tb-2-2k-touch-fe0121qu
+https://innovaretail.co.in/products/hp-omnibook-x-flip-oled-ultra5-16gb-512gb-3k-touch-fm0058tu
+https://innovaretail.co.in/products/hp-omnibook-5-i5-1334u-16gb-512gb-2k-16inch-ba1008tu
+https://innovaretail.co.in/products/hp-pavilion-x360-ek2033tu-i3-100u-8gb-512gb-14-touch
+https://innovaretail.co.in/products/hp-omnibook-5-16-ba1789tu-2k-touch-laptop
+https://innovaretail.co.in/products/hp-omnibook-5-laptop-16-ba1124tu-blue
+https://innovaretail.co.in/products/hp-omnibook-x-flip-ultra7-258v-3k-oled
+https://innovaretail.co.in/products/hp-omnibook-x-flip-ultra7-256v-3k-oled
+https://innovaretail.co.in/products/hp-laptop-15-fd0665tu-core5-16gb-512gb
+https://innovaretail.co.in/products/hp-laptop-15-fd0883tu-core-3-512gb-ssd
+https://innovaretail.co.in/products/hp-laptop-15-fc0500au-ryzen-3-512gb-ssd
+https://innovaretail.co.in/products/hp-15-fc0690au-ryzen-5-16gb-512gb-15-6-fhd
+https://innovaretail.co.in/products/hp-15-fc0761au-ryzen-7-16gb-512gb-15-6-fhd
+https://innovaretail.co.in/products/hp-15-fd0885tu-core-3-16gb-ddr5-512gb-15-6-fhd
+https://innovaretail.co.in/products/hp-15-fd1254tu-core-ultra-5-16gb-ddr5-512gb-15-6-ips
+https://innovaretail.co.in/products/hp-15-fd1458tu-core-ultra-5-24gb-1tb-touch-15-6
+https://innovaretail.co.in/products/hp-omnibook-5-flip-i5-16gb-512gb-14-2k-touch
+https://innovaretail.co.in/products/hp-omnibook-5-snapdragon-x-ai-16gb-1tb-oled-14
+https://innovaretail.co.in/products/hp-omnibook-7-ultra-7-32gb-1tb-3k-oled-14
+https://innovaretail.co.in/products/hp-omnibook-x-flip-ultra-5-16gb-1tb-3k-oled-touch
+https://innovaretail.co.in/products/hp-pavilion-plus-i5-16gb-512gb-14-2k
+https://innovaretail.co.in/products/hp-omnibook-5-oled-snapdragon-ai-14
+https://innovaretail.co.in/products/hp-15-core-i5-16gb-512gb-ssd-15-inch-fhd-laptop-fr0045tu
+https://innovaretail.co.in/products/hp-14-ep1181tu-ultra-7-24gb-1tb-ssd-laptop
+https://innovaretail.co.in/products/hp-15-fc0805au-ryzen-5-8gb-512gb-ssd-laptop
+https://innovaretail.co.in/products/hp-15-fd0682tu-core-5-16gb-512gb-15-6-fhd-laptop
+https://innovaretail.co.in/products/hp-15-fd0624tu-i3-13th-gen-8gb-512gb-ssd-15-6-inch-fhd
+https://innovaretail.co.in/products/hp-envy-13-ba1505tx-laptop-intel-core-i7-11th-gen-16gb-ram-1tb-ssd-mx450-2gb-13-3-fhd-windows-10
+https://innovaretail.co.in/products/hp-omnibook-5-next-gen-ai-16-ag1037au-ryzen-5-16gb-512gb-ssd-2k-display
+https://innovaretail.co.in/products/hp-omnibook-7-aero-next-gen-ai-13-bg1678au-16gb-512gb-wqxga-windows-11
+https://innovaretail.co.in/products/hp-omnibook-7-14-fs0789tu-35-6-cm-14-laptop-intel-core-i5-16gb-ram-512gb-ssd-windows-11-silver
+https://innovaretail.co.in/products/hp-omnibook-5-16-ag1087au-ryzen-ai-7-24gb-1tb-2k-touch-laptop
+
+# ── GAMING LAPTOPS ────────────────────────────────────────────────────────────
+https://innovaretail.co.in/products/hp-victus-i7-13620h-rtx-5050-24gb-1tb-ssd-144hz-fa2309tx
+https://innovaretail.co.in/products/hp-omen-16-i7-14650hx-rtx5050-24gb-1tb-am0241tx
+https://innovaretail.co.in/products/hp-victus-ryzen7-7445hs-rtx2050-16gb-512gb-fb3189ax
+https://innovaretail.co.in/products/hp-victus-i7-13620h-rtx4050-144hz-15-fa2103tx
+https://innovaretail.co.in/products/hp-victus-39-6-cm-15-6-gaming-laptop-15-fa2303tx-silver
+https://innovaretail.co.in/products/hyperx-omen-i7-14650hx-rtx5050-180hz-15-ga0028tx
+https://innovaretail.co.in/products/hp-omen-ryzen-9-rtx-5060-24gb-1tb-16-165hz-gaming-laptop
+https://innovaretail.co.in/products/hp-omen-ryzen-9-rtx-5070-24gb-1tb-16-240hz-gaming-laptop
+https://innovaretail.co.in/products/hp-victus-i5-rtx3050-16gb-512gb-144hz
+https://innovaretail.co.in/products/hp-victus-i5-rtx4050-16gb-512gb-144hz
+https://innovaretail.co.in/products/hp-victus-ryzen7-rtx4050-16gb-144hz
+https://innovaretail.co.in/products/hp-victus-ryzen7-rtx3050-16gb-144hz
+https://innovaretail.co.in/products/hp-omen-slim-gaming-laptop-16-an0012tx
+https://innovaretail.co.in/products/hp-omen-16-ultra7-rtx5060-24gb-1tb-2k-165hz
+https://innovaretail.co.in/products/hp-omen-i7-14650hx-rtx-5060-24gb-1tb-16-inch-2k-165hz-gaming-laptop
+https://innovaretail.co.in/products/hp-omen-16-ultra7-rtx5050-24gb-1tb-2k-165hz
+https://innovaretail.co.in/products/hp-omen-i9-rtx5060-24gb-1tb-16inch-165hz-gaming-laptop
+https://innovaretail.co.in/products/hp-omen-16-ryzen-ai-7-rtx-5060-24gb-1tb-2k-165hz
+https://innovaretail.co.in/products/hp-victus-i5-13420h-rtx3050-16gb-512ssd-144hz-gaming-laptop
+https://innovaretail.co.in/products/hp-victus-ryzen-7-rtx-2050-16gb-512gb-144hz-gaming-laptop
+https://innovaretail.co.in/products/hp-victus-15-fa2192tx-i5-16gb-ssd-rtx-3050-15-inch-fhd
+
+# ── DESKTOPS & ALL-IN-ONE ─────────────────────────────────────────────────────
+https://innovaretail.co.in/products/hp-24-cr0271in-all-in-one-ryzen-5-16gb-512gb-23-8-fhd
+https://innovaretail.co.in/products/hp-24-cr0903in-all-in-one-i3-8gb-512gb-23-8-fhd
+https://innovaretail.co.in/products/hp-24-cr0905in-all-in-one-i3-8gb-512gb-23-8-fhd
+https://innovaretail.co.in/products/hp-27-cr1009in-all-in-one-core-ultra-7-16gb-1tb-27-fhd
+https://innovaretail.co.in/products/hp-omnistudio-x-32-c0075in-4k-all-in-one-core-ultra-7-16gb-1tb
+https://innovaretail.co.in/products/hp-omnistudio-x-ultra-7-rtx4050-16gb-1tb-31-5-4k-aio-c0076in
+https://innovaretail.co.in/products/hp-27-inch-all-in-one-core-i3-8gb-512gb-windows-11-cr0906in-cr0906in
+https://innovaretail.co.in/products/hp-27-cr1418in-all-in-one-desktop-core-ultra-7-16gb-1tb-ssd
+https://innovaretail.co.in/products/hp-omen-16l-gaming-desktop-tg03-0008in-bx8r8pa-intel-core-i5-14th-gen-rtx-5060-16gb-ram-1tb-ssd-windows-11
+
+# ── PRINTERS (Inkjet / Laser / Tank) ──────────────────────────────────────────
+https://innovaretail.co.in/products/printer-laser-1008w-hp-714z9a
+https://innovaretail.co.in/products/printer-laser-mfp-1188w-hp-715a3a-1
+https://innovaretail.co.in/products/hp-smart-tank-580-1f3y2a-1
+https://innovaretail.co.in/products/hp-smart-tank-585-dark-surf-blue-1f3y4a-1
+https://innovaretail.co.in/products/hp-smart-tank-675-wifi-duplex-printer
+https://innovaretail.co.in/products/hp-smart-tank-790-adf-duplex-printer
+https://innovaretail.co.in/products/hp-laser-303dw-business-printer
+https://innovaretail.co.in/products/hp-deskjet-2989-all-in-one-printer
+https://innovaretail.co.in/products/hp-laserjet-m126nw-plus-printer
+https://innovaretail.co.in/products/hp-laser-mfp-323sdnw-printer
+https://innovaretail.co.in/products/hp-deskjet-ultra-4926-printer
+https://innovaretail.co.in/products/hp-smart-tank-584-all-in-one-printer-fast-printing-wifi-copy-scan-5d1c1a
+
+# ── LARGE FORMAT PRINTERS (DesignJet) ─────────────────────────────────────────
+https://innovaretail.co.in/products/hp-designjet-t230-24-inch-a1-large-format-printer-plotter-5hb07d
+https://innovaretail.co.in/products/hp-designjet-t230-24-inch-large-format-wireless-plotter-printer-5hb07a
+https://innovaretail.co.in/products/hp-designjet-t650-36-inch-a0-plotter-printer-5hb10d
+https://innovaretail.co.in/products/hp-designjet-t850-36-inch-a0-large-format-plotter-printer-2y9h2a
+https://innovaretail.co.in/products/hp-designjet-z6-44-inch-postscript-large-format-printer
+https://innovaretail.co.in/products/hp-designjet-xl-3800-36-inch-multifunction-printer
+https://innovaretail.co.in/products/hp-designjet-xl-3600-36-inch-multifunction-printer
+https://innovaretail.co.in/products/hp-laserjet-mfp-m72630dn-a3-monochrome-multifunction-printer-print-copy-scan-fax-duplex-ethernet-enterprise-use
+https://innovaretail.co.in/products/hp-laserjet-mfp-m438nda-a3-multifunction-printer
+https://innovaretail.co.in/products/hp-mfp-e78523dn-monochrome-laser-printer
+
+# ── INK CARTRIDGES & BOTTLES ──────────────────────────────────────────────────
+https://innovaretail.co.in/products/hp-47-tri-color-original-ink-cartridge
+https://innovaretail.co.in/products/hp-47-black-original-ink-cartridge-6zd21aa
+https://innovaretail.co.in/products/hp-46-black-original-ink-advantage-cartridge
+https://innovaretail.co.in/products/hp-46-tri-color-original-ink-advantage-cartridge
+https://innovaretail.co.in/products/hp-682-black-original-ink-advantage-cartridge
+https://innovaretail.co.in/products/hp-682-tri-color-original-ink-advantage-cartridge
+https://innovaretail.co.in/products/hp-678-black-original-ink-advantage-cartridge
+https://innovaretail.co.in/products/hp-678-tri-color-original-ink-advantage-cartridge
+https://innovaretail.co.in/products/hp-680-black-original-ink-advantage-cartridge
+https://innovaretail.co.in/products/hp-680-tri-color-original-ink-advantage-cartridge
+https://innovaretail.co.in/products/hp-704-tri-color-original-ink-advantage-cartridge
+https://innovaretail.co.in/products/hp-802-small-black-original-ink-cartridge
+https://innovaretail.co.in/products/hp-802-small-tri-color-original-ink-cartridge
+https://innovaretail.co.in/products/hp-803-tri-color-original-ink-cartridge
+https://innovaretail.co.in/products/hp-938-black-original-ink-cartridge-4s6x8pa
+https://innovaretail.co.in/products/hp-938-magenta-ink-cartridge
+https://innovaretail.co.in/products/ink-cartridge-685-cyan-hp-cz122aa
+https://innovaretail.co.in/products/ink-cartridge-685-yellow-hp-cz124aa
+https://innovaretail.co.in/products/cartridge-805-tri-color-originalink-3ym72aa
+https://innovaretail.co.in/products/hp-gt53-black-original-ink-bottle
+https://innovaretail.co.in/products/hp-gt53xl-black-ink-bottle
+https://innovaretail.co.in/products/hp-gt52-cyan-original-ink-bottle
+https://innovaretail.co.in/products/hp-gt52-magenta-original-ink-bottle
+https://innovaretail.co.in/products/hp-gt52-yellow-original-ink-bottle
+
+# ── TONER CARTRIDGES & DRUMS ──────────────────────────────────────────────────
+https://innovaretail.co.in/products/hp-158a-black-toner-reload-kit
+https://innovaretail.co.in/products/hp-158x-black-toner-reload-kit-w1580x
+https://innovaretail.co.in/products/toner-103ad-2pack-blk-toner-reload-w1103ad
+https://innovaretail.co.in/products/hp-416a-black-toner-cartridge
+https://innovaretail.co.in/products/hp-181x-black-toner-cartridge
+https://innovaretail.co.in/products/hp-181a-w1816a-imaging-drum
+https://innovaretail.co.in/products/hp-222a-black-toner-cartridge
+https://innovaretail.co.in/products/hp-30a-cf230a-black-toner-cartridge-cf230a
+https://innovaretail.co.in/products/hp-33a-cf233a-black-toner-cartridge
+
+# ── KEYBOARDS & MICE ──────────────────────────────────────────────────────────
+https://innovaretail.co.in/products/nb-pc-accessories-km250-wireless-keyboard-mouse-combo-7j4g7aa
+https://innovaretail.co.in/products/hp-gk320-rgb-mechanical-gaming-keyboard
+https://innovaretail.co.in/products/hp-gk320-mechanical-gaming-keyboard-4qn01aa
+https://innovaretail.co.in/products/nb-dt-keyboard-gaming-combo-gk1000-hp-3dr57pa-1
+https://innovaretail.co.in/products/hyperx-pulsefire-core-mouse-black-hxmc004b4p4f8aa
+https://innovaretail.co.in/products/km-160-wired-mouse-and-keyboard-combo-99y13aa
+https://innovaretail.co.in/products/hp-s500-wireless-mouse-7ya11pa
+https://innovaretail.co.in/products/hp-cs10-wireless-keyboard-mouse-combo
+https://innovaretail.co.in/products/hp-km260-wireless-keyboard-mouse-combo
+https://innovaretail.co.in/products/hp-m10-wired-usb-mouse-7ya10pa
+https://innovaretail.co.in/products/hp-400-quiet-wireless-mouse
+https://innovaretail.co.in/products/hp-400-quiet-wireless-mouse-black
+https://innovaretail.co.in/products/hp-km120-wired-keyboard-mouse-combo
+https://innovaretail.co.in/products/hp-m180-gaming-mouse-ab3c3aa
+
+# ── HEADSETS & AUDIO ──────────────────────────────────────────────────────────
+https://innovaretail.co.in/products/nb-headset-in-ear-100-ered-hp-1kf56aa
+https://innovaretail.co.in/products/headset-bluetooth-500-2j875aa-1
+https://innovaretail.co.in/products/headset-vl-icc-padpt-hp-poly-7w6b8aa
+https://innovaretail.co.in/products/hp-b4b09pa-wired-headphones
+https://innovaretail.co.in/products/nb-headset-bluetooth-600-black-hp-1sh06aa-1
+https://innovaretail.co.in/products/nb-headset-wired-omen-800-hp-1kf76aa-1
+https://innovaretail.co.in/products/headset-cloud-stinger-core-hyperx-4p5j8aa
+https://innovaretail.co.in/products/hp-h120-stereo-usb-headset-9z4v9aa
+https://innovaretail.co.in/products/hyperx-cloud-stinger-2-gaming-headset-519t1aa
+https://innovaretail.co.in/products/hyperx-cloudx-stinger-2-core-gaming-headset-6h9b8aa
+https://innovaretail.co.in/products/hyperx-cloudx-stinger-2-core-xbox-gaming-headset-6h9b7aa
+
+# ── LAPTOP BAGS & BACKPACKS ───────────────────────────────────────────────────
+https://innovaretail.co.in/products/hyperx-knight-gaming-backpack-8c525aa
+https://innovaretail.co.in/products/nb-backpack-pc-omen-tct-15-6-hp-7mt84aa
+https://innovaretail.co.in/products/nb-pc-accessories-hp-15-6-mod-lptp-bag-9j4c2aa
+https://innovaretail.co.in/products/hp-travel-25l-15-6-inch-laptop-backpack-6b8u4aa
+https://innovaretail.co.in/products/hp-120-15-6-inch-laptop-backpack-am5s4aa
+https://innovaretail.co.in/products/nb-backpack-220-15-6-hp-am5s5aa
+https://innovaretail.co.in/products/hp-creator-13-inch-laptop-sling-bag
+https://innovaretail.co.in/products/hp-campus-core-16-laptop-backpack
+https://innovaretail.co.in/products/hp-15-6-laptop-backpack-1d0m5aa
+
+# ── CHARGERS, ADAPTERS & POWER ────────────────────────────────────────────────
+https://innovaretail.co.in/products/hp-65w-4-5mm-non-em-ac-adapter
+https://innovaretail.co.in/products/hp-90w-smart-power-ac-adapter-w5d55aa
+https://innovaretail.co.in/products/adaptor-65w-7-4-ac-non-em-hp-y5y42aa
+https://innovaretail.co.in/products/nb-90w-smart-ac-adapter-new-hp-g6h43aa
+https://innovaretail.co.in/products/nb-usb-c-essential-power-bank-hp-hp-3tb55aa-1
+
+# ── USB DRIVES, PENS, BATTERY, MONITOR ────────────────────────────────────────
+https://innovaretail.co.in/products/hp-818w-128gb-usb-3-2-flash-drive
+https://innovaretail.co.in/products/hp-886c-64gb-otg-usb-32-flash-drive-an1j4aa
+https://innovaretail.co.in/products/hp-886c-64gb-otg-usb-3-2-flash-drive-an1j0aa
+https://innovaretail.co.in/products/hp-pen-1-51-3v2x4aa
+https://innovaretail.co.in/products/hvar-usi-active-rechargeable-pen-a-p-hp-8nn78aa
+https://innovaretail.co.in/products/nb-pen-hp-1mr94aa-1
+https://innovaretail.co.in/products/rc-mpp-2-0-tilt-sv-pen-hp-3j123aa
+https://innovaretail.co.in/products/notebook-battery-mc06062-hp-n2l86aa
+https://innovaretail.co.in/products/hp-series-5-27-fhd-monitor-527sf-27-94f45a6
+
+# ── SMART LOCKS (ELV) ─────────────────────────────────────────────────────────
+https://innovaretail.co.in/products/smart-digital-cabinet-lock-invs102-f
+https://innovaretail.co.in/products/smart-fingerprint-cabinet-lock-invc100-f
+https://innovaretail.co.in/products/smart-touch-keypad-cabinet-lock-invb20-ctfb
+https://innovaretail.co.in/products/smart-rim-door-lock-invr9
+https://innovaretail.co.in/products/smart-fingerprint-glass-door-lock-inva9
+https://innovaretail.co.in/products/smart-face-recognition-glass-door-lock-invg9
+https://innovaretail.co.in/products/smart-waterproof-key-box-invk7
+https://innovaretail.co.in/products/smart-waterproof-key-box-invk3
+https://innovaretail.co.in/products/smart-face-recognition-door-lock-invi6
+https://innovaretail.co.in/products/intelligent-fingerprint-door-lock-inva261
+
+# ── SMART CLEANING ROBOTS (ELV) ───────────────────────────────────────────────
+https://innovaretail.co.in/products/smart-sweeping-robot-inv01
+https://innovaretail.co.in/products/smart-self-cleaning-sweepert-inv02
+https://innovaretail.co.in/products/advanced-self-cleaning-sweepert-inv03
+https://innovaretail.co.in/products/smart-window-cleaning-robot-inv08
+
+# ── PARKING BARRIERS (ELV) ────────────────────────────────────────────────────
+https://innovaretail.co.in/products/innova-boom-barrier-inv-ac01-automatic-parking-system
+https://innovaretail.co.in/products/high-speed-parking-barrier-gate-inv-hdc-03
+https://innovaretail.co.in/products/innova-automatic-boom-barrier-inv-dc-02-with-dc-brushless-motor-adjustable-speed-control-5-million-cycles-life-ip44-protection
+https://innovaretail.co.in/products/innova-automatic-boom-barrier-inv-dc-01-with-120w-brushless-dc-motor-adjustable-speed-5-million-cycles-life-ip44-protection
+
+# ── DAHUA VIDEO INTERCOM ──────────────────────────────────────────────────────
+https://innovaretail.co.in/products/dahua-dhi-kth01-video-intercom-kit
+https://innovaretail.co.in/products/dahua-dhi-vts8340b-cg-master-station
+https://innovaretail.co.in/products/dahua-dhi-vto6541h-face-recognition-door-station
+https://innovaretail.co.in/products/kta02-video-intercom-kit-7-inch-monitor-1-3mp-door-station
+https://innovaretail.co.in/products/kta03-video-intercom-kit-7-inch-monitor-hd-door-station
+https://innovaretail.co.in/products/dahua-dhi-ktp02l-ip-villa-door-station-indoor-monitor-kit
+https://innovaretail.co.in/products/dahua-dhi-ktp03l-ip-video-intercom-kit
+https://innovaretail.co.in/products/dahua-dhi-vth2621g-p-ip-indoor-monitor
+https://innovaretail.co.in/products/vto2111d-p-s3-ip-villa-door-station
+https://innovaretail.co.in/products/dahua-dhi-vth2421fw-p-digital-vth-video-intercom-monitor
+https://innovaretail.co.in/products/dahua-vth5341g-w-android-ip-wifi-indoor-monitor
+https://innovaretail.co.in/products/vto3311q-wp-ip-wifi-villa-door-station
+
+# ── SERVICES ──────────────────────────────────────────────────────────────────
+https://innovaretail.co.in/products/laptop-inspection-repair
+https://innovaretail.co.in/products/laptop-service-cleaning-maintenance
+https://innovaretail.co.in/products/advanced-laptop-repair
+https://innovaretail.co.in/products/software-os-support
+https://innovaretail.co.in/products/upgrade-services-ram-ssd
+https://innovaretail.co.in/products/printer-repair-home-users
