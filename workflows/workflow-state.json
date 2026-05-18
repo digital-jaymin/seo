@@ -7,15 +7,15 @@
     "schema_version": "1.0",
     "last_updated": "2026-05-18",
     "blueprint_status": "approved",
-    "article_status": "draft_created — waiting for user review before HTML conversion"
+    "article_status": "reviewed_and_approved — ready for HTML conversion (Step 8)"
   },
   "current_state": {
-    "status": "waiting_for_review",
-    "current_stage": "article_draft_created",
-    "last_completed_stage": "article_draft_created",
-    "next_action": "review_article_then_convert_to_html",
-    "last_commit_hash": "7f2221c",
-    "last_commit_message": "feat: Step 5+6 complete — SERP analysis done, blueprint created for BLOG-029"
+    "status": "waiting_for_next_step",
+    "current_stage": "article_review_completed",
+    "last_completed_stage": "article_review_completed",
+    "next_action": "convert_reviewed_article_to_html",
+    "last_commit_hash": "7b016f7",
+    "last_commit_message": "feat: Step 7 complete — article draft created for BLOG-029"
   },
   "active_work": {
     "active_cluster": "gaming_laptops",
@@ -208,7 +208,7 @@
       "blog_id": "BLOG-029",
       "file": "blogs/drafts/hp-victus-vs-hp-omen/article.md",
       "word_count_estimate": "~2000",
-      "summary": "Article draft written. 9 H2 sections, spec comparison table, Buy Victus/Buy Omen verdict section, 5 FAQ questions (all 4 PAA + 1 related search), 3 CTA blocks, 6 internal links to all 5 approved collections plus service page. No fixed specs invented — 'depending on configuration' used throughout. Awaiting user review before HTML conversion (Step 8)."
+      "summary": "Article draft written and QA reviewed. 4 edits applied: DDR4/DDR5 qualifier added to RAM spec, Thermal Grizzly scoped to select models, HDMI version number removed, primary keyword added to intro. Price accuracy flagged for user verification before publish. Article approved for HTML conversion."
     }
   ],
   "cluster_queue": [

@@ -14,7 +14,7 @@ status: "draft"
 author: "Innova Retail Content Team"
 ---
 
-You have narrowed it down to two HP gaming laptops — the Victus and the Omen. Both run the same Intel and AMD processors. Both are sold as gaming machines. But one costs noticeably less. So what are you actually paying for when you go for the Omen, and is that difference worth it at Indian price points?
+The HP Victus vs HP Omen comparison is one of the most common questions Indian laptop buyers face today. Both are HP gaming laptops. Both run the same Intel and AMD processors. Both are sold as gaming machines. But one costs noticeably less. So what are you actually paying for when you go for the Omen, and is that difference worth it at Indian price points?
 
 At Innova Retail, we are an HP Authorized Reseller operating across Ahmedabad and Rajkot. We sell and service both the Victus and the Omen lines, and the question "which one should I buy?" is one we hear every single week. This guide answers that question honestly — not with benchmark numbers that go stale, but with practical buying advice based on what Indian customers actually need.
 
@@ -48,9 +48,9 @@ Both the Victus and Omen are available in multiple configurations, so no single 
 | Refresh Rate | 144Hz (most configs) | 144Hz–165Hz depending on configuration |
 | GPU Options | NVIDIA RTX 4050 / RTX 4060 | NVIDIA RTX 4060 / RTX 4070 / RTX 4080 |
 | CPU Options | Intel Core i5/i7 or AMD Ryzen 5/7 | Intel Core i7/i9 or AMD Ryzen 7/9 |
-| RAM | 8GB–16GB DDR5 (varies by config) | 16GB–32GB DDR5 (varies by config) |
+| RAM | 8GB–16GB DDR4/DDR5 (varies by config) | 16GB–32GB DDR4/DDR5 (varies by config) |
 | Storage | 512GB SSD (most configs) | 512GB–1TB SSD depending on configuration |
-| Cooling System | Dual-fan thermal design | Tempest Cooling with Thermal Grizzly compound |
+| Cooling System | Dual-fan thermal design | Tempest Cooling (Thermal Grizzly compound on select models) |
 | Chassis Material | Full plastic | Aluminum base with plastic lid |
 | Weight | ~2.2–2.4 kg depending on configuration | ~2.4–2.6 kg depending on configuration |
 | Battery Life (light use) | ~6–7 hours | ~5–6 hours |
@@ -85,7 +85,7 @@ The Victus offers a standard backlit keyboard — functional, no complaints. The
 
 **Ports**
 
-Both include the standard set: USB-A, USB-C, HDMI 2.1, headphone jack. The Omen adds a full-size SD card slot and, on select models, a second USB-C port with DisplayPort support — useful for dual-monitor setups or content creators.
+Both include the standard set: USB-A, USB-C, HDMI, headphone jack. The Omen adds a full-size SD card slot and, on select models, a second USB-C port with DisplayPort support — useful for dual-monitor setups or content creators.
 
 ---
 
