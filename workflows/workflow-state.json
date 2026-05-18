@@ -46,8 +46,9 @@
       "input_id": "SERP-001",
       "description": "SERP results for 'hp victus vs hp omen' — top 10 ranking pages, PAA questions, content gaps",
       "required_for": "blog_blueprint",
-      "blocked_reason": "No SERPAPI key found at config/api-keys.json",
-      "how_to_unblock": "Option A: Follow blogs/drafts/hp-victus-vs-hp-omen/manual-serp-research-instructions.md and paste findings to Claude. Option B: Add SERPAPI key to config/api-keys.json and run python scripts/serpapi_fetcher.py --keyword 'hp victus vs hp omen'",
+      "blocked_reason": "Cloud environment blocks all outbound HTTP — serpapi.com returns 403. Key is valid and reads correctly from config/api-keys.json.",
+      "how_to_unblock": "Option A (recommended): Run locally on your machine: python scripts/serpapi_fetcher.py --keyword 'hp victus vs hp omen' — this will write serp-analysis.json, commit and push it, and Claude can proceed to blueprint. Option B: Follow blogs/drafts/hp-victus-vs-hp-omen/manual-serp-research-instructions.md and paste findings to Claude.",
+      "serpapi_key_status": "configured and loading correctly — blocked only by cloud network policy",
       "instructions_file": "blogs/drafts/hp-victus-vs-hp-omen/manual-serp-research-instructions.md"
     }
   ],
