@@ -1,8 +1,12 @@
 {
   "_meta": {
-    "description": "Final selected blog topics after SEMrush validation. Each topic is memory-validated: checked against existing blogs, collection pages, and topical authority map before selection. Claude populates this after analyzing the uploaded SEMrush report.",
-    "last_updated": null,
-    "selection_round": 0,
+    "description": "Final selected blog topics after keyword validation. Each topic is memory-validated: checked against existing blogs, collection pages, and topical authority map before selection.",
+    "last_updated": "2026-05-18",
+    "selection_round": 1,
+    "validation_source": "Ubersuggest bulk analysis — 40 keywords validated 2026-05-18",
+    "selected_cluster": "Gaming Laptops",
+    "selection_rationale": "Only confirmed non-local high-volume keyword in validated set (hp victus vs hp omen, 140 vol, KD 9). Gaming cluster has 21 products, 5 collection pages, highest revenue gap, zero internal competition.",
+    "quick_win_standalone": "HP Laptop Service Center Ahmedabad — write in parallel (480 vol, KD 11, local commercial intent)",
     "memory_rules": {
       "collection_pages_own_transactional_keywords": true,
       "blogs_must_support_a_collection": true,
@@ -16,5 +20,220 @@
       ]
     }
   },
-  "selected_topics": []
+  "selected_topics": [
+    {
+      "article_order": 1,
+      "role": "cluster_anchor",
+      "title": "HP Victus vs HP Omen — Which Gaming Laptop Should You Buy in India?",
+      "proposed_slug": "hp-victus-vs-hp-omen-gaming-laptop-india",
+      "primary_keyword": "hp victus vs hp omen",
+      "secondary_keywords": [
+        "hp victus vs omen india",
+        "hp omen vs victus which is better",
+        "hp gaming laptop comparison india"
+      ],
+      "cluster": "Gaming Laptops",
+      "intent": "comparison",
+      "target_page_type": "blog",
+      "parent_cluster": "Gaming Laptops",
+      "supported_collection_page": "/collections/gaming-laptops",
+      "all_supported_collections": [
+        "/collections/gaming-laptops",
+        "/collections/hp-victus-gaming-laptop",
+        "/collections/hp-omen-laptop",
+        "/collections/best-gaming-laptop-under-70000",
+        "/collections/best-gaming-laptop-under-1-lakh"
+      ],
+      "cannibalization_risk": "none",
+      "cannibalization_check": "No published blog covers gaming laptops. Zero conflict.",
+      "internal_link_targets": [
+        "/collections/gaming-laptops",
+        "/collections/hp-victus-gaming-laptop",
+        "/collections/hp-omen-laptop",
+        "/collections/best-gaming-laptop-under-70000",
+        "/collections/best-gaming-laptop-under-1-lakh"
+      ],
+      "ubersuggest_volume": 140,
+      "ubersuggest_kd": 9,
+      "ubersuggest_cpc": "₹0.00",
+      "final_priority_score": 8.0,
+      "word_count_target": "1800-2200",
+      "cta_primary": "Browse HP Victus Gaming Laptops → /collections/hp-victus-gaming-laptop",
+      "cta_secondary": "Browse HP Omen Gaming Laptops → /collections/hp-omen-laptop",
+      "status": "approved_for_writing",
+      "why_selected": "Only confirmed-volume gaming keyword in validated set (140 vol, KD 9). Comparison intent avoids all collection page conflicts. Becomes the cluster pillar with all other gaming articles linking back to it.",
+      "content_angle": "Honest side-by-side comparison covering specs, performance, price, and use-case fit. NOT a product listing (that is the collection page's job)."
+    },
+    {
+      "article_order": 2,
+      "role": "cluster_spoke",
+      "title": "Gaming Laptop for College Students India 2026 — What to Look For",
+      "proposed_slug": "gaming-laptop-for-college-students-india",
+      "primary_keyword": "gaming laptop for college students india",
+      "secondary_keywords": [
+        "best gaming laptop for students india",
+        "gaming laptop for engineering students india",
+        "gaming laptop under 70000 for students"
+      ],
+      "cluster": "Gaming Laptops",
+      "intent": "buying_guide",
+      "target_page_type": "blog",
+      "parent_cluster": "Gaming Laptops",
+      "supported_collection_page": "/collections/gaming-laptops",
+      "all_supported_collections": [
+        "/collections/gaming-laptops",
+        "/collections/student-laptop",
+        "/collections/best-gaming-laptop-under-70000"
+      ],
+      "cannibalization_risk": "none",
+      "cannibalization_check": "Student cluster covers stream-specific guides. None cover gaming. No conflict.",
+      "internal_link_targets": [
+        "/collections/gaming-laptops",
+        "/collections/student-laptop",
+        "/collections/best-gaming-laptop-under-70000",
+        "hp-victus-vs-hp-omen-gaming-laptop-india",
+        "/blogs/insights/your-college-stream-decides-your-laptop-heres-the-complete-guide",
+        "/blogs/insights/laptop-buying-guide-india-2025"
+      ],
+      "ubersuggest_volume": 0,
+      "ubersuggest_kd": 4,
+      "ubersuggest_cpc": "₹0.00",
+      "volume_note": "Ubersuggest data gap — India long-tail keyword with real demand not captured by tool",
+      "final_priority_score": 7.4,
+      "word_count_target": "1500-2000",
+      "cta_primary": "Browse Gaming Laptops Under ₹70,000 → /collections/best-gaming-laptop-under-70000",
+      "status": "approved_for_writing",
+      "why_selected": "Bridges Gaming Laptops cluster (0 articles) with Student cluster (9 articles). Captures student gaming segment without conflicting with any existing content.",
+      "content_angle": "Guide for students who need a laptop that handles gaming AND classwork. Focus on value, portability, and battery — not raw performance benchmarks."
+    },
+    {
+      "article_order": 3,
+      "role": "cluster_spoke",
+      "title": "What Specs Do You Really Need for a Gaming Laptop in India?",
+      "proposed_slug": "gaming-laptop-specs-guide-india",
+      "primary_keyword": "what specs do i need for a gaming laptop india",
+      "secondary_keywords": [
+        "gaming laptop specs guide india",
+        "gaming laptop gpu ram storage india",
+        "minimum specs gaming laptop india"
+      ],
+      "cluster": "Gaming Laptops",
+      "intent": "educational",
+      "target_page_type": "blog",
+      "parent_cluster": "Gaming Laptops",
+      "supported_collection_page": "/collections/gaming-laptops",
+      "all_supported_collections": [
+        "/collections/gaming-laptops",
+        "/collections/best-gaming-laptop-under-70000",
+        "/collections/best-gaming-laptop-under-1-lakh"
+      ],
+      "cannibalization_risk": "none",
+      "cannibalization_check": "Existing processor guide covers desktop CPUs broadly. Gaming-specific specs guide is distinct.",
+      "internal_link_targets": [
+        "/collections/gaming-laptops",
+        "/collections/best-gaming-laptop-under-70000",
+        "/collections/best-gaming-laptop-under-1-lakh",
+        "hp-victus-vs-hp-omen-gaming-laptop-india",
+        "gaming-laptop-for-college-students-india",
+        "/blogs/insights/best-processor-for-laptops-2025"
+      ],
+      "ubersuggest_volume": 0,
+      "ubersuggest_kd": 4,
+      "ubersuggest_cpc": "₹0.00",
+      "volume_note": "Ubersuggest data gap — pre-purchase research queries common in India",
+      "final_priority_score": 6.6,
+      "word_count_target": "1500-2000",
+      "cta_primary": "See Gaming Laptops Under ₹1 Lakh → /collections/best-gaming-laptop-under-1-lakh",
+      "status": "approved_for_writing",
+      "why_selected": "Pre-purchase educational content with high dwell time signal. Explains GPU tier, display Hz, RAM and storage requirements — makes buyers informed before visiting collection pages.",
+      "content_angle": "Plain-language spec explanation for non-technical buyers. Each spec tied to a real gaming use case (FPS, AAA titles, streaming)."
+    },
+    {
+      "article_order": 4,
+      "role": "cluster_spoke",
+      "title": "Is a Gaming Laptop Worth It for Students in India? Honest Answer",
+      "proposed_slug": "is-gaming-laptop-worth-it-for-students-india",
+      "primary_keyword": "is gaming laptop worth it for students india",
+      "secondary_keywords": [
+        "should students buy gaming laptop india",
+        "gaming laptop vs regular laptop for students india"
+      ],
+      "cluster": "Gaming Laptops",
+      "intent": "educational",
+      "target_page_type": "blog",
+      "parent_cluster": "Gaming Laptops",
+      "supported_collection_page": "/collections/gaming-laptops",
+      "all_supported_collections": [
+        "/collections/gaming-laptops",
+        "/collections/student-laptop"
+      ],
+      "cannibalization_risk": "none",
+      "cannibalization_check": "Decision-stage question not covered by any existing blog.",
+      "internal_link_targets": [
+        "/collections/gaming-laptops",
+        "/collections/student-laptop",
+        "hp-victus-vs-hp-omen-gaming-laptop-india",
+        "gaming-laptop-for-college-students-india",
+        "gaming-laptop-specs-guide-india",
+        "/blogs/insights/your-college-stream-decides-your-laptop-heres-the-complete-guide",
+        "/blogs/insights/best-laptop-for-engineering-students-in-india-2026"
+      ],
+      "ubersuggest_volume": 0,
+      "ubersuggest_kd": 4,
+      "ubersuggest_cpc": "₹0.00",
+      "volume_note": "Ubersuggest data gap — decision-stage queries are typically long-tail with real volume",
+      "final_priority_score": 6.65,
+      "word_count_target": "1200-1600",
+      "cta_primary": "View HP Victus Gaming Laptops → /collections/hp-victus-gaming-laptop",
+      "status": "approved_for_writing",
+      "why_selected": "Decision-stage content converts at higher rates. Buyer who reads 'is it worth it' is already intent on buying — this article closes the hesitation and points to product.",
+      "content_angle": "Honest pros and cons. Acknowledge gaming laptops cost more — then justify it for students who game AND study. Ends with recommendation to check Victus range for budget buyers."
+    },
+    {
+      "article_order": 5,
+      "role": "standalone_quick_win",
+      "title": "HP Laptop Service Center Ahmedabad — Repair, RAM Upgrade & Support",
+      "proposed_slug": "hp-laptop-service-center-ahmedabad",
+      "primary_keyword": "hp laptop service center ahmedabad",
+      "secondary_keywords": [
+        "hp laptop repair ahmedabad",
+        "hp laptop service in ahmedabad",
+        "hp service center ahmedabad"
+      ],
+      "cluster": "Local SEO",
+      "intent": "local_commercial",
+      "target_page_type": "blog",
+      "parent_cluster": "Services",
+      "supported_collection_page": "/pages/laptop-service",
+      "all_supported_collections": [
+        "/pages/laptop-service",
+        "/pages/hp-world-navrangpura",
+        "/pages/hp-world-maninagar",
+        "/pages/hp-world-chandkheda",
+        "/pages/hp-world-prahlad-nagar",
+        "/pages/hp-world-vastral"
+      ],
+      "cannibalization_risk": "none",
+      "cannibalization_check": "No existing service or repair blog. Ahmedabad local SEO covered for desktops (BLOG-025) and printers (BLOG-026) — laptop service is distinct.",
+      "internal_link_targets": [
+        "/pages/laptop-service",
+        "/pages/hp-world-navrangpura",
+        "/pages/hp-world-maninagar",
+        "/pages/hp-world-chandkheda",
+        "/pages/hp-world-prahlad-nagar",
+        "/pages/hp-world-vastral",
+        "/blogs/insights/hp-printers-ahmedabad",
+        "/blogs/insights/desktop-computers-ahmedabad-hp-desktops"
+      ],
+      "ubersuggest_volume": 480,
+      "ubersuggest_kd": 11,
+      "ubersuggest_cpc": "₹0.96",
+      "final_priority_score": 8.45,
+      "word_count_target": "1000-1400",
+      "cta_primary": "Book a Service Appointment → /pages/laptop-service",
+      "status": "approved_for_writing",
+      "why_selected": "Highest confirmed volume in validated set (480, KD 11). Local commercial intent with CPC ₹0.96 confirms advertiser value. Drives directly to /pages/laptop-service. Write in parallel with gaming cluster articles.",
+      "content_angle": "Local service guide: what repairs/upgrades are available, location details for all 5 Ahmedabad HP World stores, what to expect from HP authorized service vs third-party, when to upgrade vs buy new."
+    }
+  ]
 }
