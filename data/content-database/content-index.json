@@ -1,16 +1,20 @@
 {
   "_meta": {
     "description": "Master content index for Innova Retail. Tracks all published and draft blogs for cannibalization checks.",
-    "last_updated": "2026-05-15",
-    "total_blogs": 28,
-    "source": "Manually extracted from sitemap_blogs_1.xml — 2026-05-15"
+    "last_updated": "2026-05-18",
+    "total_blogs": 29,
+    "source": "Manually extracted from sitemap_blogs_1.xml \u2014 2026-05-15"
   },
   "blogs": [
     {
       "blog_id": "BLOG-001",
       "title": "Laser Printer vs Inkjet: What Kind of Printer Do You Really Need?",
       "primary_keyword": "laser printer vs inkjet",
-      "secondary_keywords": ["inkjet vs laser printer india", "which printer to buy india", "laser printer for home"],
+      "secondary_keywords": [
+        "inkjet vs laser printer india",
+        "which printer to buy india",
+        "laser printer for home"
+      ],
       "cluster": "Printers",
       "intent": "Informational",
       "slug": "/blogs/insights/laser-printer-vs-inkjet-what-kind-of-printer-do-you-really-need",
@@ -26,7 +30,11 @@
       "blog_id": "BLOG-002",
       "title": "Printer Buying Guide India: How to Choose the Best Printer for Your Home or Office",
       "primary_keyword": "printer buying guide india",
-      "secondary_keywords": ["best printer india", "how to choose printer india", "printer for home office india"],
+      "secondary_keywords": [
+        "best printer india",
+        "how to choose printer india",
+        "printer for home office india"
+      ],
       "cluster": "Printers",
       "intent": "Informational",
       "slug": "/blogs/insights/printer-buying-guide-india-how-to-choose-the-best-printer-for-your-home-or-office",
@@ -42,7 +50,11 @@
       "blog_id": "BLOG-003",
       "title": "How to Check Laptop Battery Health: Simple Ways to Know When It's Time to Replace or Upgrade",
       "primary_keyword": "how to check laptop battery health",
-      "secondary_keywords": ["laptop battery health india", "hp laptop battery check", "battery health windows"],
+      "secondary_keywords": [
+        "laptop battery health india",
+        "hp laptop battery check",
+        "battery health windows"
+      ],
       "cluster": "Laptop How-To",
       "intent": "Informational",
       "slug": "/blogs/insights/how-to-check-laptop-battery-health-simple-ways-to-know-when-it-s-time-to-replace-or-upgrade",
@@ -58,7 +70,11 @@
       "blog_id": "BLOG-004",
       "title": "How to Format a Laptop Safely (Without Losing Data)",
       "primary_keyword": "how to format a laptop",
-      "secondary_keywords": ["format laptop windows 11", "factory reset hp laptop", "format laptop safely"],
+      "secondary_keywords": [
+        "format laptop windows 11",
+        "factory reset hp laptop",
+        "format laptop safely"
+      ],
       "cluster": "Laptop How-To",
       "intent": "Informational",
       "slug": "/blogs/insights/how-to-format-a-laptop-safely",
@@ -74,7 +90,11 @@
       "blog_id": "BLOG-005",
       "title": "How to Speed Up a Laptop: 10 Proven Ways to Boost Performance Instantly",
       "primary_keyword": "how to speed up a laptop",
-      "secondary_keywords": ["laptop slow fix india", "hp laptop slow", "boost laptop performance"],
+      "secondary_keywords": [
+        "laptop slow fix india",
+        "hp laptop slow",
+        "boost laptop performance"
+      ],
       "cluster": "Laptop How-To",
       "intent": "Informational",
       "slug": "/blogs/insights/how-to-speed-up-a-laptop",
@@ -90,7 +110,10 @@
       "blog_id": "BLOG-006",
       "title": "How to Transfer Photos from iPhone to Laptop (Step-by-Step Guide)",
       "primary_keyword": "how to transfer photos from iphone to laptop",
-      "secondary_keywords": ["iphone to laptop transfer india", "copy photos iphone windows"],
+      "secondary_keywords": [
+        "iphone to laptop transfer india",
+        "copy photos iphone windows"
+      ],
       "cluster": "Laptop How-To",
       "intent": "Informational",
       "slug": "/blogs/insights/how-to-transfer-photos-from-iphone-to-laptop",
@@ -106,7 +129,11 @@
       "blog_id": "BLOG-007",
       "title": "How to Take a Screenshot on a Laptop (Windows & HP Shortcuts)",
       "primary_keyword": "how to take a screenshot on a laptop",
-      "secondary_keywords": ["screenshot hp laptop", "windows screenshot shortcut", "printscreen laptop"],
+      "secondary_keywords": [
+        "screenshot hp laptop",
+        "windows screenshot shortcut",
+        "printscreen laptop"
+      ],
       "cluster": "Laptop How-To",
       "intent": "Informational",
       "slug": "/blogs/insights/how-to-take-a-screenshot-on-a-laptop",
@@ -122,7 +149,11 @@
       "blog_id": "BLOG-008",
       "title": "Laptop Buying Guide India 2025: How to Choose the Right Laptop",
       "primary_keyword": "laptop buying guide india",
-      "secondary_keywords": ["how to choose laptop india", "best laptop india 2025", "laptop purchase guide india"],
+      "secondary_keywords": [
+        "how to choose laptop india",
+        "best laptop india 2025",
+        "laptop purchase guide india"
+      ],
       "cluster": "Laptop Buying Guide",
       "intent": "Informational",
       "slug": "/blogs/insights/laptop-buying-guide-india-2025",
@@ -138,8 +169,12 @@
       "blog_id": "BLOG-009",
       "title": "Best Laptop for Coding and Programming in India (2025)",
       "primary_keyword": "best laptop for coding india",
-      "secondary_keywords": ["laptop for programming india", "developer laptop india", "coding laptop under 60000"],
-      "cluster": "Laptop Buying Guide — Students",
+      "secondary_keywords": [
+        "laptop for programming india",
+        "developer laptop india",
+        "coding laptop under 60000"
+      ],
+      "cluster": "Laptop Buying Guide \u2014 Students",
       "intent": "Commercial",
       "slug": "/blogs/insights/best-laptop-for-coding-and-programming-india",
       "status": "published",
@@ -154,7 +189,11 @@
       "blog_id": "BLOG-010",
       "title": "Best Processor for Laptops in 2025 (Intel vs AMD): Complete Guide",
       "primary_keyword": "best processor for laptop india",
-      "secondary_keywords": ["intel vs amd laptop india", "core ultra vs ryzen", "laptop processor guide 2025"],
+      "secondary_keywords": [
+        "intel vs amd laptop india",
+        "core ultra vs ryzen",
+        "laptop processor guide 2025"
+      ],
       "cluster": "Tech Guide",
       "intent": "Informational",
       "slug": "/blogs/insights/best-processor-for-laptops-2025",
@@ -168,10 +207,14 @@
     },
     {
       "blog_id": "BLOG-011",
-      "title": "Best Laptop for Video Editing (2026) – Top HP Laptops, Specs & Creator Guide",
+      "title": "Best Laptop for Video Editing (2026) \u2013 Top HP Laptops, Specs & Creator Guide",
       "primary_keyword": "best laptop for video editing india",
-      "secondary_keywords": ["video editing laptop india 2026", "hp laptop for video editing", "creator laptop india"],
-      "cluster": "Laptop Buying Guide — Students",
+      "secondary_keywords": [
+        "video editing laptop india 2026",
+        "hp laptop for video editing",
+        "creator laptop india"
+      ],
+      "cluster": "Laptop Buying Guide \u2014 Students",
       "intent": "Commercial",
       "slug": "/blogs/insights/best-laptop-for-video-editing",
       "status": "published",
@@ -179,15 +222,19 @@
       "updated_date": "2026-03-16",
       "shopify_status": "published",
       "internal_links": [],
-      "cannibalization_notes": "Overlaps with graphic design blog (BLOG-012) — both creator-focused. Differentiate by use case.",
+      "cannibalization_notes": "Overlaps with graphic design blog (BLOG-012) \u2014 both creator-focused. Differentiate by use case.",
       "ranking_notes": ""
     },
     {
       "blog_id": "BLOG-012",
       "title": "Best Laptop for Graphic Design in India: Top HP Laptops for Designers, Creators & Artists",
       "primary_keyword": "best laptop for graphic design india",
-      "secondary_keywords": ["designer laptop india", "hp laptop for photoshop", "laptop for illustrator india"],
-      "cluster": "Laptop Buying Guide — Students",
+      "secondary_keywords": [
+        "designer laptop india",
+        "hp laptop for photoshop",
+        "laptop for illustrator india"
+      ],
+      "cluster": "Laptop Buying Guide \u2014 Students",
       "intent": "Commercial",
       "slug": "/blogs/insights/best-laptop-for-graphic-design-in-india",
       "status": "published",
@@ -195,14 +242,18 @@
       "updated_date": "2025-12-08",
       "shopify_status": "published",
       "internal_links": [],
-      "cannibalization_notes": "Overlaps with video editing blog (BLOG-011). Acceptable — different keywords.",
+      "cannibalization_notes": "Overlaps with video editing blog (BLOG-011). Acceptable \u2014 different keywords.",
       "ranking_notes": ""
     },
     {
       "blog_id": "BLOG-013",
       "title": "Why You Should Buy Your Laptop or Desktop Now, Before 2026 Price Surge Hits",
       "primary_keyword": "laptop price increase india 2026",
-      "secondary_keywords": ["laptop price hike india", "buy laptop before price rise", "desktop price 2026"],
+      "secondary_keywords": [
+        "laptop price hike india",
+        "buy laptop before price rise",
+        "desktop price 2026"
+      ],
       "cluster": "Market Trends",
       "intent": "Commercial",
       "slug": "/blogs/insights/laptop-prices-increase-2026",
@@ -218,7 +269,12 @@
       "blog_id": "BLOG-014",
       "title": "What Is an AI PC in 2026 and Do You Really Need One?",
       "primary_keyword": "what is an ai pc",
-      "secondary_keywords": ["ai laptop india", "ai pc 2026", "hp omnibook ai pc", "copilot pc india"],
+      "secondary_keywords": [
+        "ai laptop india",
+        "ai pc 2026",
+        "hp omnibook ai pc",
+        "copilot pc india"
+      ],
       "cluster": "Tech Guide",
       "intent": "Informational",
       "slug": "/blogs/insights/what-is-an-ai-pc-2026",
@@ -234,8 +290,12 @@
       "blog_id": "BLOG-015",
       "title": "Best Laptop for MBA Students in India (2026 Guide)",
       "primary_keyword": "best laptop for mba students india",
-      "secondary_keywords": ["laptop for mba india", "management student laptop", "business school laptop india"],
-      "cluster": "Laptop Buying Guide — Students",
+      "secondary_keywords": [
+        "laptop for mba india",
+        "management student laptop",
+        "business school laptop india"
+      ],
+      "cluster": "Laptop Buying Guide \u2014 Students",
       "intent": "Commercial",
       "slug": "/blogs/insights/best-laptop-for-mba-students-india-2026",
       "status": "published",
@@ -250,7 +310,11 @@
       "blog_id": "BLOG-016",
       "title": "Laptop vs Desktop: What Should You Buy in 2026?",
       "primary_keyword": "laptop vs desktop india",
-      "secondary_keywords": ["laptop or desktop india 2026", "desktop vs laptop for home", "should i buy laptop or desktop"],
+      "secondary_keywords": [
+        "laptop or desktop india 2026",
+        "desktop vs laptop for home",
+        "should i buy laptop or desktop"
+      ],
       "cluster": "Tech Guide",
       "intent": "Informational",
       "slug": "/blogs/insights/laptop-vs-desktop-what-should-you-buy-in-2026",
@@ -266,7 +330,11 @@
       "blog_id": "BLOG-017",
       "title": "Best Printer for Home in India: A Practical Buying Guide for Families, Students, and Home Offices",
       "primary_keyword": "best printer for home india",
-      "secondary_keywords": ["home printer india 2026", "inkjet printer for home", "hp printer for home india"],
+      "secondary_keywords": [
+        "home printer india 2026",
+        "inkjet printer for home",
+        "hp printer for home india"
+      ],
       "cluster": "Printers",
       "intent": "Commercial",
       "slug": "/blogs/insights/best-printer-for-home-india",
@@ -275,15 +343,19 @@
       "updated_date": "2026-03-06",
       "shopify_status": "published",
       "internal_links": [],
-      "cannibalization_notes": "RISK: Overlaps with BLOG-002 (printer buying guide). Different angle (home-specific vs general) — acceptable.",
+      "cannibalization_notes": "RISK: Overlaps with BLOG-002 (printer buying guide). Different angle (home-specific vs general) \u2014 acceptable.",
       "ranking_notes": ""
     },
     {
       "blog_id": "BLOG-018",
       "title": "Best Laptop for Online Classes in India",
       "primary_keyword": "best laptop for online classes india",
-      "secondary_keywords": ["laptop for students india", "online learning laptop india", "budget laptop for classes india"],
-      "cluster": "Laptop Buying Guide — Students",
+      "secondary_keywords": [
+        "laptop for students india",
+        "online learning laptop india",
+        "budget laptop for classes india"
+      ],
+      "cluster": "Laptop Buying Guide \u2014 Students",
       "intent": "Commercial",
       "slug": "/blogs/insights/best-laptop-for-online-classes-india",
       "status": "published",
@@ -298,8 +370,12 @@
       "blog_id": "BLOG-019",
       "title": "Best Laptops for Work From Home in India (2026 Guide)",
       "primary_keyword": "best laptop for work from home india",
-      "secondary_keywords": ["wfh laptop india", "home office laptop india 2026", "laptop for remote work india"],
-      "cluster": "Laptop Buying Guide — Professional",
+      "secondary_keywords": [
+        "wfh laptop india",
+        "home office laptop india 2026",
+        "laptop for remote work india"
+      ],
+      "cluster": "Laptop Buying Guide \u2014 Professional",
       "intent": "Commercial",
       "slug": "/blogs/insights/best-laptops-for-work-from-home",
       "status": "published",
@@ -312,9 +388,13 @@
     },
     {
       "blog_id": "BLOG-020",
-      "title": "Best Smart Door Locks in India (2026) – Complete Buying Guide",
+      "title": "Best Smart Door Locks in India (2026) \u2013 Complete Buying Guide",
       "primary_keyword": "best smart door lock india",
-      "secondary_keywords": ["smart lock india 2026", "fingerprint door lock india", "smart lock price india"],
+      "secondary_keywords": [
+        "smart lock india 2026",
+        "fingerprint door lock india",
+        "smart lock price india"
+      ],
       "cluster": "ELV Products",
       "intent": "Commercial",
       "slug": "/blogs/insights/best-smart-door-locks-in-india-2026",
@@ -330,7 +410,11 @@
       "blog_id": "BLOG-021",
       "title": "A Scratch on Your Laptop Does Not Happen At Your Desk",
       "primary_keyword": "hp laptop bag india",
-      "secondary_keywords": ["laptop bag protection", "why use laptop bag", "best hp laptop bag india"],
+      "secondary_keywords": [
+        "laptop bag protection",
+        "why use laptop bag",
+        "best hp laptop bag india"
+      ],
       "cluster": "Accessories",
       "intent": "Commercial",
       "slug": "/blogs/insights/why-use-hp-laptop-bag-travel-protection",
@@ -346,8 +430,12 @@
       "blog_id": "BLOG-022",
       "title": "Your College Stream Decides Your Laptop. Here's the Complete Guide",
       "primary_keyword": "best laptop for college india",
-      "secondary_keywords": ["laptop for college students india", "which laptop for btech mba bca", "college laptop guide india"],
-      "cluster": "Laptop Buying Guide — Students",
+      "secondary_keywords": [
+        "laptop for college students india",
+        "which laptop for btech mba bca",
+        "college laptop guide india"
+      ],
+      "cluster": "Laptop Buying Guide \u2014 Students",
       "intent": "Commercial",
       "slug": "/blogs/insights/your-college-stream-decides-your-laptop-heres-the-complete-guide",
       "status": "published",
@@ -355,15 +443,19 @@
       "updated_date": "2026-04-22",
       "shopify_status": "published",
       "internal_links": [],
-      "cannibalization_notes": "RISK: Overlaps with engineering (BLOG-028), coding (BLOG-009), MBA (BLOG-015), online classes (BLOG-018). This is a pillar for students — link all others from here.",
+      "cannibalization_notes": "RISK: Overlaps with engineering (BLOG-028), coding (BLOG-009), MBA (BLOG-015), online classes (BLOG-018). This is a pillar for students \u2014 link all others from here.",
       "ranking_notes": ""
     },
     {
       "blog_id": "BLOG-023",
       "title": "HP ZBook Workstation Laptop in India",
       "primary_keyword": "hp zbook india",
-      "secondary_keywords": ["hp zbook price india", "workstation laptop india", "hp mobile workstation india"],
-      "cluster": "Laptop Buying Guide — Professional",
+      "secondary_keywords": [
+        "hp zbook price india",
+        "workstation laptop india",
+        "hp mobile workstation india"
+      ],
+      "cluster": "Laptop Buying Guide \u2014 Professional",
       "intent": "Commercial",
       "slug": "/blogs/insights/hp-zbook-workstation-laptop-in-india",
       "status": "published",
@@ -378,7 +470,11 @@
       "blog_id": "BLOG-024",
       "title": "Which Digital Door Lock Is Right for Your Space?",
       "primary_keyword": "digital door lock india",
-      "secondary_keywords": ["smart door lock types india", "fingerprint vs app lock india", "best door lock for office"],
+      "secondary_keywords": [
+        "smart door lock types india",
+        "fingerprint vs app lock india",
+        "best door lock for office"
+      ],
       "cluster": "ELV Products",
       "intent": "Commercial",
       "slug": "/blogs/insights/which-digital-door-lock-is-right-for-your-space",
@@ -387,14 +483,18 @@
       "updated_date": "2026-04-28",
       "shopify_status": "published",
       "internal_links": [],
-      "cannibalization_notes": "RISK: HIGH overlap with BLOG-020. One is 'best smart locks' the other is 'which lock for your space' — differentiate by making this a decision guide and BLOG-020 a product list.",
+      "cannibalization_notes": "RISK: HIGH overlap with BLOG-020. One is 'best smart locks' the other is 'which lock for your space' \u2014 differentiate by making this a decision guide and BLOG-020 a product list.",
       "ranking_notes": ""
     },
     {
       "blog_id": "BLOG-025",
       "title": "Desktop Computers in Ahmedabad: HP Desktops for Home, Office & Business",
       "primary_keyword": "desktop computer ahmedabad",
-      "secondary_keywords": ["hp desktop ahmedabad", "buy desktop ahmedabad", "hp all in one ahmedabad"],
+      "secondary_keywords": [
+        "hp desktop ahmedabad",
+        "buy desktop ahmedabad",
+        "hp all in one ahmedabad"
+      ],
       "cluster": "Local SEO",
       "intent": "Commercial",
       "slug": "/blogs/insights/desktop-computers-ahmedabad-hp-desktops",
@@ -403,14 +503,18 @@
       "updated_date": "2026-05-04",
       "shopify_status": "published",
       "internal_links": [],
-      "cannibalization_notes": "No risk — local SEO unique target.",
+      "cannibalization_notes": "No risk \u2014 local SEO unique target.",
       "ranking_notes": ""
     },
     {
       "blog_id": "BLOG-026",
       "title": "HP Printers in Ahmedabad | Inkjet, Laser & All-in-One",
       "primary_keyword": "hp printer ahmedabad",
-      "secondary_keywords": ["buy hp printer ahmedabad", "hp printer store ahmedabad", "printer repair ahmedabad"],
+      "secondary_keywords": [
+        "buy hp printer ahmedabad",
+        "hp printer store ahmedabad",
+        "printer repair ahmedabad"
+      ],
       "cluster": "Local SEO",
       "intent": "Commercial",
       "slug": "/blogs/insights/hp-printers-ahmedabad",
@@ -419,15 +523,19 @@
       "updated_date": "2026-05-05",
       "shopify_status": "published",
       "internal_links": [],
-      "cannibalization_notes": "No risk — local SEO unique target.",
+      "cannibalization_notes": "No risk \u2014 local SEO unique target.",
       "ranking_notes": ""
     },
     {
       "blog_id": "BLOG-027",
       "title": "Best Laptop for CA Students in India (2026 Guide)",
       "primary_keyword": "best laptop for ca students india",
-      "secondary_keywords": ["laptop for chartered accountant india", "ca student laptop india", "tally laptop india"],
-      "cluster": "Laptop Buying Guide — Students",
+      "secondary_keywords": [
+        "laptop for chartered accountant india",
+        "ca student laptop india",
+        "tally laptop india"
+      ],
+      "cluster": "Laptop Buying Guide \u2014 Students",
       "intent": "Commercial",
       "slug": "/blogs/insights/best-laptop-for-ca-students-india-2026",
       "status": "published",
@@ -435,15 +543,19 @@
       "updated_date": "2026-05-12",
       "shopify_status": "published",
       "internal_links": [],
-      "cannibalization_notes": "RISK: Overlaps with MBA students (BLOG-015) and WFH (BLOG-019). CA students have specific software needs (Tally) — differentiate on that angle.",
+      "cannibalization_notes": "RISK: Overlaps with MBA students (BLOG-015) and WFH (BLOG-019). CA students have specific software needs (Tally) \u2014 differentiate on that angle.",
       "ranking_notes": ""
     },
     {
       "blog_id": "BLOG-028",
       "title": "Best Laptop for Engineering Students in India 2026",
       "primary_keyword": "best laptop for engineering students india",
-      "secondary_keywords": ["engineering student laptop india", "laptop for btech india", "autocad laptop india"],
-      "cluster": "Laptop Buying Guide — Students",
+      "secondary_keywords": [
+        "engineering student laptop india",
+        "laptop for btech india",
+        "autocad laptop india"
+      ],
+      "cluster": "Laptop Buying Guide \u2014 Students",
       "intent": "Commercial",
       "slug": "/blogs/insights/best-laptop-for-engineering-students-in-india-2026",
       "status": "published",
@@ -452,6 +564,32 @@
       "shopify_status": "published",
       "internal_links": [],
       "cannibalization_notes": "RISK: Overlaps with coding (BLOG-009) and college stream (BLOG-022). Differentiate by focusing on CAD/AutoCAD/simulation workloads.",
+      "ranking_notes": ""
+    },
+    {
+      "blog_id": "BLOG-029",
+      "title": "",
+      "primary_keyword": "hp victus vs hp omen",
+      "secondary_keywords": [],
+      "cluster": "Gaming Laptops",
+      "intent": "comparison",
+      "slug": "/blogs/insights/hp-victus-vs-hp-omen",
+      "status": "draft",
+      "created_date": "2026-05-18",
+      "updated_date": "2026-05-18",
+      "shopify_status": "not_uploaded",
+      "target_page_type": "blog",
+      "parent_cluster": "Gaming Laptops",
+      "supported_collection_page": "/collections/gaming-laptops",
+      "internal_links": [
+        "/collections/gaming-laptops",
+        "/collections/hp-victus-gaming-laptop",
+        "/collections/hp-omen-laptop",
+        "/collections/best-gaming-laptop-under-70000",
+        "/collections/best-gaming-laptop-under-1-lakh"
+      ],
+      "cannibalization_risk": "none",
+      "cannibalization_notes": null,
       "ranking_notes": ""
     }
   ]

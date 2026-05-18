@@ -1,0 +1,32 @@
+{
+  "blog_post": {
+    "title": "TODO: Set in blueprint step",
+    "body_html": "TODO: Generated in Step 7",
+    "meta_title": "TODO: Generated in Step 5",
+    "meta_description": "TODO: Generated in Step 5",
+    "handle": "hp-victus-vs-hp-omen",
+    "tags": [
+      "Gaming Laptops"
+    ],
+    "status": "draft",
+    "published": false
+  },
+  "workflow_notes": {
+    "qa_score": null,
+    "primary_keyword": "hp victus vs hp omen",
+    "cluster": "Gaming Laptops",
+    "intent": "comparison",
+    "target_page_type": "blog",
+    "supported_collection": "/collections/gaming-laptops",
+    "internal_link_targets": [
+      "/collections/gaming-laptops",
+      "/collections/hp-victus-gaming-laptop",
+      "/collections/hp-omen-laptop",
+      "/collections/best-gaming-laptop-under-70000",
+      "/collections/best-gaming-laptop-under-1-lakh"
+    ],
+    "cannibalization_risk": "none",
+    "notes_for_publisher": "Do not publish automatically. Manual review required. QA score must be \u2265 85.",
+    "ready_for_automation": false
+  }
+}

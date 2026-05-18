@@ -9,19 +9,19 @@
   },
 
   "current_state": {
-    "status": "waiting_for_next_step",
-    "current_stage": "semrush_validation_completed",
-    "last_completed_stage": "keyword_validation",
-    "next_action": "create_article_1_folder_and_run_serp_analysis",
-    "last_commit_hash": "8772470",
-    "last_commit_message": "feat: add workflow checkpoint and recovery system"
+    "status": "waiting_for_input",
+    "current_stage": "serp_analysis",
+    "last_completed_stage": "blog_folder_setup",
+    "next_action": "fill_serp_analysis_json_then_create_blueprint",
+    "last_commit_hash": "PENDING",
+    "last_commit_message": "PENDING — committing now"
   },
 
   "active_work": {
     "active_cluster": "gaming_laptops",
     "active_article": "hp_victus_vs_hp_omen",
     "active_article_title": "HP Victus vs HP Omen — Which Gaming Laptop Should You Buy in India?",
-    "active_article_slug": "hp-victus-vs-hp-omen-gaming-laptop-india",
+    "active_article_slug": "hp-victus-vs-hp-omen",
     "active_article_order": 1,
     "active_article_role": "cluster_anchor",
     "active_article_keyword": "hp victus vs hp omen",
@@ -44,35 +44,46 @@
   "pending_inputs": [
     {
       "input_id": "SERP-001",
-      "description": "SERP results for 'hp victus vs hp omen' — top 10 ranking pages",
+      "description": "SERP results for 'hp victus vs hp omen' — top 10 ranking pages, PAA questions, content gaps",
       "required_for": "blog_blueprint",
-      "how_to_get": "Run: python scripts/serpapi_fetcher.py --keyword 'hp victus vs hp omen' OR use --manual flag for manual research",
-      "fallback": "Manually search Google India for 'hp victus vs hp omen', note top 10 URLs, titles, and word counts"
+      "blocked_reason": "No SERPAPI key found at config/api-keys.json",
+      "how_to_unblock": "Option A: Follow blogs/drafts/hp-victus-vs-hp-omen/manual-serp-research-instructions.md and paste findings to Claude. Option B: Add SERPAPI key to config/api-keys.json and run python scripts/serpapi_fetcher.py --keyword 'hp victus vs hp omen'",
+      "instructions_file": "blogs/drafts/hp-victus-vs-hp-omen/manual-serp-research-instructions.md"
     }
   ],
 
   "expected_outputs": {
     "stage_serp_analysis": [
-      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/serp-analysis.json"
+      "blogs/drafts/hp-victus-vs-hp-omen/serp-analysis.json"
     ],
     "stage_blueprint": [
-      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/blueprint.md"
+      "blogs/drafts/hp-victus-vs-hp-omen/blueprint.md"
     ],
     "stage_article_writing": [
-      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/article.md"
+      "blogs/drafts/hp-victus-vs-hp-omen/article.md"
     ],
     "stage_html_conversion": [
-      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/article.html"
+      "blogs/drafts/hp-victus-vs-hp-omen/article.html"
     ],
     "stage_qa": [
-      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/qa-report.md"
+      "blogs/drafts/hp-victus-vs-hp-omen/qa-report.md"
     ],
     "stage_shopify_draft": [
-      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/shopify-draft.json"
+      "blogs/drafts/hp-victus-vs-hp-omen/shopify-draft.json"
     ]
   },
 
   "completed_outputs": {
+    "stage_blog_folder_setup": [
+      "blogs/drafts/hp-victus-vs-hp-omen/metadata.json",
+      "blogs/drafts/hp-victus-vs-hp-omen/serp-analysis.json",
+      "blogs/drafts/hp-victus-vs-hp-omen/blueprint.md",
+      "blogs/drafts/hp-victus-vs-hp-omen/article.md",
+      "blogs/drafts/hp-victus-vs-hp-omen/article.html",
+      "blogs/drafts/hp-victus-vs-hp-omen/qa-report.md",
+      "blogs/drafts/hp-victus-vs-hp-omen/shopify-draft.json",
+      "blogs/drafts/hp-victus-vs-hp-omen/manual-serp-research-instructions.md"
+    ],
     "stage_sitemap_analysis": [
       "data/sitemap/products-urls.txt",
       "data/sitemap/collections-urls.txt",
@@ -175,6 +186,17 @@
       "completed_date": "2026-05-18",
       "commit_hash": "8772470",
       "summary": "Created workflow-state.json checkpoint and recovery system. Updated seo-workflow-guide.md with checkpoint rules at every major step."
+    },
+    {
+      "stage": "blog_folder_setup",
+      "status": "completed",
+      "completed_date": "2026-05-18",
+      "commit_hash": "PENDING",
+      "article": "hp_victus_vs_hp_omen",
+      "blog_id": "BLOG-029",
+      "folder": "blogs/drafts/hp-victus-vs-hp-omen/",
+      "memory_validation": "passed — target_page_type: blog, cannibalization_risk: none, approved: YES",
+      "summary": "Created blog folder for BLOG-029 (hp victus vs hp omen). All 7 template files created plus manual-serp-research-instructions.md. SERPAPI key missing — blocked at serp_analysis stage. Waiting for manual SERP input."
     }
   ],
 
