@@ -4,10 +4,74 @@
 
 This workflow produces one rank-ready Shopify blog draft per run.
 Final publishing is always manual. Claude handles content generation.
-You handle SEMrush research and final approval.
+You handle keyword validation and final approval.
 
-The system operates with **persistent SEO memory** — every recommendation
-is validated against all existing site data before being accepted.
+The system operates with **persistent SEO memory** and a **checkpoint/recovery system**
+so work can be safely paused and resumed across sessions.
+
+---
+
+## Session Start Protocol (READ FIRST — EVERY SESSION)
+
+**Before doing any work in a new Claude session:**
+
+```
+1. Read:  workflows/workflow-state.json
+2. Run:   python scripts/seo_memory.py
+3. Check: git log --oneline -5
+4. Confirm current_state.status and next_action with user
+5. Only then proceed
+```
+
+If `status` is `paused_usage_limit` — ask the user to confirm before resuming
+the paused task. Do not auto-start large tasks without confirmation.
+
+---
+
+## Usage Limit Safety Rule
+
+**Before starting any large task** (blog writing, HTML conversion, full QA):
+
+1. Estimate if the current context window can hold the full task
+2. If the session is more than ~60% through context — **do not start**
+3. Instead:
+   - Update `workflow-state.json` → `status: paused_usage_limit`
+   - Commit and push
+   - End the session cleanly
+4. Resume in a fresh session
+
+**Tasks that are safe to run near context limit:**
+- Updating workflow-state.json
+- Git commit and push
+- Running seo_memory.py
+- Running blog_folder_creator.py
+- Short file edits
+
+**Tasks that require fresh context:**
+- Blog writing (1,500–2,200 words)
+- HTML conversion
+- Full QA review
+
+---
+
+## Checkpoint Rule (Every Major Step)
+
+Every major step MUST:
+
+1. **Before starting:** update `workflow-state.json`:
+   - Set `current_stage` to the step name
+   - Set `status` to `running`
+   - Set `pending_inputs` to what is needed
+   - Set `expected_outputs` to what will be produced
+
+2. **After completing:** update `workflow-state.json`:
+   - Set `status` to `waiting_for_next_step` (or `waiting_for_input` if blocked)
+   - Set `last_completed_stage` to this step
+   - Set `next_action` to the next step
+   - Move outputs to `completed_outputs`
+   - Append entry to `stage_history`
+
+3. **Commit and push** the updated state before moving to the next major step.
 
 ---
 
@@ -28,22 +92,13 @@ checks all 6 memory sources in order:
 **Core memory rules:**
 
 1. Collection pages own transactional keywords — blogs never compete with them
-2. Every blog must support a collection (informational / comparison / guide intent)
-3. Never suggest a topic already covered by an existing published blog
+2. Every blog must support a collection (informational/comparison/guide intent)
+3. Never suggest a topic already covered by a published blog
 4. Detect cannibalization before recommending any new topic
-5. Every topic must include all 5 required memory fields (see below)
+5. Every topic must include all 5 required memory fields
 6. Topics must strengthen topical authority — no isolated blog ideas
 
-**Required memory fields for every topic:**
-```
-target_page_type         → "blog" or "collection"
-parent_cluster           → which cluster this belongs to
-supported_collection_page → the collection page this blog supports
-cannibalization_risk     → "none" | "medium" | "high" | "collection_conflict"
-internal_link_targets    → list of existing blog slugs + collection URLs to link to
-```
-
-**Run memory report at any time:**
+**Run memory report:**
 ```bash
 python scripts/seo_memory.py
 ```
@@ -54,7 +109,7 @@ python scripts/seo_memory.py
 
 1. Fill in `config/site-config.json` — replace all `TODO:` values
 2. Copy `config/api-keys.example.json` → `config/api-keys.json` — add SERPAPI key (optional)
-3. Verify Python 3.8+ is installed: `python3 --version`
+3. Verify Python 3.8+: `python3 --version`
 
 ---
 
@@ -62,101 +117,148 @@ python scripts/seo_memory.py
 
 **Goal:** Load full site inventory into memory. Detect content clusters and gaps.
 
+**Checkpoint — before starting:**
+```json
+{ "current_stage": "sitemap_analysis", "status": "running" }
+```
+
 **Run:**
 ```bash
 python scripts/sitemap_fetcher.py
 ```
-If outbound HTTP is blocked, paste sitemap XML manually and ask Claude to process it.
+If outbound HTTP is blocked, paste sitemap XML manually.
 
 **Output:** `data/sitemap/sitemap-urls.json`
 
-**Then ask Claude:**
-> "Run Step 1 sitemap analysis. Here is the sitemap data: [paste sitemap-urls.json]"
+**Ask Claude:**
+> "Run Step 1 sitemap analysis. Memory report: [paste seo_memory.py output]. Sitemap data: [paste sitemap-urls.json]"
 
-Follow the prompt in: `prompts/sitemap-analysis-prompt.md`
+Follow: `prompts/sitemap-analysis-prompt.md`
 
 **Claude will:**
 - Register all existing blog topics in content-index.json
-- Identify content gaps by cluster
-- Populate `topical-authority-map.json` with cluster health scores
-- Flag any cannibalization risks in content-index.json
+- Populate topical-authority-map.json
+- Flag cannibalization risks
+
+**Checkpoint — after completing:**
+```json
+{
+  "last_completed_stage": "sitemap_analysis",
+  "status": "waiting_for_next_step",
+  "next_action": "run_keyword_discovery",
+  "completed_outputs": ["data/sitemap/sitemap-urls.json", "data/content-database/content-index.json"]
+}
+```
+**→ Commit and push before continuing.**
 
 ---
 
 ## STEP 2 — Keyword Discovery
 
-**Goal:** Generate keyword opportunities from content gaps — all memory-validated.
+**Goal:** Generate memory-validated keyword opportunities from content gaps.
 
-**Memory check before this step:**
+**Checkpoint — before starting:**
+```json
+{ "current_stage": "keyword_discovery", "status": "running" }
+```
+
+**Run memory report first:**
 ```bash
 python scripts/seo_memory.py
 ```
-Review the memory report. Understand what's already covered before generating new keywords.
 
 **Ask Claude:**
-> "Run Step 2: Keyword Discovery. Memory report: [paste seo_memory.py output]. Content gaps: [paste content_gaps from sitemap-urls.json]"
+> "Run Step 2: Keyword Discovery. Memory report: [paste output]. Content gaps: [paste from sitemap-urls.json]"
 
-Follow the prompt in: `prompts/keyword-discovery-prompt.md`
+Follow: `prompts/keyword-discovery-prompt.md`
 
-**Claude will only suggest topics that:**
-- Are NOT already covered by existing blogs or collections
-- Have informational/comparison/guide intent (not transactional)
-- Support a specific collection page
-- Include all 5 required memory fields
-
-**Output:** Paste Claude's CSV into keyword-opportunities.csv via:
+**Validate Claude's output:**
 ```bash
 python scripts/keyword_table_builder.py new-keywords.csv
 ```
-This runs memory validation on every keyword — blocking collection-owned transactional terms.
+
+**Output:** `data/keywords/keyword-opportunities.csv`
+
+**Checkpoint — after completing:**
+```json
+{
+  "last_completed_stage": "keyword_discovery",
+  "status": "waiting_for_next_step",
+  "next_action": "upload_keywords_to_ubersuggest_or_semrush"
+}
+```
+**→ Commit and push before continuing.**
 
 ---
 
-## STEP 3 — SEMrush Validation (Manual)
+## STEP 3 — Keyword Validation (Ubersuggest / SEMrush)
 
-**Goal:** Get real search volume, KD, and CPC for your keywords.
+**Goal:** Get real search volume, KD, and CPC. Select top cluster for production.
 
-1. Open `data/semrush-uploads/keywords-to-check-in-semrush.csv` — these are pre-prioritized
-2. Go to SEMrush → Keyword Magic Tool → Country: India
-3. Run TIER-1 keywords first, then TIER-2
-4. Export CSV for each batch
-5. Save files to `data/semrush-uploads/` as: `semrush-YYYY-MM-DD-[group].csv`
+**Checkpoint — before starting:**
+```json
+{ "current_stage": "keyword_validation", "status": "waiting_for_input",
+  "pending_inputs": ["ubersuggest or semrush export CSV"] }
+```
 
-**Then ask Claude:**
-> "Analyze this SEMrush upload. Memory report: [paste seo_memory.py output]. SEMrush data: [paste CSV]"
+**Manual step (you do this):**
+1. Open `data/semrush-uploads/keywords-to-check-in-semrush.csv`
+2. Run TIER-1 keywords in Ubersuggest or SEMrush → India
+3. Export CSV → save to `data/semrush-uploads/[tool]-YYYY-MM-DD.csv`
 
-Follow the prompt in: `prompts/semrush-validation-prompt.md`
+**Ask Claude:**
+> "Run keyword validation. Memory: [paste seo_memory.py output]. Validation data: [paste CSV]"
 
-**Claude will:**
-- Fill SEMrush volume/KD/CPC into keyword-opportunities.csv
-- Re-run memory validation with real data
-- Select top 2–3 topics
-- Save selections to `data/keywords/selected-topics.json` with all required memory fields
+Follow: `prompts/semrush-validation-prompt.md`
+
+**Output:**
+- `data/keywords/selected-topics.json` — approved topics with all memory fields
+- `output/validated-cluster-strategy.md` — cluster blueprint
+
+**Checkpoint — after completing:**
+```json
+{
+  "last_completed_stage": "keyword_validation",
+  "status": "waiting_for_next_step",
+  "next_action": "create_article_folder_and_run_serp_analysis",
+  "active_cluster": "[selected cluster]",
+  "active_article": "[article 1 slug]"
+}
+```
+**→ Commit and push before continuing.**
 
 ---
 
 ## STEP 4 — Blog Folder Setup
 
-**Goal:** Create the standard folder for your selected blog topic. Memory validated.
+**Goal:** Create the memory-validated folder for Article 1.
+
+**Checkpoint — before starting:**
+```json
+{ "current_stage": "blog_folder_setup", "status": "running",
+  "active_article": "[slug]" }
+```
 
 ```bash
 python scripts/blog_folder_creator.py \
-  --keyword "best gaming laptop under 70000" \
+  --keyword "hp victus vs hp omen" \
   --cluster "Gaming Laptops" \
-  --intent "informational"
+  --intent "comparison"
 ```
 
-The script will:
-1. Run full memory validation — blocks collection-owned transactional keywords
-2. Detect cannibalization against all published/draft blogs
-3. Resolve `supported_collection_page` and `internal_link_targets` automatically
-4. Create `blogs/drafts/[slug]/` with all template files
-5. Register blog in `content-index.json` with all memory fields
-6. Update `topical-authority-map.json`
+The script runs full memory validation before creating anything.
 
-**If the topic is blocked:**
-- The script explains why (collection conflict or cannibalization)
-- Adjust keyword framing to informational angle, then re-run
+**Output:** `blogs/drafts/[slug]/` with all 6 template files + metadata.json
+
+**Checkpoint — after completing:**
+```json
+{
+  "last_completed_stage": "blog_folder_setup",
+  "status": "waiting_for_next_step",
+  "next_action": "run_serp_analysis"
+}
+```
+**→ Commit and push.**
 
 ---
 
@@ -164,41 +266,72 @@ The script will:
 
 **Goal:** Understand what's currently ranking and why.
 
-**If SERPAPI key is available:**
-```bash
-python scripts/serpapi_fetcher.py --keyword "your keyword"
+**Checkpoint — before starting:**
+```json
+{ "current_stage": "serp_analysis", "status": "running" }
 ```
 
-**If no API key:**
 ```bash
+# With SERPAPI key:
+python scripts/serpapi_fetcher.py --keyword "your keyword"
+
+# Without key:
 python scripts/serpapi_fetcher.py --keyword "your keyword" --manual
 ```
-Follow the manual research instructions created in the blog folder.
 
-**Then ask Claude:**
-> "Analyze this SERP data for [keyword]. Memory report: [paste seo_memory.py output]. SERP data: [paste serp-analysis.json]"
+**Ask Claude:**
+> "Analyze SERP for [keyword]. Memory: [paste seo_memory.py output]. SERP data: [paste serp-analysis.json]"
 
-Follow the prompt in: `prompts/serp-analysis-prompt.md`
+Follow: `prompts/serp-analysis-prompt.md`
+
+**Output:** `blogs/drafts/[slug]/serp-analysis.json`
+
+**Checkpoint — after completing:**
+```json
+{
+  "last_completed_stage": "serp_analysis",
+  "status": "waiting_for_next_step",
+  "next_action": "create_blog_blueprint"
+}
+```
+**→ Commit and push.**
 
 ---
 
 ## STEP 6 — Blog Blueprint
 
-**Goal:** Plan the full article structure. Internal link targets are pre-loaded from memory.
+**Goal:** Plan the full article structure before writing.
+
+**⚠ Usage limit check:** If context is >60% used, stop here. Checkpoint and push.
+
+**Checkpoint — before starting:**
+```json
+{ "current_stage": "blueprint", "status": "running" }
+```
 
 **Ask Claude:**
-> "Create a blog blueprint. Memory report: [paste seo_memory.py output]. SERP analysis: [paste serp-analysis.json]. Metadata: [paste metadata.json]"
+> "Create blueprint. Memory: [paste seo_memory.py output]. SERP: [paste serp-analysis.json]. Metadata: [paste metadata.json]"
 
-Follow the prompt in: `prompts/blog-blueprint-prompt.md`
+Follow: `prompts/blog-blueprint-prompt.md`
 
 Blueprint must include:
-- All `internal_link_targets` from metadata.json woven into the article structure
-- CTA linking to `supported_collection_page`
-- Cluster pillar article cross-link if one exists
+- All `internal_link_targets` from metadata.json
+- CTA pointing to `supported_collection_page`
+- Cluster pillar cross-link if one exists
 
 **Output:** `blogs/drafts/[slug]/blueprint.md`
 
 **Review and approve before proceeding.**
+
+**Checkpoint — after approval:**
+```json
+{
+  "last_completed_stage": "blueprint",
+  "status": "waiting_for_next_step",
+  "next_action": "write_article"
+}
+```
+**→ Commit and push.**
 
 ---
 
@@ -206,12 +339,29 @@ Blueprint must include:
 
 **Goal:** Generate the full SEO article.
 
-**Ask Claude:**
-> "Write the full article using this blueprint: [paste blueprint.md]. Memory: [paste metadata.json]"
+**⚠ Usage limit check:** Blog writing uses significant context. Start only with fresh session.
 
-Follow the prompt in: `prompts/blog-writing-prompt.md`
+**Checkpoint — before starting:**
+```json
+{ "current_stage": "article_writing", "status": "running" }
+```
+
+**Ask Claude:**
+> "Write full article. Blueprint: [paste blueprint.md]. Metadata: [paste metadata.json]"
+
+Follow: `prompts/blog-writing-prompt.md`
 
 **Output:** `blogs/drafts/[slug]/article.md`
+
+**Checkpoint — after completing:**
+```json
+{
+  "last_completed_stage": "article_writing",
+  "status": "waiting_for_next_step",
+  "next_action": "html_conversion"
+}
+```
+**→ Commit and push.**
 
 ---
 
@@ -219,38 +369,63 @@ Follow the prompt in: `prompts/blog-writing-prompt.md`
 
 **Goal:** Convert Markdown to Shopify-safe HTML.
 
-**Ask Claude:**
-> "Convert this article to Shopify-safe HTML: [paste article.md]"
+**⚠ Usage limit check:** HTML conversion uses significant context. Start only with fresh session.
 
-Follow the prompt in: `prompts/html-conversion-prompt.md`
+**Checkpoint — before starting:**
+```json
+{ "current_stage": "html_conversion", "status": "running" }
+```
+
+**Ask Claude:**
+> "Convert to Shopify HTML. Article: [paste article.md]"
+
+Follow: `prompts/html-conversion-prompt.md`
 
 **Output:** `blogs/drafts/[slug]/article.html`
+
+**Checkpoint — after completing:**
+```json
+{
+  "last_completed_stage": "html_conversion",
+  "status": "waiting_for_next_step",
+  "next_action": "run_qa"
+}
+```
+**→ Commit and push.**
 
 ---
 
 ## STEP 9 — SEO & HTML QA
 
-**Goal:** Score the blog against 25 checks. Minimum score: 85/100.
+**Goal:** Score the blog. Minimum 85/100 required to proceed.
 
-**Run automated checks:**
+**Checkpoint — before starting:**
+```json
+{ "current_stage": "qa_review", "status": "running" }
+```
+
 ```bash
 python scripts/qa_checker.py --slug "your-keyword-slug"
 ```
 
-**Then ask Claude for deep QA:**
-> "Run full SEO QA. Memory: [paste seo_memory.py output]. article.md: [paste]. article.html: [paste]."
+**Ask Claude for deep QA:**
+> "Full SEO QA. Memory: [paste seo_memory.py output]. article.md: [paste]. article.html: [paste]"
 
-Follow the prompt in: `prompts/seo-qa-prompt.md`
-
-**QA checks include:**
-- All `internal_link_targets` from metadata.json are present in article
-- CTA links to `supported_collection_page`
-- No keyword cannibalization with published blogs
-- India/Ahmedabad/local context where applicable
+Follow: `prompts/seo-qa-prompt.md`
 
 **Output:** `blogs/drafts/[slug]/qa-report.md`
 
-**If score < 85:** Fix issues and re-run. Do not proceed.
+If score < 85: fix issues and re-run. Do not proceed until ≥ 85.
+
+**Checkpoint — after passing:**
+```json
+{
+  "last_completed_stage": "qa_review",
+  "status": "waiting_for_next_step",
+  "next_action": "prepare_shopify_draft"
+}
+```
+**→ Commit and push.**
 
 ---
 
@@ -258,33 +433,56 @@ Follow the prompt in: `prompts/seo-qa-prompt.md`
 
 **Goal:** Create publish-ready JSON for Shopify.
 
-**Ask Claude:**
-> "Prepare the Shopify draft JSON. article.html: [paste]. blueprint: [paste]. metadata: [paste metadata.json]"
+**Checkpoint — before starting:**
+```json
+{ "current_stage": "shopify_draft", "status": "running" }
+```
 
-Follow the prompt in: `prompts/shopify-draft-prompt.md`
+**Ask Claude:**
+> "Prepare Shopify draft. article.html: [paste]. blueprint: [paste]. metadata: [paste metadata.json]"
+
+Follow: `prompts/shopify-draft-prompt.md`
 
 **Output:** `blogs/drafts/[slug]/shopify-draft.json`
 
+**Checkpoint — after completing:**
+```json
+{
+  "last_completed_stage": "shopify_draft",
+  "status": "waiting_for_next_step",
+  "next_action": "commit_push_and_review_for_publishing"
+}
+```
+**→ Commit and push.**
+
 ---
 
-## STEP 11 — GitHub Commit
-
-**Goal:** Save all work to GitHub.
+## STEP 11 — GitHub Commit (Final)
 
 ```bash
 git add blogs/drafts/[slug]/
 git add data/keywords/
 git add data/content-database/
 git add data/topical-authority/
-git commit -m "feat: add SEO blog draft — [keyword]"
+git add workflows/workflow-state.json
+git commit -m "feat: complete blog draft — [keyword]"
 git push -u origin claude/setup-connection-e8W80
+```
+
+Update `workflow-state.json`:
+```json
+{
+  "last_completed_stage": "article_committed",
+  "next_action": "manual_review_and_publish",
+  "active_article_order": 2
+}
 ```
 
 ---
 
 ## STEP 12 — Publish (Manual Only)
 
-1. Use Zapier/Make with `shopify-draft.json` to create a Shopify blog draft
+1. Use Zapier/Make with `shopify-draft.json` to create a Shopify draft
 2. Go to Shopify Admin → Blog Posts → find your draft
 3. Add feature image
 4. Replace all `#TODO` links with real URLs
@@ -296,35 +494,49 @@ git push -u origin claude/setup-connection-e8W80
 After publishing, update `content-index.json`:
 - Change `status` from `"draft"` to `"published"`
 - Add `shopify_url` and `lastmod` date
-- Run `python scripts/seo_memory.py` to confirm the new blog is in memory
+- Run `python scripts/seo_memory.py` to confirm new blog is in memory
+- Update `workflow-state.json` → `articles_completed` count in cluster_queue
 
 ---
 
 ## Quick Reference
 
 ```bash
-# Load memory and print current state
+# Session start — always run first
+cat workflows/workflow-state.json
 python scripts/seo_memory.py
 
 # Step 4: Create blog folder (memory validated)
 python scripts/blog_folder_creator.py \
   --keyword "keyword" \
   --cluster "Gaming Laptops" \
-  --intent "informational"
+  --intent "comparison"
 
-# Step 5: Fetch SERP data
+# Step 5: SERP fetch
 python scripts/serpapi_fetcher.py --keyword "keyword"
 python scripts/serpapi_fetcher.py --keyword "keyword" --manual
 
-# Step 9: Run QA check
+# Step 9: QA check
 python scripts/qa_checker.py --slug "keyword-slug"
 
-# Rebuild keyword table (recalculate + refresh memory fields)
+# Keyword tools
 python scripts/keyword_table_builder.py
-
-# Import new keywords from CSV (with full memory validation)
 python scripts/keyword_table_builder.py data/semrush-uploads/new-export.csv
 ```
+
+---
+
+## Workflow State Reference
+
+| Status | Meaning |
+|--------|---------|
+| `pending` | Step not yet started |
+| `running` | Step is actively in progress |
+| `waiting_for_input` | Blocked — needs user-provided data (e.g. SERP export) |
+| `waiting_for_next_step` | Step complete — ready for next step |
+| `paused_usage_limit` | Stopped before a large task due to context limit |
+| `completed` | Article fully done and published |
+| `failed` | Step failed — see stage_history for reason |
 
 ---
 
@@ -332,11 +544,11 @@ python scripts/keyword_table_builder.py data/semrush-uploads/new-export.csv
 
 | File | Purpose |
 |------|---------|
+| `workflows/workflow-state.json` | **READ FIRST** — checkpoint and recovery |
 | `data/sitemap/sitemap-urls.json` | Full site structure + content gaps |
-| `data/content-database/content-index.json` | All blogs (published + draft) with memory fields |
-| `data/keywords/keyword-opportunities.csv` | All researched keywords with validation status |
+| `data/content-database/content-index.json` | All blogs with memory fields |
+| `data/keywords/keyword-opportunities.csv` | All researched keywords |
 | `data/keywords/selected-topics.json` | Approved topics queued for writing |
-| `data/sitemap/collections-urls.txt` | Collection page index (transactional keyword owners) |
-| `data/sitemap/blog-urls.txt` | Published blog URL index |
-| `data/topical-authority/topical-authority-map.json` | Cluster health + pillar/spoke map + gaps |
-| `scripts/seo_memory.py` | Memory system — import in all scripts |
+| `data/sitemap/collections-urls.txt` | Collection page index |
+| `data/topical-authority/topical-authority-map.json` | Cluster health map |
+| `scripts/seo_memory.py` | Memory system — run at session start |

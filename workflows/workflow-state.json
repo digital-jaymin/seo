@@ -1,0 +1,263 @@
+{
+  "_meta": {
+    "description": "Workflow checkpoint and recovery file for Innova Retail SEO automation. Read this FIRST at the start of every Claude session before doing any new work.",
+    "recovery_rule": "On session start: read this file, reconstruct current state, confirm with user before proceeding to next_action.",
+    "usage_limit_rule": "If the next task is large (blog writing, HTML conversion, full QA) and the session is near context limit, do NOT start it. Update status to paused_usage_limit, commit and push, then stop.",
+    "commit_rule": "Commit and push after every major stage completion. Never leave uncommitted work when stopping.",
+    "schema_version": "1.0",
+    "last_updated": "2026-05-18"
+  },
+
+  "current_state": {
+    "status": "waiting_for_next_step",
+    "current_stage": "semrush_validation_completed",
+    "last_completed_stage": "keyword_validation",
+    "next_action": "create_article_1_folder_and_run_serp_analysis",
+    "last_commit_hash": "d47110d",
+    "last_commit_message": "feat: keyword validation + Gaming Laptops cluster selected for production"
+  },
+
+  "active_work": {
+    "active_cluster": "gaming_laptops",
+    "active_article": "hp_victus_vs_hp_omen",
+    "active_article_title": "HP Victus vs HP Omen — Which Gaming Laptop Should You Buy in India?",
+    "active_article_slug": "hp-victus-vs-hp-omen-gaming-laptop-india",
+    "active_article_order": 1,
+    "active_article_role": "cluster_anchor",
+    "active_article_keyword": "hp victus vs hp omen",
+    "active_article_volume": 140,
+    "active_article_kd": 9
+  },
+
+  "parallel_track": {
+    "cluster": "local_seo",
+    "article": "hp_laptop_service_center_ahmedabad",
+    "article_title": "HP Laptop Service Center Ahmedabad — Repair, RAM Upgrade & Support",
+    "article_slug": "hp-laptop-service-center-ahmedabad",
+    "article_keyword": "hp laptop service center ahmedabad",
+    "article_volume": 480,
+    "article_kd": 11,
+    "status": "queued",
+    "note": "Standalone quick win. NOT part of gaming_laptops cluster. Write between Article 1 and Article 2 of gaming cluster, or in a separate session."
+  },
+
+  "pending_inputs": [
+    {
+      "input_id": "SERP-001",
+      "description": "SERP results for 'hp victus vs hp omen' — top 10 ranking pages",
+      "required_for": "blog_blueprint",
+      "how_to_get": "Run: python scripts/serpapi_fetcher.py --keyword 'hp victus vs hp omen' OR use --manual flag for manual research",
+      "fallback": "Manually search Google India for 'hp victus vs hp omen', note top 10 URLs, titles, and word counts"
+    }
+  ],
+
+  "expected_outputs": {
+    "stage_serp_analysis": [
+      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/serp-analysis.json"
+    ],
+    "stage_blueprint": [
+      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/blueprint.md"
+    ],
+    "stage_article_writing": [
+      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/article.md"
+    ],
+    "stage_html_conversion": [
+      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/article.html"
+    ],
+    "stage_qa": [
+      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/qa-report.md"
+    ],
+    "stage_shopify_draft": [
+      "blogs/drafts/hp-victus-vs-hp-omen-gaming-laptop-india/shopify-draft.json"
+    ]
+  },
+
+  "completed_outputs": {
+    "stage_sitemap_analysis": [
+      "data/sitemap/products-urls.txt",
+      "data/sitemap/collections-urls.txt",
+      "data/sitemap/pages-urls.txt",
+      "data/sitemap/blog-urls.txt",
+      "data/sitemap/sitemap-urls.json",
+      "data/content-database/content-index.json",
+      "output/full-sitemap-analysis-report.md"
+    ],
+    "stage_keyword_discovery": [
+      "data/keywords/keyword-opportunities.csv",
+      "data/topical-authority/topical-authority-map.json",
+      "output/topical-authority-map.md"
+    ],
+    "stage_semrush_validation": [
+      "data/semrush-uploads/ubersuggest-2026-05-18-tier1-tier2.csv",
+      "data/semrush-uploads/keywords-to-check-in-semrush.csv",
+      "output/validated-cluster-strategy.md",
+      "data/keywords/selected-topics.json"
+    ]
+  },
+
+  "resume_instructions": {
+    "on_session_start": [
+      "1. Read this file: workflows/workflow-state.json",
+      "2. Read active article metadata: data/keywords/selected-topics.json (find article with article_order matching active_work.active_article_order)",
+      "3. Run memory snapshot: python scripts/seo_memory.py",
+      "4. Check git log for any commits since last_commit_hash",
+      "5. Confirm current_state.status with user before starting next_action",
+      "6. If status is paused_usage_limit — ask user to confirm resuming the paused task"
+    ],
+    "next_action_detail": {
+      "action": "create_article_1_folder_and_run_serp_analysis",
+      "steps": [
+        "Step 4: python scripts/blog_folder_creator.py --keyword 'hp victus vs hp omen' --cluster 'Gaming Laptops' --intent 'comparison'",
+        "Step 5: python scripts/serpapi_fetcher.py --keyword 'hp victus vs hp omen' --manual (or with API key)",
+        "Step 6: Ask Claude to create blueprint using prompts/blog-blueprint-prompt.md",
+        "Update workflow-state.json current_stage to 'blueprint_completed' after blueprint is approved",
+        "Commit and push before moving to article writing"
+      ]
+    }
+  },
+
+  "usage_limit_safety_notes": {
+    "large_tasks": [
+      "blog_writing — typically 1500-2200 words; start only with fresh context",
+      "html_conversion — converts full article to Shopify HTML; start only with fresh context",
+      "full_qa_review — reads article.md + article.html together; moderate context use",
+      "shopify_draft_prep — moderate; safe after QA"
+    ],
+    "safe_to_run_near_limit": [
+      "workflow-state.json update",
+      "git commit and push",
+      "reading/updating content-index.json",
+      "seo_memory.py snapshot",
+      "blog_folder_creator.py"
+    ],
+    "rule": "If about to start blog_writing or html_conversion and context window is more than 60% used — stop, update this file to status=paused_usage_limit, commit and push, then end the session cleanly."
+  },
+
+  "stage_history": [
+    {
+      "stage": "project_setup",
+      "status": "completed",
+      "completed_date": "2026-05-15",
+      "commit_hash": "f49b1dd",
+      "summary": "Connected GitHub repo, created full project scaffold — config, scripts, templates, prompts, workflows"
+    },
+    {
+      "stage": "sitemap_analysis",
+      "status": "completed",
+      "completed_date": "2026-05-15",
+      "commit_hash": "f2f81c7",
+      "summary": "Manually extracted all 4 Shopify sitemaps. 202 products, 44 collections, 9 pages, 28 blogs. Identified 11 content gaps (6 HIGH, 5 MEDIUM). Registered all 28 published blogs in content-index.json."
+    },
+    {
+      "stage": "seo_memory_system",
+      "status": "completed",
+      "completed_date": "2026-05-15",
+      "commit_hash": "49e33d3",
+      "summary": "Built seo_memory.py persistent memory module. Created topical-authority-map.json for 15 clusters. Updated all scripts and prompts to enforce memory rules."
+    },
+    {
+      "stage": "keyword_discovery",
+      "status": "completed",
+      "completed_date": "2026-05-15",
+      "commit_hash": "b31456d",
+      "summary": "Rebuilt keyword-opportunities.csv with 80 keywords across 5 categories. 19 collection-owned keywords blocked. Created topical-authority-map.md output. Created prioritized semrush upload CSV."
+    },
+    {
+      "stage": "keyword_validation",
+      "status": "completed",
+      "completed_date": "2026-05-18",
+      "commit_hash": "d47110d",
+      "summary": "Validated 40 keywords via Ubersuggest. 3 keywords had confirmed volume. Selected Gaming Laptops as first cluster (anchor: hp victus vs hp omen, 140 vol, KD 9). Quick win identified: hp laptop service center ahmedabad (480 vol, KD 11). 5 topics approved in selected-topics.json."
+    },
+    {
+      "stage": "workflow_checkpoint_system",
+      "status": "completed",
+      "completed_date": "2026-05-18",
+      "commit_hash": "PENDING",
+      "summary": "Created workflow-state.json checkpoint and recovery system. Updated seo-workflow-guide.md with checkpoint rules at every major step."
+    }
+  ],
+
+  "cluster_queue": [
+    {
+      "queue_position": 1,
+      "cluster": "gaming_laptops",
+      "status": "active",
+      "articles_total": 4,
+      "articles_completed": 0,
+      "anchor_keyword": "hp victus vs hp omen",
+      "anchor_volume": 140,
+      "anchor_kd": 9,
+      "target_collections": [
+        "/collections/gaming-laptops",
+        "/collections/hp-victus-gaming-laptop",
+        "/collections/hp-omen-laptop",
+        "/collections/best-gaming-laptop-under-70000",
+        "/collections/best-gaming-laptop-under-1-lakh"
+      ]
+    },
+    {
+      "queue_position": 2,
+      "cluster": "local_seo",
+      "status": "queued",
+      "articles_total": 1,
+      "articles_completed": 0,
+      "anchor_keyword": "hp laptop service center ahmedabad",
+      "anchor_volume": 480,
+      "anchor_kd": 11,
+      "note": "Standalone quick win. Write in parallel with gaming_laptops cluster articles 2-3.",
+      "target_collections": [
+        "/pages/laptop-service",
+        "/pages/hp-world-navrangpura",
+        "/pages/hp-world-maninagar",
+        "/pages/hp-world-chandkheda",
+        "/pages/hp-world-prahlad-nagar",
+        "/pages/hp-world-vastral"
+      ]
+    },
+    {
+      "queue_position": 3,
+      "cluster": "business_it",
+      "status": "queued",
+      "articles_total": 3,
+      "articles_completed": 0,
+      "anchor_keyword": "hp laptop for office use india",
+      "anchor_volume": 0,
+      "anchor_kd": 4,
+      "target_collections": ["/collections/business-laptops"]
+    },
+    {
+      "queue_position": 4,
+      "cluster": "hp_omnibook",
+      "status": "queued",
+      "articles_total": 3,
+      "articles_completed": 0,
+      "anchor_keyword": "hp omnibook x review india",
+      "anchor_volume": 0,
+      "anchor_kd": 4,
+      "target_collections": ["/collections/laptops"]
+    },
+    {
+      "queue_position": 5,
+      "cluster": "elv_cleaning_robots",
+      "status": "queued",
+      "articles_total": 2,
+      "articles_completed": 0,
+      "anchor_keyword": "best robotic vacuum cleaner india 2026",
+      "anchor_volume": 0,
+      "anchor_kd": 4,
+      "target_collections": ["/collections/robotic-vacuum-cleaner"]
+    },
+    {
+      "queue_position": 6,
+      "cluster": "large_format_printers",
+      "status": "queued",
+      "articles_total": 2,
+      "articles_completed": 0,
+      "anchor_keyword": "hp designjet buying guide india",
+      "anchor_volume": 0,
+      "anchor_kd": 4,
+      "target_collections": ["/collections/large-format-printer"]
+    }
+  ]
+}
