@@ -271,15 +271,70 @@ The script runs full memory validation before creating anything.
 { "current_stage": "serp_analysis", "status": "running" }
 ```
 
-```bash
-# With SERPAPI key:
-python scripts/serpapi_fetcher.py --keyword "your keyword"
+### Option A — Run Locally (fastest)
 
-# Without key:
-python scripts/serpapi_fetcher.py --keyword "your keyword" --manual
+If you have Python and outbound internet access on your machine:
+
+```bash
+python scripts/serpapi_fetcher.py --keyword "hp victus vs hp omen"
 ```
 
-**Ask Claude:**
+This writes `blogs/drafts/hp-victus-vs-hp-omen/serp-analysis.json` directly.
+Commit and push the file, then continue to Step 6.
+
+### Option B — GitHub Actions (use when Claude environment blocks outbound HTTP)
+
+The Claude cloud environment cannot reach `serpapi.com`. Use this workflow instead.
+
+#### Step B1 — Add the SERPAPI_KEY secret (one-time setup)
+
+1. Go to your GitHub repository: `digital-jaymin/seo`
+2. Click **Settings** → **Secrets and variables** → **Actions**
+3. Click **New repository secret**
+4. Name: `SERPAPI_KEY`
+5. Value: paste your SERPAPI key
+6. Click **Add secret**
+
+The key is stored encrypted and never appears in logs.
+
+#### Step B2 — Trigger the workflow
+
+1. Go to your repository on GitHub
+2. Click the **Actions** tab
+3. In the left sidebar, click **Run SERPAPI Fetch**
+4. Click **Run workflow** (top-right dropdown)
+5. Fill in the inputs:
+   - **keyword**: `hp victus vs hp omen`
+   - **slug**: `hp-victus-vs-hp-omen`
+6. Click the green **Run workflow** button
+
+The workflow will:
+- Check out branch `claude/setup-connection-e8W80`
+- Write `config/api-keys.json` from the secret (never committed)
+- Run `python scripts/serpapi_fetcher.py --keyword "hp victus vs hp omen"`
+- Verify `blogs/drafts/hp-victus-vs-hp-omen/serp-analysis.json` was created
+- Update `workflows/workflow-state.json` → `status: waiting_for_next_step`
+- Commit and push both files to the branch
+
+#### Step B3 — After the workflow completes
+
+1. Wait for the green checkmark in the Actions tab (~1 minute)
+2. In your Claude session, run:
+   ```bash
+   git pull origin claude/setup-connection-e8W80
+   ```
+3. Confirm `blogs/drafts/hp-victus-vs-hp-omen/serp-analysis.json` has real data
+4. Tell Claude:
+   > "SERP data is ready. Here is serp-analysis.json: [paste file contents]. Create the blueprint."
+
+### Option C — Manual SERP Research
+
+Follow `blogs/drafts/hp-victus-vs-hp-omen/manual-serp-research-instructions.md`
+to collect data manually from Google India, then paste findings to Claude.
+
+---
+
+**Ask Claude (after SERP data exists):**
 > "Analyze SERP for [keyword]. Memory: [paste seo_memory.py output]. SERP data: [paste serp-analysis.json]"
 
 Follow: `prompts/serp-analysis-prompt.md`

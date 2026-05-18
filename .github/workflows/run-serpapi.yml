@@ -1,0 +1,119 @@
+name: Run SERPAPI Fetch
+
+# Manual trigger only — never runs automatically.
+# Use this when the Claude cloud environment cannot reach serpapi.com directly.
+on:
+  workflow_dispatch:
+    inputs:
+      keyword:
+        description: 'Exact keyword to fetch SERP for (e.g. hp victus vs hp omen)'
+        required: true
+        type: string
+      slug:
+        description: 'Blog folder slug matching the keyword (e.g. hp-victus-vs-hp-omen)'
+        required: true
+        type: string
+
+jobs:
+  fetch-serp:
+    name: Fetch SERP and commit results
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Check out the working branch ──────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: claude/setup-connection-e8W80
+          # Fetch full history so the commit push works cleanly
+          fetch-depth: 0
+
+      # ── 2. Set up Python ──────────────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # ── 3. Create config/api-keys.json at runtime from the Actions secret ────
+      #    This file is in .gitignore and will NEVER be committed.
+      #    The secret value is masked in logs by GitHub Actions automatically.
+      - name: Write api-keys.json (runtime only, never committed)
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: |
+          mkdir -p config
+          printf '{"serpapi_key":"%s","usersuggest_key":"","shopify_admin_api_key":"","shopify_store_url":""}' \
+            "$SERPAPI_KEY" > config/api-keys.json
+          echo "api-keys.json written (key masked in logs)"
+
+      # ── 4. Run the SERP fetcher ───────────────────────────────────────────────
+      #    The script reads config/api-keys.json, calls serpapi.com (India, en),
+      #    and saves output to blogs/drafts/[slug]/serp-analysis.json.
+      - name: Fetch SERP data via serpapi_fetcher.py
+        run: |
+          python scripts/serpapi_fetcher.py --keyword "${{ github.event.inputs.keyword }}" --country in
+
+      # ── 5. Verify the output file was created ────────────────────────────────
+      - name: Verify serp-analysis.json exists
+        run: |
+          OUTPUT="blogs/drafts/${{ github.event.inputs.slug }}/serp-analysis.json"
+          if [ ! -f "$OUTPUT" ]; then
+            echo "ERROR: $OUTPUT was not created. Check serpapi_fetcher.py output above."
+            exit 1
+          fi
+          echo "SUCCESS: $OUTPUT created."
+          # Print top-level keys so we can confirm data structure in logs
+          python -c "import json; d=json.load(open('$OUTPUT')); print('Keys:', list(d.keys())); print('Top results:', len(d.get('top_10_results', [])))"
+
+      # ── 6. Update workflow-state.json to mark SERP data received ─────────────
+      - name: Update workflow-state.json
+        run: |
+          python - <<'PYEOF'
+          import json, datetime
+
+          state_path = "workflows/workflow-state.json"
+          with open(state_path) as f:
+              state = json.load(f)
+
+          state["current_state"]["status"] = "waiting_for_next_step"
+          state["current_state"]["current_stage"] = "serp_analysis"
+          state["current_state"]["last_completed_stage"] = "serp_analysis"
+          state["current_state"]["next_action"] = "create_blueprint"
+          state["_meta"]["last_updated"] = datetime.date.today().isoformat()
+
+          # Clear the SERP-001 pending input if present
+          state["pending_inputs"] = [
+              p for p in state.get("pending_inputs", [])
+              if p.get("input_id") != "SERP-001"
+          ]
+
+          with open(state_path, "w") as f:
+              json.dump(state, f, indent=2)
+
+          print("workflow-state.json updated — status: waiting_for_next_step, next: create_blueprint")
+          PYEOF
+
+      # ── 7. Delete api-keys.json before committing ─────────────────────────────
+      #    Belt-and-suspenders: even though it's gitignored, explicitly remove it
+      #    so there is zero chance of it leaking into the commit.
+      - name: Remove api-keys.json (never commit secrets)
+        run: rm -f config/api-keys.json
+
+      # ── 8. Commit and push results ────────────────────────────────────────────
+      - name: Commit and push serp-analysis.json + workflow-state.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Stage only the two safe output files
+          git add "blogs/drafts/${{ github.event.inputs.slug }}/serp-analysis.json"
+          git add workflows/workflow-state.json
+
+          # Only commit if there are staged changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit — serp-analysis.json may already be up to date."
+          else
+            git commit -m "feat: add SERP analysis for '${{ github.event.inputs.keyword }}' via GitHub Actions"
+            git push origin claude/setup-connection-e8W80
+            echo "Committed and pushed successfully."
+          fi
