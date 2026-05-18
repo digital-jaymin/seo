@@ -7,15 +7,16 @@
     "schema_version": "1.0",
     "last_updated": "2026-05-18",
     "blueprint_status": "approved",
-    "article_status": "reviewed_and_approved — ready for HTML conversion (Step 8)"
+    "article_status": "reviewed_and_approved",
+    "html_status": "created — waiting for review before Shopify draft (Step 9)"
   },
   "current_state": {
-    "status": "waiting_for_next_step",
-    "current_stage": "article_review_completed",
-    "last_completed_stage": "article_review_completed",
-    "next_action": "convert_reviewed_article_to_html",
-    "last_commit_hash": "7b016f7",
-    "last_commit_message": "feat: Step 7 complete — article draft created for BLOG-029"
+    "status": "waiting_for_review",
+    "current_stage": "html_created",
+    "last_completed_stage": "html_created",
+    "next_action": "test_html_then_create_shopify_draft",
+    "last_commit_hash": "b04f0c0",
+    "last_commit_message": "fix: SEO QA review applied to article.md — 4 factual corrections"
   },
   "active_work": {
     "active_cluster": "gaming_laptops",
@@ -209,6 +210,15 @@
       "file": "blogs/drafts/hp-victus-vs-hp-omen/article.md",
       "word_count_estimate": "~2000",
       "summary": "Article draft written and QA reviewed. 4 edits applied: DDR4/DDR5 qualifier added to RAM spec, Thermal Grizzly scoped to select models, HDMI version number removed, primary keyword added to intro. Price accuracy flagged for user verification before publish. Article approved for HTML conversion."
+    },
+    {
+      "stage": "html_conversion",
+      "status": "waiting_for_review",
+      "completed_date": "2026-05-18",
+      "article": "hp_victus_vs_hp_omen",
+      "blog_id": "BLOG-029",
+      "file": "blogs/drafts/hp-victus-vs-hp-omen/final.html",
+      "summary": "Shopify-ready HTML created. Inline CSS only, no html/head/body tags, no h1, no JS. Responsive table with overflow-x:auto. 3 styled CTA blocks (blue Victus, purple Omen, neutral end-of-article). All 6 internal links intact. FAQ as H3 sections. Honest verdict callout box. Author byline footer."
     }
   ],
   "cluster_queue": [
