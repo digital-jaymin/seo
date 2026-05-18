@@ -8,15 +8,15 @@
     "last_updated": "2026-05-18",
     "blueprint_status": "approved",
     "article_status": "reviewed_and_approved",
-    "html_status": "created — waiting for review before Shopify draft (Step 9)"
+    "html_status": "qa_passed — 1 issue found and fixed (background: → background-color:). Ready for Shopify draft."
   },
   "current_state": {
-    "status": "waiting_for_review",
-    "current_stage": "html_created",
-    "last_completed_stage": "html_created",
-    "next_action": "test_html_then_create_shopify_draft",
-    "last_commit_hash": "b04f0c0",
-    "last_commit_message": "fix: SEO QA review applied to article.md — 4 factual corrections"
+    "status": "waiting_for_next_step",
+    "current_stage": "html_qa_completed",
+    "last_completed_stage": "html_qa_completed",
+    "next_action": "create_shopify_draft_json",
+    "last_commit_hash": "c6ac70a",
+    "last_commit_message": "feat: Step 8 complete — Shopify HTML created for BLOG-029"
   },
   "active_work": {
     "active_cluster": "gaming_laptops",
@@ -219,6 +219,20 @@
       "blog_id": "BLOG-029",
       "file": "blogs/drafts/hp-victus-vs-hp-omen/final.html",
       "summary": "Shopify-ready HTML created. Inline CSS only, no html/head/body tags, no h1, no JS. Responsive table with overflow-x:auto. 3 styled CTA blocks (blue Victus, purple Omen, neutral end-of-article). All 6 internal links intact. FAQ as H3 sections. Honest verdict callout box. Author byline footer."
+    },
+    {
+      "stage": "html_qa",
+      "status": "completed",
+      "completed_date": "2026-05-18",
+      "article": "hp_victus_vs_hp_omen",
+      "blog_id": "BLOG-029",
+      "files": [
+        "blogs/drafts/hp-victus-vs-hp-omen/final.html",
+        "blogs/drafts/hp-victus-vs-hp-omen/html-qa-report.md"
+      ],
+      "issues_found": 1,
+      "issues_fixed": 1,
+      "summary": "HTML QA passed. One fix: background: shorthand → background-color: (24 occurrences) for Shopify HTML editor compatibility. All forbidden tags absent, all 6 links valid, table mobile-responsive, pricing hedged, meaning unchanged from article.md."
     }
   ],
   "cluster_queue": [
