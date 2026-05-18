@@ -13,8 +13,8 @@
     "current_stage": "semrush_validation_completed",
     "last_completed_stage": "keyword_validation",
     "next_action": "create_article_1_folder_and_run_serp_analysis",
-    "last_commit_hash": "d47110d",
-    "last_commit_message": "feat: keyword validation + Gaming Laptops cluster selected for production"
+    "last_commit_hash": "8772470",
+    "last_commit_message": "feat: add workflow checkpoint and recovery system"
   },
 
   "active_work": {
@@ -173,7 +173,7 @@
       "stage": "workflow_checkpoint_system",
       "status": "completed",
       "completed_date": "2026-05-18",
-      "commit_hash": "PENDING",
+      "commit_hash": "8772470",
       "summary": "Created workflow-state.json checkpoint and recovery system. Updated seo-workflow-guide.md with checkpoint rules at every major step."
     }
   ],
