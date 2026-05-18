@@ -7,20 +7,18 @@
     "schema_version": "1.0",
     "last_updated": "2026-05-18"
   },
-
   "current_state": {
-    "status": "waiting_for_input",
+    "status": "waiting_for_next_step",
     "current_stage": "serp_analysis",
-    "last_completed_stage": "blog_folder_setup",
-    "next_action": "fill_serp_analysis_json_then_create_blueprint",
+    "last_completed_stage": "serp_analysis",
+    "next_action": "create_blueprint",
     "last_commit_hash": "8e1ceaa",
-    "last_commit_message": "feat: Step 4 complete — blog folder created for hp-victus-vs-hp-omen"
+    "last_commit_message": "feat: Step 4 complete \u2014 blog folder created for hp-victus-vs-hp-omen"
   },
-
   "active_work": {
     "active_cluster": "gaming_laptops",
     "active_article": "hp_victus_vs_hp_omen",
-    "active_article_title": "HP Victus vs HP Omen — Which Gaming Laptop Should You Buy in India?",
+    "active_article_title": "HP Victus vs HP Omen \u2014 Which Gaming Laptop Should You Buy in India?",
     "active_article_slug": "hp-victus-vs-hp-omen",
     "active_article_order": 1,
     "active_article_role": "cluster_anchor",
@@ -28,11 +26,10 @@
     "active_article_volume": 140,
     "active_article_kd": 9
   },
-
   "parallel_track": {
     "cluster": "local_seo",
     "article": "hp_laptop_service_center_ahmedabad",
-    "article_title": "HP Laptop Service Center Ahmedabad — Repair, RAM Upgrade & Support",
+    "article_title": "HP Laptop Service Center Ahmedabad \u2014 Repair, RAM Upgrade & Support",
     "article_slug": "hp-laptop-service-center-ahmedabad",
     "article_keyword": "hp laptop service center ahmedabad",
     "article_volume": 480,
@@ -40,19 +37,7 @@
     "status": "queued",
     "note": "Standalone quick win. NOT part of gaming_laptops cluster. Write between Article 1 and Article 2 of gaming cluster, or in a separate session."
   },
-
-  "pending_inputs": [
-    {
-      "input_id": "SERP-001",
-      "description": "SERP results for 'hp victus vs hp omen' — top 10 ranking pages, PAA questions, content gaps",
-      "required_for": "blog_blueprint",
-      "blocked_reason": "Cloud environment blocks all outbound HTTP — serpapi.com returns 403. Key is valid and reads correctly from config/api-keys.json.",
-      "how_to_unblock": "Option A (recommended): Run locally on your machine: python scripts/serpapi_fetcher.py --keyword 'hp victus vs hp omen' — this will write serp-analysis.json, commit and push it, and Claude can proceed to blueprint. Option B: Follow blogs/drafts/hp-victus-vs-hp-omen/manual-serp-research-instructions.md and paste findings to Claude.",
-      "serpapi_key_status": "configured and loading correctly — blocked only by cloud network policy",
-      "instructions_file": "blogs/drafts/hp-victus-vs-hp-omen/manual-serp-research-instructions.md"
-    }
-  ],
-
+  "pending_inputs": [],
   "expected_outputs": {
     "stage_serp_analysis": [
       "blogs/drafts/hp-victus-vs-hp-omen/serp-analysis.json"
@@ -73,7 +58,6 @@
       "blogs/drafts/hp-victus-vs-hp-omen/shopify-draft.json"
     ]
   },
-
   "completed_outputs": {
     "stage_blog_folder_setup": [
       "blogs/drafts/hp-victus-vs-hp-omen/metadata.json",
@@ -106,7 +90,6 @@
       "data/keywords/selected-topics.json"
     ]
   },
-
   "resume_instructions": {
     "on_session_start": [
       "1. Read this file: workflows/workflow-state.json",
@@ -114,7 +97,7 @@
       "3. Run memory snapshot: python scripts/seo_memory.py",
       "4. Check git log for any commits since last_commit_hash",
       "5. Confirm current_state.status with user before starting next_action",
-      "6. If status is paused_usage_limit — ask user to confirm resuming the paused task"
+      "6. If status is paused_usage_limit \u2014 ask user to confirm resuming the paused task"
     ],
     "next_action_detail": {
       "action": "create_article_1_folder_and_run_serp_analysis",
@@ -127,13 +110,12 @@
       ]
     }
   },
-
   "usage_limit_safety_notes": {
     "large_tasks": [
-      "blog_writing — typically 1500-2200 words; start only with fresh context",
-      "html_conversion — converts full article to Shopify HTML; start only with fresh context",
-      "full_qa_review — reads article.md + article.html together; moderate context use",
-      "shopify_draft_prep — moderate; safe after QA"
+      "blog_writing \u2014 typically 1500-2200 words; start only with fresh context",
+      "html_conversion \u2014 converts full article to Shopify HTML; start only with fresh context",
+      "full_qa_review \u2014 reads article.md + article.html together; moderate context use",
+      "shopify_draft_prep \u2014 moderate; safe after QA"
     ],
     "safe_to_run_near_limit": [
       "workflow-state.json update",
@@ -142,16 +124,15 @@
       "seo_memory.py snapshot",
       "blog_folder_creator.py"
     ],
-    "rule": "If about to start blog_writing or html_conversion and context window is more than 60% used — stop, update this file to status=paused_usage_limit, commit and push, then end the session cleanly."
+    "rule": "If about to start blog_writing or html_conversion and context window is more than 60% used \u2014 stop, update this file to status=paused_usage_limit, commit and push, then end the session cleanly."
   },
-
   "stage_history": [
     {
       "stage": "project_setup",
       "status": "completed",
       "completed_date": "2026-05-15",
       "commit_hash": "f49b1dd",
-      "summary": "Connected GitHub repo, created full project scaffold — config, scripts, templates, prompts, workflows"
+      "summary": "Connected GitHub repo, created full project scaffold \u2014 config, scripts, templates, prompts, workflows"
     },
     {
       "stage": "sitemap_analysis",
@@ -196,11 +177,10 @@
       "article": "hp_victus_vs_hp_omen",
       "blog_id": "BLOG-029",
       "folder": "blogs/drafts/hp-victus-vs-hp-omen/",
-      "memory_validation": "passed — target_page_type: blog, cannibalization_risk: none, approved: YES",
-      "summary": "Created blog folder for BLOG-029 (hp victus vs hp omen). All 7 template files created plus manual-serp-research-instructions.md. SERPAPI key missing — blocked at serp_analysis stage. Waiting for manual SERP input."
+      "memory_validation": "passed \u2014 target_page_type: blog, cannibalization_risk: none, approved: YES",
+      "summary": "Created blog folder for BLOG-029 (hp victus vs hp omen). All 7 template files created plus manual-serp-research-instructions.md. SERPAPI key missing \u2014 blocked at serp_analysis stage. Waiting for manual SERP input."
     }
   ],
-
   "cluster_queue": [
     {
       "queue_position": 1,
@@ -247,7 +227,9 @@
       "anchor_keyword": "hp laptop for office use india",
       "anchor_volume": 0,
       "anchor_kd": 4,
-      "target_collections": ["/collections/business-laptops"]
+      "target_collections": [
+        "/collections/business-laptops"
+      ]
     },
     {
       "queue_position": 4,
@@ -258,7 +240,9 @@
       "anchor_keyword": "hp omnibook x review india",
       "anchor_volume": 0,
       "anchor_kd": 4,
-      "target_collections": ["/collections/laptops"]
+      "target_collections": [
+        "/collections/laptops"
+      ]
     },
     {
       "queue_position": 5,
@@ -269,7 +253,9 @@
       "anchor_keyword": "best robotic vacuum cleaner india 2026",
       "anchor_volume": 0,
       "anchor_kd": 4,
-      "target_collections": ["/collections/robotic-vacuum-cleaner"]
+      "target_collections": [
+        "/collections/robotic-vacuum-cleaner"
+      ]
     },
     {
       "queue_position": 6,
@@ -280,7 +266,9 @@
       "anchor_keyword": "hp designjet buying guide india",
       "anchor_volume": 0,
       "anchor_kd": 4,
-      "target_collections": ["/collections/large-format-printer"]
+      "target_collections": [
+        "/collections/large-format-printer"
+      ]
     }
   ]
 }

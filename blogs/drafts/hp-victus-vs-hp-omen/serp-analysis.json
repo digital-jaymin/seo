@@ -1,32 +1,112 @@
 {
   "keyword": "hp victus vs hp omen",
   "country": "India",
-  "search_date": "",
-  "data_source": "SERPAPI | manual",
+  "search_date": "2026-05-18T07:05:07.489187",
+  "data_source": "SERPAPI",
   "top_10_results": [
     {
       "position": 1,
-      "title": "",
-      "url": "",
-      "domain": "",
-      "meta_description": "",
-      "content_type": "listicle | guide | comparison | product_page | review",
+      "title": "Omen vs Victus : r/HPOmen",
+      "url": "https://www.reddit.com/r/HPOmen/comments/1ecjuq1/omen_vs_victus/",
+      "domain": "9 comments \u00b7 1 year ago",
+      "meta_description": "Victus is designed to be more affordable than Omen, and \u00b7 Omen is designed to be the more premium line of gaming computers. \u00b7 Victus chassis is ...",
+      "content_type": "unknown",
       "estimated_word_count": null,
       "content_angle": "",
-      "da_estimate": "high | medium | low"
+      "da_estimate": "unknown"
+    },
+    {
+      "position": 2,
+      "title": "OMEN vs. Victus Gaming Laptops: Which is Best for You?",
+      "url": "https://www.hp.com/us-en/shop/tech-takes/omen-vs-victus-gaming-laptops",
+      "domain": "https://www.hp.com \u203a us-en \u203a shop \u203a tech-takes \u203a omen-...",
+      "meta_description": "Both the OMEN and Victus lineups offer excellent gaming experiences, but they cater to different needs and budgets. Here's a quick comparison to help you ...",
+      "content_type": "unknown",
+      "estimated_word_count": null,
+      "content_angle": "",
+      "da_estimate": "unknown"
+    },
+    {
+      "position": 3,
+      "title": "Compare HP Victus 16 (2023) vs HP Omen 16 (2023)",
+      "url": "https://www.gadgets360.com/compare-hp-victus-16-2023-118860-vs-hp-omen-16-2023-118859",
+      "domain": "https://www.gadgets360.com \u203a ... \u203a Compare Laptops",
+      "meta_description": "HP Victus 16 (2023) vs HP Omen 16 (2023) comparison \u00b7 Display size \u00b7 16.10-inch \u00b7 Display resolution \u00b7 1920x1080 pixels \u00b7 Touchscreen \u00b7 No \u00b7 Processor \u00b7 Core i5 ...",
+      "content_type": "unknown",
+      "estimated_word_count": null,
+      "content_angle": "",
+      "da_estimate": "unknown"
+    },
+    {
+      "position": 4,
+      "title": "HP Victus 16 (2021) vs OMEN 16 (2022) - Laptop",
+      "url": "https://www.rtings.com/laptop/tools/compare/hp-victus-16-2021-vs-hp-omen-16-2022/26419/27734",
+      "domain": "https://www.rtings.com \u203a Laptop",
+      "meta_description": "The HP OMEN 16 (2022) is better than the HP Victus 16 (2021). The OMEN 16 is a more premium laptop that offers a better user experience with better thermals ...",
+      "content_type": "unknown",
+      "estimated_word_count": null,
+      "content_angle": "",
+      "da_estimate": "unknown"
+    },
+    {
+      "position": 5,
+      "title": "HP Victus 16 (2024) vs Omen 16 (2023): which is better?",
+      "url": "https://nanoreview.net/en/laptop-compare/hp-victus-16-2024-vs-hp-omen-16-2023",
+      "domain": "https://nanoreview.net \u203a Laptop comparison",
+      "meta_description": "Slightly easier to carry: weighs 110 grams less (around 0.24 lbs); Around 61% better multi-core CPU performance in the Cinebench 2024 test ...",
+      "content_type": "unknown",
+      "estimated_word_count": null,
+      "content_angle": "",
+      "da_estimate": "unknown"
+    },
+    {
+      "position": 6,
+      "title": "[In-Depth Comparison] HP Victus 16 (16-d1000) vs ...",
+      "url": "https://laptopmedia.com/in/comparisons/in-depth-comparison-hp-victus-16-16-d1000-vs-hp-omen-16-16-k0000-hp-are-levelling-up-in-2022/",
+      "domain": "https://laptopmedia.com \u203a comparisons \u203a in-depth-com...",
+      "meta_description": "The Omen is a bit more durable, thanks to the aluminum base, while both laptops have similar weight and thickness. Typing is fantastic on both, ...",
+      "content_type": "unknown",
+      "estimated_word_count": null,
+      "content_angle": "",
+      "da_estimate": "unknown"
+    },
+    {
+      "position": 7,
+      "title": "HP Victus 15-fb3025AX Gaming Laptop vs HP Omen 16- ...",
+      "url": "https://www.smartprix.com/laptops/hp_victus_15_fb3025ax_gaming_l_vs_hp_omen_16_xf0060ax_gaming_lap-cpd1vyyinbq2_pd13mqgsw44.php",
+      "domain": "https://www.smartprix.com \u203a Laptops \u203a Compare",
+      "meta_description": "Comparing HP Victus 15-fb3025AX Gaming Laptop (A... vs HP Omen 16-xf0060AX Gaming Laptop (AMD... on Smartprix enables you to check their respective specs scores ...",
+      "content_type": "unknown",
+      "estimated_word_count": null,
+      "content_angle": "",
+      "da_estimate": "unknown"
     }
   ],
-  "people_also_ask": [],
-  "related_searches": [],
+  "people_also_ask": [
+    "Is Victus owned by Omen?",
+    "Which series of HP is best?",
+    "What is better than HP Victus?",
+    "Why is HP Victus discontinued?"
+  ],
+  "related_searches": [
+    "Hp victus vs hp omen reddit",
+    "HP Omen or HP Victus Which is better",
+    "Hp victus vs hp omen specs",
+    "Hp victus vs hp omen 16 reddit",
+    "Hp victus vs hp omen for gaming",
+    "Hp victus vs hp omen 2022",
+    "HP omen vs Victus vs Pavilion",
+    "Hp victus vs hp omen gaming laptop"
+  ],
   "featured_snippet": {
     "present": false,
-    "type": "paragraph | list | table | none",
+    "type": "none",
     "content": ""
   },
   "serp_features": {
     "shopping_results": false,
     "image_pack": false,
-    "video_results": false,
+    "video_results": true,
     "local_pack": false,
     "knowledge_panel": false
   },
@@ -34,6 +114,6 @@
     "average_word_count": null,
     "common_h2_topics": [],
     "content_gaps": [],
-    "winning_angle_for_innova": ""
+    "winning_angle_for_innova": "TODO: Analyze results and fill this in"
   }
 }
