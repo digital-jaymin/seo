@@ -4,7 +4,8 @@
 **File reviewed:** `blogs/drafts/hp-victus-vs-hp-omen/final.html`  
 **QA date:** 2026-05-18  
 **Reviewer:** Claude (automated SEO QA pass)  
-**Outcome:** 1 issue found and fixed. File is Shopify paste-ready.
+**Pass:** Visual redesign + em-dash removal pass  
+**Outcome:** 1 minor issue found and fixed (em dash in HTML comment). File is Shopify paste-ready.
 
 ---
 
@@ -19,11 +20,19 @@
 | `<h1>` | No | ✅ Pass |
 | `<script>` | No | ✅ Pass |
 | `<style>` | No | ✅ Pass |
-| `<link>` | No | ✅ Pass |
+| `<link>` (stylesheet) | No | ✅ Pass |
 | Liquid syntax (`{{`, `{%`) | No | ✅ Pass |
 
-### 2. Link Audit
-All links use absolute URLs pointing to `innovaretail.co.in`. No empty `href` values. No broken anchors.
+### 2. Em Dash Audit
+All em dash characters (—) removed from both `article.md` and `final.html`.
+
+- `article.md`: 41 replacements applied by Python script. 0 remaining.
+- `final.html`: 1 em dash found in HTML comment line (`Innova Retail — Shopify Blog Post HTML`). Fixed to colon. 0 remaining.
+
+`grep -c "—" final.html` returns **0**. ✅
+
+### 3. Link Audit
+All links use absolute URLs pointing to `innovaretail.co.in`. No empty `href` values.
 
 | Destination | Occurrences | Status |
 |------------|-------------|--------|
@@ -34,109 +43,103 @@ All links use absolute URLs pointing to `innovaretail.co.in`. No empty `href` va
 | /collections/best-gaming-laptop-under-1-lakh | 2 | ✅ |
 | /pages/laptop-service | 1 | ✅ |
 
-All 6 internal link targets from `metadata.json` are present.
+All 6 internal link targets from `metadata.json` are present. ✅
 
-### 3. Image References
+### 4. Image References
 No `<img>` tags in the file. No fake or placeholder image references. ✅
 
-### 4. Mobile Responsiveness
+### 5. Mobile Responsiveness
 - Spec comparison table wrapped in `<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">` ✅
-- Table has `min-width:560px` — scrolls horizontally on small screens rather than collapsing ✅
-- CTA button links use `display:inline-block` with `margin-bottom:8px` — stack naturally on narrow viewports ✅
+- Table has `min-width:560px` — scrolls horizontally on narrow viewports ✅
+- Two-column flex layouts use `flex-wrap:wrap` — stack vertically on mobile without media queries ✅
+- CTA buttons use `display:inline-block;margin-bottom:8px` — stack naturally on small screens ✅
 
-### 5. CSS Method
+### 6. CSS Method
 - All styling via `style=""` attributes only ✅
-- No `class=` or `id=` attributes used for styling ✅
+- No `class=` or `id=` attributes used ✅
 - No external stylesheet references ✅
-- `-webkit-overflow-scrolling:touch` present (deprecated but harmless) ✅
+- No JavaScript ✅
+- `background-color:` used throughout (not `background:` shorthand) ✅
+  - `grep -c "background-color:"` returns **36**
+  - `grep -c "background:[^-]"` returns **0**
 
-### 6. CTA Buttons — Shopify Safety
-**Issue found and fixed.**
+### 7. Visual Design — New in This Pass
+The file was fully redesigned for visual quality. Key elements verified present:
 
-Shopify's online store HTML editor can mutate or strip the CSS `background` shorthand property in inline `style=""` attributes. It interprets `background:` as a shorthand that may reset sub-properties (background-image, background-repeat, etc.), occasionally stripping the color value entirely on save.
+| Element | Implementation | Status |
+|---------|---------------|--------|
+| Outer max-width wrapper | `max-width:860px;margin:0 auto` | ✅ |
+| System font stack | `-apple-system,BlinkMacSystemFont,'Segoe UI',...` | ✅ |
+| Quick-answer card | Blue left-border callout after intro | ✅ |
+| H2 underline style | `border-bottom:2px solid #e8edf2` | ✅ |
+| Two-column flex cards | `display:flex;flex-wrap:wrap;gap:16px` | ✅ |
+| Table header | `background-color:#0057b8;color:#ffffff` | ✅ |
+| Alternating table rows | `#f8f9fb` / `#ffffff` | ✅ |
+| Verdict callout | Amber left-border `#fffbea;border-left:4px solid #d4930a` | ✅ |
+| CTA Block 1 (Victus) | `background-color:#0057b8`, white text/button | ✅ |
+| CTA Block 2 (Omen) | `background-color:#1a0033`, white text/button | ✅ |
+| CTA Block 3 (neutral) | `background-color:#f8f9fb`, 4 buttons | ✅ |
+| FAQ cards | `background-color:#f8f9fb;border:1px solid #dde3ec;border-radius:8px` | ✅ |
 
-**Fix applied:** All 24 occurrences of `background:` replaced with `background-color:` throughout the file. Affected elements:
-- 13 table row `<tr>` elements (alternating shading and header)
-- 3 CTA container `<div>` backgrounds
-- 4 `<a>` button backgrounds
-- 1 verdict callout box background
-- 3 other styled containers
+### 8. CTA Buttons — Shopify Safety
+- `background-color:` used on all buttons (not `background:` shorthand) ✅
+- No hover/active states that require JavaScript or `<style>` blocks ✅
+- All button `<a>` tags include `display:inline-block` for reliable rendering ✅
 
-Verification: `grep -c "background:"` returns 0. `grep -c "background-color:"` returns 24.
+### 9. Structure Audit
+| Section | Present | Status |
+|---------|---------|--------|
+| Intro (3 paragraphs + quick-answer card) | ✅ | ✅ |
+| What Is the Difference (featured snippet H2) | ✅ | ✅ |
+| Full Spec Comparison Table | ✅ | ✅ |
+| Display and Build Quality (H3 subsections) | ✅ | ✅ |
+| Gaming Performance (H3 subsections) | ✅ | ✅ |
+| Price in India | ✅ | ✅ |
+| CTA Block 1 — Victus | ✅ | ✅ |
+| Which Should You Buy (Buy Victus if / Buy Omen if) | ✅ | ✅ |
+| Is HP Victus Being Discontinued | ✅ | ✅ |
+| Three-Way View (Victus / Omen / Pavilion) | ✅ | ✅ |
+| CTA Block 2 — Omen | ✅ | ✅ |
+| Where to Buy (Authorized) | ✅ | ✅ |
+| FAQ (5 questions as H3 + P pairs) | ✅ | ✅ |
+| The Verdict | ✅ | ✅ |
+| CTA Block 3 — End of article | ✅ | ✅ |
+| Author byline footer | ✅ | ✅ |
 
-### 7. FAQ Section
-- 5 questions rendered as `<h3>` + `<p>` pairs ✅
-- No nested lists or definition lists ✅
-- No accordion/collapse markup (not needed; Shopify blog renders flat HTML) ✅
-- All 4 PAA questions covered ✅
-- 5th question covers "which should I buy" decision intent ✅
+H2 count: **11** | H3 count: **15** ✅
 
-### 8. Duplicate Content Check
-All 11 sections verified as unique. No paragraph is repeated verbatim across sections.
-
-Sections present:
-1. Intro (3 paragraphs) ✅
-2. What Is the Difference ✅
-3. Full Spec Comparison Table ✅
-4. Display and Build Quality (4 H3 subsections) ✅
-5. Gaming Performance (4 H3 subsections) ✅
-6. Price in India ✅
-7. CTA Block 1 — Victus ✅
-8. Which Should You Buy (Buy Victus if / Buy Omen if) ✅
-9. Is HP Victus Being Discontinued ✅
-10. Three-Way View (Victus / Omen / Pavilion) ✅
-11. CTA Block 2 — Omen ✅
-12. Where to Buy (Authorized) ✅
-13. FAQ (5 questions) ✅
-14. The Verdict ✅
-15. CTA Block 3 — End of article (all 4 collections) ✅
-16. Author byline ✅
-
-### 9. Pricing Claims
-All price figures are hedged with appropriate language:
+### 10. Pricing Claims
+All price figures hedged with appropriate language. `grep -c "approx\|approximately\|varies"` returns **8**. ✅
 
 | Location | Price mentioned | Hedge present |
 |----------|----------------|---------------|
 | Spec table — Starting Price rows | ₹60k–65k / ₹90k–1L | "(approx.)" ✅ |
 | Table footnote | — | "Prices shown are approximate market references" ✅ |
 | Price section body | ₹60k–65k, ₹85k–90k, ₹90k–1L, ₹1.3L+ | "approximately" ✅ |
-| Price section footnote | — | "pricing varies by stock and available configs" ✅ |
-| Buy Victus if list | ₹60k–85k | Budget range, not a fixed price ✅ |
-| Buy Omen if list | ₹90k+ | Budget threshold, not a fixed price ✅ |
+| Budget guidance cards | ₹60k–85k / ₹90k+ | Budget ranges, not fixed prices ✅ |
 | FAQ | ₹85k, ₹90k | Budget guidance thresholds ✅ |
 | Verdict | ₹85k, ₹90k | Budget guidance thresholds ✅ |
 
-No bare unhedged price claim present. ✅
-
-**Note for publisher:** The ₹60,000–₹65,000 starting price for Victus entry models should be verified against live Innova Retail inventory before publishing. 2025 Victus RTX 4050 base configs may be closer to ₹70,000.
-
-### 10. Meaning vs article.md
-Verified section by section. No content has been altered, added, or omitted during HTML conversion. HTML entities used correctly throughout:
-- `&mdash;` for em dashes ✅
-- `&ndash;` for ranges ✅
-- `&#8377;` for ₹ (Rupee sign) ✅
-- `&rarr;` for → arrows ✅
-- `&ldquo;`/`&rdquo;` for smart quotes ✅
-- `&rsquo;` for apostrophes ✅
-- `&times;` for × in QHD spec ✅
-- `&amp;` for & in byline ✅
+**Note for publisher:** Verify ₹60,000–₹65,000 entry Victus pricing against live Innova Retail stock before publishing.
 
 ### 11. Shopify Paste-Ready Assessment
-- File starts with a `<p>` tag ✅
+- File opens with `<!-- comment -->` then `<div style="...">` ✅
 - No forbidden tags ✅
 - No JavaScript ✅
 - No external CSS ✅
 - No Liquid syntax ✅
-- `background-color:` used throughout (not `background:` shorthand) ✅ (fixed)
-- Table is scroll-wrapped for mobile ✅
+- `background-color:` used throughout ✅
+- Table wrapped in `overflow-x:auto` div ✅
+- No `class=` or `id=` attributes ✅
+- No em dashes ✅
 
 ---
 
-## Issues Found
+## Issues Found and Fixed
 
 | # | Severity | Issue | Fix Applied |
 |---|----------|-------|-------------|
-| 1 | Medium | `background:` shorthand in all inline styles — can be stripped by Shopify HTML editor on save | ✅ Replaced all 24 occurrences with `background-color:` |
+| 1 | Low | Em dash (—) in HTML comment: `Innova Retail — Shopify Blog Post HTML` | ✅ Replaced with colon |
 
 **Total issues:** 1  
 **Issues fixed:** 1  
@@ -147,7 +150,7 @@ Verified section by section. No content has been altered, added, or omitted duri
 ## Final Status
 
 **HTML QA: PASSED**  
-`final.html` is clean, Shopify-safe, and ready for Shopify draft creation (Step 10).
+`final.html` is visually redesigned, em-dash-free, Shopify-safe, and ready for Shopify draft creation (Step 10).
 
 ---
 
@@ -155,7 +158,7 @@ Verified section by section. No content has been altered, added, or omitted duri
 
 Create `shopify-draft.json` with:
 - `title` from metadata.json
-- `body_html` — contents of `final.html` (escaped or raw depending on API method)
+- `body_html` — contents of `final.html`
 - `blog_id` — from Shopify admin (to be filled by user)
 - `tags`, `published`, `author` fields
 - `meta_title` and `meta_description` from article.md frontmatter
