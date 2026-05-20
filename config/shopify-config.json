@@ -1,0 +1,80 @@
+{
+  "_meta": {
+    "description": "Shopify blog publishing defaults for Innova Retail. Used by shopify-draft.json generator and future n8n/Zapier/Make automation workflows.",
+    "usage": "These are defaults only. Per-article overrides go in the article's shopify-draft.json.",
+    "api_docs": "https://shopify.dev/docs/api/admin-rest/2024-01/resources/article",
+    "last_updated": "2026-05-20"
+  },
+
+  "store": {
+    "store_url": "https://innovaretail.co.in",
+    "myshopify_url": "REPLACE_WITH_MYSHOPIFY_URL",
+    "api_version": "2024-01"
+  },
+
+  "default_blog_id": "REPLACE_WITH_SHOPIFY_BLOG_ID",
+
+  "default_author": "Innova Retail Content Team",
+
+  "default_status": "draft",
+
+  "default_tags": [
+    "Gaming Laptops",
+    "HP Laptops",
+    "Laptop Buying Guide",
+    "India"
+  ],
+
+  "seo_defaults": {
+    "title_suffix": " | Innova Retail",
+    "max_title_length": 60,
+    "max_description_length": 160,
+    "canonical_base": "https://innovaretail.co.in/blogs/insights/"
+  },
+
+  "publishing_rules": {
+    "auto_publish": false,
+    "requires_manual_review": true,
+    "review_checklist": [
+      "Verify live pricing against current Innova Retail inventory",
+      "Check all internal links return 200 in browser",
+      "Preview on mobile (Shopify theme preview)",
+      "Confirm no duplicate H1 in Shopify blog template",
+      "Set featured image before publishing"
+    ]
+  },
+
+  "automation_integration": {
+    "zapier": {
+      "trigger": "New file in blogs/drafts/*/shopify-draft.json",
+      "action": "POST to Shopify Admin API /blogs/{blog_id}/articles.json",
+      "auth_header": "X-Shopify-Access-Token",
+      "payload_field": "article"
+    },
+    "make": {
+      "module": "HTTP - Make a request",
+      "method": "POST",
+      "url_template": "https://{myshopify_url}/admin/api/{api_version}/blogs/{blog_id}/articles.json",
+      "body_field": "article"
+    },
+    "n8n": {
+      "node": "HTTP Request",
+      "method": "POST",
+      "url_expression": "={{$json.store.myshopify_url}}/admin/api/{{$json.store.api_version}}/blogs/{{$json.blog_id}}/articles.json",
+      "auth": "Shopify credentials (API key + password or access token)",
+      "body_field": "article"
+    }
+  },
+
+  "field_reference": {
+    "article.title": "Blog post title — shown in Shopify blog listing and browser tab",
+    "article.author": "Author name displayed on the post",
+    "article.body_html": "Full HTML content — paste-ready, no html/head/body tags",
+    "article.handle": "URL slug — e.g. hp-victus-vs-hp-omen becomes /blogs/insights/hp-victus-vs-hp-omen",
+    "article.tags": "Comma-separated or array — used for Shopify blog filtering",
+    "article.published": "true = live, false = draft",
+    "article.published_at": "ISO 8601 datetime — set when publishing",
+    "article.metafields": "SEO title and description stored as metafields (see seo block below)",
+    "article.image": "Featured image — must be uploaded separately; not included in draft JSON"
+  }
+}
