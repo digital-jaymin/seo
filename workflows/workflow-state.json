@@ -15,7 +15,7 @@
     "current_stage": "html_qa_completed",
     "last_completed_stage": "html_qa_completed",
     "next_action": "create_shopify_draft_json",
-    "last_commit_hash": "pending",
+    "last_commit_hash": "16cfff2",
     "last_commit_message": "feat: Step 9 complete — HTML redesigned, em dashes removed, QA passed for BLOG-029"
   },
   "active_work": {
