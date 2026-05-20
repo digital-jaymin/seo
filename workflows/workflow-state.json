@@ -16,7 +16,7 @@
     "current_stage": "shopify_draft_created",
     "last_completed_stage": "shopify_draft_created",
     "next_action": "manual_shopify_preview_and_publish",
-    "last_commit_hash": "pending",
+    "last_commit_hash": "18a3c68",
     "last_commit_message": "feat: Step 10 complete — shopify-draft.json and shopify-config.json created for BLOG-029"
   },
   "active_work": {
