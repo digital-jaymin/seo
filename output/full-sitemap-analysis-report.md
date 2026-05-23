@@ -1,8 +1,10 @@
 # Innova Retail — Full Sitemap & Content Structure Analysis
-**Generated:** 2026-05-15  
+**Generated:** 2026-05-15 | **Last Refreshed:** 2026-05-23  
 **Analyst:** Claude SEO Automation System  
 **Website:** https://innovaretail.co.in  
 **Sitemap Source:** Manually extracted from Shopify sitemap XML
+
+> **2026-05-23 Refresh:** Products 202 → 199. Removed: 4 discontinued USB/power bank accessories. Added: 1 new AIO desktop (HP 27 CR1027IN, Core Ultra 5, 16GB, 1TB SSD). Collections, pages, and blog articles unchanged.
 
 ---
 
@@ -10,11 +12,11 @@
 
 | Type | Count |
 |------|-------|
-| Products | 202 |
+| Products | 199 *(was 202 — 4 discontinued, 1 added)* |
 | Collections | 44 |
 | Static Pages | 9 |
 | Blog Articles | 28 |
-| **Grand Total** | **283** |
+| **Grand Total** | **281** |
 
 Innova Retail operates as an **HP authorized reseller** (HP World franchise) in Gujarat, India — with 5 Ahmedabad showrooms and 1 Rajkot showroom. The store sells HP laptops, desktops, printers, accessories, ink/toner, and ELV products (Smart Locks, Cleaning Robots, Parking Barriers, Dahua intercom systems).
 

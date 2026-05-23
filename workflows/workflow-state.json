@@ -5,7 +5,7 @@
     "usage_limit_rule": "If the next task is large (blog writing, HTML conversion, full QA) and the session is near context limit, do NOT start it. Update status to paused_usage_limit, commit and push, then stop.",
     "commit_rule": "Commit and push after every major stage completion. Never leave uncommitted work when stopping.",
     "schema_version": "1.0",
-    "last_updated": "2026-05-20",
+    "last_updated": "2026-05-23",
     "blueprint_status": "approved",
     "article_status": "reviewed_and_approved",
     "html_status": "qa_passed — visual redesign applied, em dashes removed from article.md and final.html, 1 QA issue fixed (em dash in HTML comment). Ready for Shopify draft.",
@@ -132,6 +132,14 @@
     "rule": "If about to start blog_writing or html_conversion and context window is more than 60% used \u2014 stop, update this file to status=paused_usage_limit, commit and push, then end the session cleanly."
   },
   "stage_history": [
+    {
+      "stage": "sitemap_refresh",
+      "status": "completed",
+      "completed_date": "2026-05-23",
+      "commit_hash": "pending",
+      "data_sources": "Manual paste — all 4 Shopify sitemaps (products, collections, pages, blogs)",
+      "summary": "Refresh vs 2026-05-15 baseline. Products: 202 → 199 (-4 discontinued USB/power bank accessories, +1 new AIO desktop HP 27 CR1027IN Core Ultra 5). Collections: 44 → 44 (no change). Pages: 9 → 9 (no change). Blog articles: 28 → 28 (no change). No new content gaps identified. SEO cluster plan unchanged."
+    },
     {
       "stage": "project_setup",
       "status": "completed",

@@ -186,12 +186,8 @@ https://innovaretail.co.in/products/hp-65w-4-5mm-non-em-ac-adapter
 https://innovaretail.co.in/products/hp-90w-smart-power-ac-adapter-w5d55aa
 https://innovaretail.co.in/products/adaptor-65w-7-4-ac-non-em-hp-y5y42aa
 https://innovaretail.co.in/products/nb-90w-smart-ac-adapter-new-hp-g6h43aa
-https://innovaretail.co.in/products/nb-usb-c-essential-power-bank-hp-hp-3tb55aa-1
 
 # ── USB DRIVES, PENS, BATTERY, MONITOR ────────────────────────────────────────
-https://innovaretail.co.in/products/hp-818w-128gb-usb-3-2-flash-drive
-https://innovaretail.co.in/products/hp-886c-64gb-otg-usb-32-flash-drive-an1j4aa
-https://innovaretail.co.in/products/hp-886c-64gb-otg-usb-3-2-flash-drive-an1j0aa
 https://innovaretail.co.in/products/hp-pen-1-51-3v2x4aa
 https://innovaretail.co.in/products/hvar-usi-active-rechargeable-pen-a-p-hp-8nn78aa
 https://innovaretail.co.in/products/nb-pen-hp-1mr94aa-1
@@ -244,3 +240,4 @@ https://innovaretail.co.in/products/advanced-laptop-repair
 https://innovaretail.co.in/products/software-os-support
 https://innovaretail.co.in/products/upgrade-services-ram-ssd
 https://innovaretail.co.in/products/printer-repair-home-users
+https://innovaretail.co.in/products/hp-27-cr1027in-all-in-one-desktop-core-ultra-5-16gb-1tb-ssd
