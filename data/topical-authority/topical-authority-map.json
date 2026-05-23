@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Topical authority map for innovaretail.co.in. Tracks cluster health, pillar/spoke structure, and gap coverage over time. Updated automatically when new blogs are created via blog_folder_creator.py.",
-    "last_updated": "2026-05-18",
+    "last_updated": "2026-05-23",
     "version": "1.0"
   },
   "clusters": {
@@ -289,7 +289,8 @@
       "pillar_blog": null,
       "spoke_blogs": [
         "/blogs/insights/desktop-computers-ahmedabad-hp-desktops",
-        "/blogs/insights/hp-printers-ahmedabad"
+        "/blogs/insights/hp-printers-ahmedabad",
+        "/blogs/insights/hp-laptop-service-center-ahmedabad"
       ],
       "collection_pages": [
         "/pages/hp-world-navrangpura",
@@ -299,7 +300,7 @@
         "/pages/hp-world-vastral",
         "/pages/hp-world-rajkot-tagore-road"
       ],
-      "blog_count": 2,
+      "blog_count": 3,
       "gap_articles": [
         {
           "topic": "HP Laptops in Ahmedabad \u2014 Buy at HP World Stores",
@@ -317,7 +318,7 @@
         }
       ],
       "cannibalization_notes": "Ahmedabad covered for desktops and printers. Laptop + Ahmedabad and all Rajkot local content missing.",
-      "last_updated": "2026-05-15"
+      "last_updated": "2026-05-23"
     },
     "Services": {
       "authority_goal": "Rank for HP laptop repair, upgrade, and service center searches in Ahmedabad/Rajkot",

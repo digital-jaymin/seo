@@ -1,8 +1,8 @@
 {
   "_meta": {
     "description": "Master content index for Innova Retail. Tracks all published and draft blogs for cannibalization checks.",
-    "last_updated": "2026-05-18",
-    "total_blogs": 29,
+    "last_updated": "2026-05-23",
+    "total_blogs": 30,
     "source": "Manually extracted from sitemap_blogs_1.xml \u2014 2026-05-15"
   },
   "blogs": [
@@ -587,6 +587,35 @@
         "/collections/hp-omen-laptop",
         "/collections/best-gaming-laptop-under-70000",
         "/collections/best-gaming-laptop-under-1-lakh"
+      ],
+      "cannibalization_risk": "none",
+      "cannibalization_notes": null,
+      "ranking_notes": ""
+    },
+    {
+      "blog_id": "BLOG-030",
+      "title": "",
+      "primary_keyword": "hp laptop service center ahmedabad",
+      "secondary_keywords": [],
+      "cluster": "Local SEO",
+      "intent": "local",
+      "slug": "/blogs/insights/hp-laptop-service-center-ahmedabad",
+      "status": "draft",
+      "created_date": "2026-05-23",
+      "updated_date": "2026-05-23",
+      "shopify_status": "not_uploaded",
+      "target_page_type": "blog",
+      "parent_cluster": "Local SEO",
+      "supported_collection_page": "/pages/hp-world-navrangpura",
+      "internal_links": [
+        "/blogs/insights/desktop-computers-ahmedabad-hp-desktops",
+        "/blogs/insights/hp-printers-ahmedabad",
+        "/pages/hp-world-navrangpura",
+        "/pages/hp-world-maninagar",
+        "/pages/hp-world-chandkheda",
+        "/pages/hp-world-prahlad-nagar",
+        "/pages/hp-world-vastral",
+        "/pages/hp-world-rajkot-tagore-road"
       ],
       "cannibalization_risk": "none",
       "cannibalization_notes": null,
