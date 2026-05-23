@@ -1,0 +1,39 @@
+{
+  "keyword": "hp laptop service center ahmedabad",
+  "country": "India",
+  "search_date": "",
+  "data_source": "SERPAPI | manual",
+  "top_10_results": [
+    {
+      "position": 1,
+      "title": "",
+      "url": "",
+      "domain": "",
+      "meta_description": "",
+      "content_type": "listicle | guide | comparison | product_page | review",
+      "estimated_word_count": null,
+      "content_angle": "",
+      "da_estimate": "high | medium | low"
+    }
+  ],
+  "people_also_ask": [],
+  "related_searches": [],
+  "featured_snippet": {
+    "present": false,
+    "type": "paragraph | list | table | none",
+    "content": ""
+  },
+  "serp_features": {
+    "shopping_results": false,
+    "image_pack": false,
+    "video_results": false,
+    "local_pack": false,
+    "knowledge_panel": false
+  },
+  "competitor_analysis": {
+    "average_word_count": null,
+    "common_h2_topics": [],
+    "content_gaps": [],
+    "winning_angle_for_innova": ""
+  }
+}

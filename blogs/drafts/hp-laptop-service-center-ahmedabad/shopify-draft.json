@@ -1,0 +1,35 @@
+{
+  "blog_post": {
+    "title": "TODO: Set in blueprint step",
+    "body_html": "TODO: Generated in Step 7",
+    "meta_title": "TODO: Generated in Step 5",
+    "meta_description": "TODO: Generated in Step 5",
+    "handle": "hp-laptop-service-center-ahmedabad",
+    "tags": [
+      "Local SEO"
+    ],
+    "status": "draft",
+    "published": false
+  },
+  "workflow_notes": {
+    "qa_score": null,
+    "primary_keyword": "hp laptop service center ahmedabad",
+    "cluster": "Local SEO",
+    "intent": "local",
+    "target_page_type": "blog",
+    "supported_collection": "/pages/hp-world-navrangpura",
+    "internal_link_targets": [
+      "/blogs/insights/desktop-computers-ahmedabad-hp-desktops",
+      "/blogs/insights/hp-printers-ahmedabad",
+      "/pages/hp-world-navrangpura",
+      "/pages/hp-world-maninagar",
+      "/pages/hp-world-chandkheda",
+      "/pages/hp-world-prahlad-nagar",
+      "/pages/hp-world-vastral",
+      "/pages/hp-world-rajkot-tagore-road"
+    ],
+    "cannibalization_risk": "none",
+    "notes_for_publisher": "Do not publish automatically. Manual review required. QA score must be \u2265 85.",
+    "ready_for_automation": false
+  }
+}
