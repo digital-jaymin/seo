@@ -136,7 +136,7 @@
       "stage": "sitemap_refresh",
       "status": "completed",
       "completed_date": "2026-05-23",
-      "commit_hash": "pending",
+      "commit_hash": "b1e6315",
       "data_sources": "Manual paste — all 4 Shopify sitemaps (products, collections, pages, blogs)",
       "summary": "Refresh vs 2026-05-15 baseline. Products: 202 → 199 (-4 discontinued USB/power bank accessories, +1 new AIO desktop HP 27 CR1027IN Core Ultra 5). Collections: 44 → 44 (no change). Pages: 9 → 9 (no change). Blog articles: 28 → 28 (no change). No new content gaps identified. SEO cluster plan unchanged."
     },
