@@ -17,7 +17,7 @@
     "active_article": "hp_laptop_service_center_ahmedabad",
     "last_completed_stage": "blog_folder_setup",
     "next_action": "run_serpapi_for_hp_laptop_service_center_ahmedabad",
-    "last_commit_hash": "pending",
+    "last_commit_hash": "5908c9a",
     "last_commit_message": "feat: Step 4 complete — blog folder created for BLOG-030 hp-laptop-service-center-ahmedabad"
   },
   "active_work": {
@@ -138,7 +138,7 @@
       "stage": "blog_folder_setup",
       "status": "completed",
       "completed_date": "2026-05-23",
-      "commit_hash": "pending",
+      "commit_hash": "5908c9a",
       "article": "hp_laptop_service_center_ahmedabad",
       "blog_id": "BLOG-030",
       "folder": "blogs/drafts/hp-laptop-service-center-ahmedabad/",
