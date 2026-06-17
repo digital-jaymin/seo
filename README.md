@@ -53,11 +53,43 @@ A semi-automated SEO blog workflow for Innova Retail. The system reduces manual 
 
 ## How to Run the Workflow
 
-### Step 1 — Sitemap Discovery
-```bash
-python scripts/sitemap_fetcher.py
-```
-Output: `data/sitemap/sitemap-urls.json`
+### Step 1 — Sitemap Refresh (GitHub Actions)
+
+The Claude cloud environment cannot reach `innovaretail.co.in` directly.
+Use the GitHub Actions workflow instead:
+
+1. Go to **GitHub → Actions → Refresh Sitemaps**
+2. Click **Run workflow** → select branch `claude/setup-connection-e8W80` → click **Run workflow**
+3. Wait ~60 seconds for it to complete
+
+The workflow fetches all four Shopify sitemaps from the live site, saves the raw XML,
+and commits the results back to the branch automatically.
+
+**Files saved by the workflow:**
+
+| File | Contents |
+|------|----------|
+| `data/sitemaps/raw/products.xml` | Raw XML from sitemap_products_1.xml |
+| `data/sitemaps/raw/collections.xml` | Raw XML from sitemap_collections_1.xml |
+| `data/sitemaps/raw/pages.xml` | Raw XML from sitemap_pages_1.xml |
+| `data/sitemaps/raw/blogs.xml` | Raw XML from sitemap_blogs_1.xml |
+| `data/sitemap/sitemap-urls.json` | Parsed and structured URL data |
+| `data/sitemap/sitemap-changes.json` | Diff vs. previous run (added / removed URLs) |
+
+**How new and removed URLs are identified:**
+
+Each run loads the previous `sitemap-urls.json` and compares URL sets per category.
+URLs present in the new sitemap but not the old one appear in `diff.*.added`.
+URLs present in the old sitemap but gone now appear in `diff.*.removed`.
+If nothing changed, the workflow prints "No sitemap changes detected" and skips the commit.
+
+**How sitemap changes feed keyword discovery:**
+
+After parsing, the script runs a content-gap check:
+
+- Collections with no supporting blog article are flagged as `content_gaps` in `sitemap-urls.json`
+- New gaps are appended to the list (existing approved keywords are never removed)
+- Ask Claude "Run keyword discovery from latest sitemap refresh" to turn gaps into ranked opportunities
 
 ### Step 2 — Keyword Discovery
 Ask Claude:

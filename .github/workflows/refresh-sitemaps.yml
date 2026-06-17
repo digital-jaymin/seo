@@ -1,0 +1,101 @@
+name: Refresh Sitemaps
+
+# Manual trigger only — fetches live sitemaps from innovaretail.co.in
+# and commits updated data files. GitHub Actions can reach the site;
+# the Claude cloud environment cannot.
+"on":
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    name: Fetch sitemaps and discover content gaps
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: claude/setup-connection-e8W80
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests pytest --quiet
+
+      - name: Run tests
+        run: pytest tests/test_sitemap_refresh.py -v
+
+      - name: Fetch and refresh sitemaps
+        run: python scripts/sitemap_refresh.py
+
+      - name: Verify output files exist
+        run: |
+          echo "Checking required output files..."
+
+          for f in \
+            "data/sitemaps/raw/products.xml" \
+            "data/sitemaps/raw/collections.xml" \
+            "data/sitemaps/raw/pages.xml" \
+            "data/sitemaps/raw/blogs.xml" \
+            "data/sitemap/sitemap-urls.json" \
+            "data/sitemap/sitemap-changes.json"
+          do
+            if [ ! -f "$f" ]; then
+              echo "ERROR: Expected file not found: $f"
+              exit 1
+            fi
+            echo "OK: $f"
+          done
+
+          python - <<'PYEOF'
+          import json
+
+          with open("data/sitemap/sitemap-urls.json") as f:
+              d = json.load(f)
+
+          t = d["_meta"]["totals"]
+          print(f"Products    : {t['products']}")
+          print(f"Collections : {t['collections']}")
+          print(f"Pages       : {t['pages']}")
+          print(f"Blogs       : {t['blogs']}")
+          print(f"Grand total : {t['grand_total']}")
+          print(f"Content gaps: {len(d.get('content_gaps', []))}")
+
+          with open("data/sitemap/sitemap-changes.json") as f:
+              ch = json.load(f)
+
+          latest = ch.get("latest", {})
+          diff = latest.get("diff", {})
+          print("\nLatest run diff:")
+          print(f"  Blogs added      : {len(diff.get('blogs', {}).get('added', []))}")
+          print(f"  Blogs removed    : {len(diff.get('blogs', {}).get('removed', []))}")
+          print(f"  Products added   : {len(diff.get('products', {}).get('added', []))}")
+          print(f"  Products removed : {len(diff.get('products', {}).get('removed', []))}")
+          PYEOF
+
+      - name: Commit and push results
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/sitemaps/raw/products.xml
+          git add data/sitemaps/raw/collections.xml
+          git add data/sitemaps/raw/pages.xml
+          git add data/sitemaps/raw/blogs.xml
+          git add data/sitemap/sitemap-urls.json
+          git add data/sitemap/sitemap-changes.json
+
+          if git diff --cached --quiet; then
+            echo "No sitemap changes detected — skipping commit."
+          else
+            git commit -m "chore: refresh sitemaps $(date +%Y-%m-%d)"
+            git push origin claude/setup-connection-e8W80
+            echo "Pushed successfully."
+          fi
