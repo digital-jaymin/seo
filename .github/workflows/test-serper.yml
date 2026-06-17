@@ -1,0 +1,93 @@
+name: Test Serper API Connection
+
+# Manual trigger only — runs a single test search to verify the SERPER_API_KEY secret works.
+"on":
+  workflow_dispatch:
+
+jobs:
+  test-serper:
+    name: Test Serper.dev Connection
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install requests
+        run: pip install requests --quiet
+
+      - name: Run Serper test search
+        env:
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+        run: |
+          python3 - <<'EOF'
+          import os
+          import sys
+          import requests
+
+          # Validate secret is present
+          api_key = os.environ.get("SERPER_API_KEY", "")
+          if not api_key:
+              print("Connection: failed")
+              print("Reason: SERPER_API_KEY secret is missing or empty.")
+              print("Fix: Go to Settings > Secrets and variables > Actions > New repository secret.")
+              sys.exit(1)
+
+          # Make request
+          url = "https://google.serper.dev/search"
+          headers = {
+              "X-API-KEY": api_key,
+              "Content-Type": "application/json"
+          }
+          payload = {
+              "q": "best dinnerware sets",
+              "gl": "us",
+              "hl": "en",
+              "num": 10
+          }
+
+          try:
+              response = requests.post(url, headers=headers, json=payload, timeout=15)
+              status = response.status_code
+              print(f"HTTP status: {status}")
+
+              if status != 200:
+                  print("Connection: failed")
+                  print(f"Reason: API returned error {status}.")
+                  if status == 403:
+                      print("Likely cause: API key is invalid or not yet active.")
+                  elif status == 429:
+                      print("Likely cause: Rate limit exceeded.")
+                  sys.exit(1)
+
+              data = response.json()
+              organic = data.get("organic", [])
+
+              if not organic:
+                  print("Connection: failed")
+                  print("Reason: No organic results returned.")
+                  sys.exit(1)
+
+              first_title = organic[0].get("title", "No title")
+
+              print("Connection: successful")
+              print(f"Organic results: {len(organic)}")
+              print(f"First result:    {first_title}")
+
+          except requests.exceptions.Timeout:
+              print("Connection: failed")
+              print("Reason: Request timed out after 15 seconds.")
+              sys.exit(1)
+
+          except requests.exceptions.ConnectionError:
+              print("Connection: failed")
+              print("Reason: Could not reach google.serper.dev. Check network.")
+              sys.exit(1)
+
+          except Exception as e:
+              print("Connection: failed")
+              print(f"Reason: Unexpected error — {e}")
+              sys.exit(1)
+          EOF
