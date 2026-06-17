@@ -1,5 +1,6 @@
 {
   "serpapi_key": "PASTE_SERPAPI_KEY_HERE",
+  "serper_key": "PASTE_SERPER_KEY_HERE",
   "usersuggest_key": "PASTE_USERSUGGEST_KEY_HERE",
   "shopify_admin_api_key": "PASTE_SHOPIFY_ADMIN_API_KEY_HERE",
   "shopify_store_url": "PASTE_SHOPIFY_STORE_URL_HERE",
