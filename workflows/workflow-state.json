@@ -5,20 +5,20 @@
     "usage_limit_rule": "If the next task is large (blog writing, HTML conversion, full QA) and the session is near context limit, do NOT start it. Update status to paused_usage_limit, commit and push, then stop.",
     "commit_rule": "Commit and push after every major stage completion. Never leave uncommitted work when stopping.",
     "schema_version": "1.0",
-    "last_updated": "2026-05-23",
+    "last_updated": "2026-06-17",
     "blueprint_status": "approved",
     "article_status": "reviewed_and_approved",
-    "html_status": "qa_passed — visual redesign applied, em dashes removed from article.md and final.html, 1 QA issue fixed (em dash in HTML comment). Ready for Shopify draft.",
-    "shopify_draft_status": "created — blog_id placeholder present, replace REPLACE_WITH_SHOPIFY_BLOG_ID before uploading"
+    "html_status": "qa_passed \u2014 visual redesign applied, em dashes removed from article.md and final.html, 1 QA issue fixed (em dash in HTML comment). Ready for Shopify draft.",
+    "shopify_draft_status": "created \u2014 blog_id placeholder present, replace REPLACE_WITH_SHOPIFY_BLOG_ID before uploading"
   },
   "current_state": {
-    "status": "waiting_for_input",
+    "status": "waiting_for_next_step",
     "current_stage": "serp_analysis",
     "active_article": "hp_laptop_service_center_ahmedabad",
-    "last_completed_stage": "blog_folder_setup",
-    "next_action": "run_serpapi_for_hp_laptop_service_center_ahmedabad",
+    "last_completed_stage": "serp_analysis",
+    "next_action": "create_blueprint",
     "last_commit_hash": "5908c9a",
-    "last_commit_message": "feat: Step 4 complete — blog folder created for BLOG-030 hp-laptop-service-center-ahmedabad"
+    "last_commit_message": "feat: Step 4 complete \u2014 blog folder created for BLOG-030 hp-laptop-service-center-ahmedabad"
   },
   "active_work": {
     "active_cluster": "gaming_laptops",
@@ -142,7 +142,7 @@
       "article": "hp_laptop_service_center_ahmedabad",
       "blog_id": "BLOG-030",
       "folder": "blogs/drafts/hp-laptop-service-center-ahmedabad/",
-      "memory_validation": "passed — target_page_type: blog, cannibalization_risk: none, approved: YES",
+      "memory_validation": "passed \u2014 target_page_type: blog, cannibalization_risk: none, approved: YES",
       "summary": "Blog folder created for BLOG-030 (hp laptop service center ahmedabad). 7 template files created. Memory check: no existing coverage for this keyword, 8 internal link targets confirmed. Waiting for SERP data via GitHub Actions."
     },
     {
@@ -150,8 +150,8 @@
       "status": "completed",
       "completed_date": "2026-05-23",
       "commit_hash": "b1e6315",
-      "data_sources": "Manual paste — all 4 Shopify sitemaps (products, collections, pages, blogs)",
-      "summary": "Refresh vs 2026-05-15 baseline. Products: 202 → 199 (-4 discontinued USB/power bank accessories, +1 new AIO desktop HP 27 CR1027IN Core Ultra 5). Collections: 44 → 44 (no change). Pages: 9 → 9 (no change). Blog articles: 28 → 28 (no change). No new content gaps identified. SEO cluster plan unchanged."
+      "data_sources": "Manual paste \u2014 all 4 Shopify sitemaps (products, collections, pages, blogs)",
+      "summary": "Refresh vs 2026-05-15 baseline. Products: 202 \u2192 199 (-4 discontinued USB/power bank accessories, +1 new AIO desktop HP 27 CR1027IN Core Ultra 5). Collections: 44 \u2192 44 (no change). Pages: 9 \u2192 9 (no change). Blog articles: 28 \u2192 28 (no change). No new content gaps identified. SEO cluster plan unchanged."
     },
     {
       "stage": "project_setup",
